@@ -1,0 +1,1452 @@
+<?xml version="1.0"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1"
+    xmlns:sbvr="http://www.omg.org/spec/SBVR/20070901/MeaningAndRepresentation.xml"
+    targetNamespace="http://www.omg.org/spec/SBVR/20070901/MeaningAndRepresentation.xml">
+  <xs:import namespace="http://schema.omg.org/spec/XMI/2.1" schemaLocation="http://www.omg.org/spec/XMI/20071213/XMI.xsd"/>
+  <!-- ====== Package: Meaning and Representation Vocabulary ======= -->
+  <xs:element name="actuality" type="sbvr:actuality"/>
+  <xs:complexType name="actuality">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xs:complexType>
+  <xs:element name="attributiveNamespace" type="sbvr:attributiveNamespace"/>
+  <xs:complexType name="attributiveNamespace">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="URI" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="URI" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="binaryFactType" type="sbvr:binaryFactType"/>
+  <xs:complexType name="binaryFactType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+      <xs:element name="factTypeForm" type="xmi:Any" form="unqualified"/>
+      <xs:element name="role" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="factTypeForm" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="role" type="xs:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="characteristic" type="sbvr:characteristic"/>
+  <xs:complexType name="characteristic">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+      <xs:element name="factTypeForm" type="xmi:Any" form="unqualified"/>
+      <xs:element name="role" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="factTypeForm" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="role" type="xs:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="concept" type="sbvr:concept"/>
+  <xs:complexType name="concept">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="conceptType" type="sbvr:conceptType"/>
+  <xs:complexType name="conceptType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="conceptualSchema" type="sbvr:conceptualSchema"/>
+  <xs:complexType name="conceptualSchema">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xs:complexType>
+  <xs:element name="definition" type="sbvr:definition"/>
+  <xs:complexType name="definition">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="meaning" type="xmi:Any" form="unqualified"/>
+      <xs:element name="expression" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="meaning" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="expression" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="designation" type="sbvr:designation"/>
+  <xs:complexType name="designation">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="meaning" type="xmi:Any" form="unqualified"/>
+      <xs:element name="expression" type="xmi:Any" form="unqualified"/>
+      <xs:element name="signifier" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="meaning" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="expression" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="signifier" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="expression" type="sbvr:expression"/>
+  <xs:complexType name="expression">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xs:complexType>
+  <xs:element name="fact" type="sbvr:fact"/>
+  <xs:complexType name="fact">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="isPermittedToBeTrue" type="xs:boolean" form="unqualified"/>
+      <xs:element name="statement" type="xmi:Any" form="unqualified"/>
+      <xs:element name="isTrue" type="xs:boolean" form="unqualified"/>
+      <xs:element name="isFalse" type="xs:boolean" form="unqualified"/>
+      <xs:element name="isPossiblyTrue" type="xs:boolean" form="unqualified"/>
+      <xs:element name="isObligatedToBeTrue" type="xs:boolean" form="unqualified"/>
+      <xs:element name="isNecessarilyTrue" type="xs:boolean" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="isPermittedToBeTrue" type="xs:boolean" use="optional"/>
+    <xs:attribute name="statement" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="isTrue" type="xs:boolean" use="optional"/>
+    <xs:attribute name="isFalse" type="xs:boolean" use="optional"/>
+    <xs:attribute name="isPossiblyTrue" type="xs:boolean" use="optional"/>
+    <xs:attribute name="isObligatedToBeTrue" type="xs:boolean" use="optional"/>
+    <xs:attribute name="isNecessarilyTrue" type="xs:boolean" use="optional"/>
+  </xs:complexType>
+  <xs:element name="factModel" type="sbvr:factModel"/>
+  <xs:complexType name="factModel">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xs:complexType>
+  <xs:element name="factType" type="sbvr:factType"/>
+  <xs:complexType name="factType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+      <xs:element name="factTypeForm" type="xmi:Any" form="unqualified"/>
+      <xs:element name="role" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="factTypeForm" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="role" type="xs:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="factTypeForm" type="sbvr:factTypeForm"/>
+  <xs:complexType name="factTypeForm">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="meaning" type="xmi:Any" form="unqualified"/>
+      <xs:element name="expression" type="xmi:Any" form="unqualified"/>
+      <xs:element name="placeholder" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="meaning" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="expression" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="placeholder" type="xs:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="factTypeHasFactInFactModel" type="sbvr:factTypeHasFactInFactModel"/>
+  <xs:complexType name="factTypeHasFactInFactModel">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="factType" type="xmi:Any" form="unqualified"/>
+      <xs:element name="fact" type="xmi:Any" form="unqualified"/>
+      <xs:element name="factModel" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="factType" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="fact" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="factModel" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="factTypeRole" type="sbvr:factTypeRole"/>
+  <xs:complexType name="factTypeRole">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="individualConcept" type="sbvr:individualConcept"/>
+  <xs:complexType name="individualConcept">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="integer" type="sbvr:integer"/>
+  <xs:complexType name="integer">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+      <xs:element name="value" type="xs:integer" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="value" type="xs:integer" use="optional"/>
+  </xs:complexType>
+  <xs:element name="language" type="sbvr:language"/>
+  <xs:complexType name="language">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xs:complexType>
+  <xs:element name="meaning" type="sbvr:meaning"/>
+  <xs:complexType name="meaning">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="namespace" type="sbvr:namespace"/>
+  <xs:complexType name="namespace">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="URI" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="URI" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="nonnegativeInteger" type="sbvr:nonnegativeInteger"/>
+  <xs:complexType name="nonnegativeInteger">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+      <xs:element name="value" type="xs:integer" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="value" type="xs:integer" use="optional"/>
+  </xs:complexType>
+  <xs:element name="nounConcept" type="sbvr:nounConcept"/>
+  <xs:complexType name="nounConcept">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="nounForm" type="sbvr:nounForm"/>
+  <xs:complexType name="nounForm">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="meaning" type="xmi:Any" form="unqualified"/>
+      <xs:element name="expression" type="xmi:Any" form="unqualified"/>
+      <xs:element name="placeholder" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="meaning" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="expression" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="placeholder" type="xs:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="number" type="sbvr:number"/>
+  <xs:complexType name="number">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="objectType" type="sbvr:objectType"/>
+  <xs:complexType name="objectType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="placeholder" type="sbvr:placeholder"/>
+  <xs:complexType name="placeholder">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="meaning" type="xmi:Any" form="unqualified"/>
+      <xs:element name="expression" type="xmi:Any" form="unqualified"/>
+      <xs:element name="signifier" type="xmi:Any" form="unqualified"/>
+      <xs:element name="startingCharacterPosition" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="meaning" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="expression" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="signifier" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="startingCharacterPosition" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="positiveInteger" type="sbvr:positiveInteger"/>
+  <xs:complexType name="positiveInteger">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+      <xs:element name="value" type="xs:integer" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="value" type="xs:integer" use="optional"/>
+  </xs:complexType>
+  <xs:element name="proposition" type="sbvr:proposition"/>
+  <xs:complexType name="proposition">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="isPermittedToBeTrue" type="xs:boolean" form="unqualified"/>
+      <xs:element name="statement" type="xmi:Any" form="unqualified"/>
+      <xs:element name="isTrue" type="xs:boolean" form="unqualified"/>
+      <xs:element name="isFalse" type="xs:boolean" form="unqualified"/>
+      <xs:element name="isPossiblyTrue" type="xs:boolean" form="unqualified"/>
+      <xs:element name="isObligatedToBeTrue" type="xs:boolean" form="unqualified"/>
+      <xs:element name="isNecessarilyTrue" type="xs:boolean" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="isPermittedToBeTrue" type="xs:boolean" use="optional"/>
+    <xs:attribute name="statement" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="isTrue" type="xs:boolean" use="optional"/>
+    <xs:attribute name="isFalse" type="xs:boolean" use="optional"/>
+    <xs:attribute name="isPossiblyTrue" type="xs:boolean" use="optional"/>
+    <xs:attribute name="isObligatedToBeTrue" type="xs:boolean" use="optional"/>
+    <xs:attribute name="isNecessarilyTrue" type="xs:boolean" use="optional"/>
+  </xs:complexType>
+  <xs:element name="quantity" type="sbvr:quantity"/>
+  <xs:complexType name="quantity">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="question" type="sbvr:question"/>
+  <xs:complexType name="question">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="referenceScheme" type="sbvr:referenceScheme"/>
+  <xs:complexType name="referenceScheme">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="identifyingCharacteristic" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extensionallyUsedRole" type="xmi:Any" form="unqualified"/>
+      <xs:element name="simplyUsedRole" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="identifyingCharacteristic" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extensionallyUsedRole" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="simplyUsedRole" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="representation" type="sbvr:representation"/>
+  <xs:complexType name="representation">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="meaning" type="xmi:Any" form="unqualified"/>
+      <xs:element name="expression" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="meaning" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="expression" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="role" type="sbvr:role"/>
+  <xs:complexType name="role">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="representation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="extension" type="xmi:Any" form="unqualified"/>
+      <xs:element name="attributiveNamespace" type="xmi:Any" form="unqualified"/>
+      <xs:element name="definition" type="xmi:Any" form="unqualified"/>
+      <xs:element name="referenceScheme" type="xmi:Any" form="unqualified"/>
+      <xs:element name="designation" type="xmi:Any" form="unqualified"/>
+      <xs:element name="instance" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="representation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="attributiveNamespace" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="definition" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="referenceScheme" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="designation" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="instance" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="sententialForm" type="sbvr:sententialForm"/>
+  <xs:complexType name="sententialForm">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="meaning" type="xmi:Any" form="unqualified"/>
+      <xs:element name="expression" type="xmi:Any" form="unqualified"/>
+      <xs:element name="placeholder" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="meaning" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="expression" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="placeholder" type="xs:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="set" type="sbvr:set"/>
+  <xs:complexType name="set">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="element" type="xmi:Any" form="unqualified"/>
+      <xs:element name="cardinality" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="element" type="sbvr:IDREFS" use="optional"/>
+    <xs:attribute name="cardinality" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="stateOfAffairs" type="sbvr:stateOfAffairs"/>
+  <xs:complexType name="stateOfAffairs">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xs:complexType>
+  <xs:element name="stateOfAffairsInvolvesThingInRole" type="sbvr:stateOfAffairsInvolvesThingInRole"/>
+  <xs:complexType name="stateOfAffairsInvolvesThingInRole">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="stateOfAffairs" type="xmi:Any" form="unqualified"/>
+      <xs:element name="thing" type="xmi:Any" form="unqualified"/>
+      <xs:element name="role" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="stateOfAffairs" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="thing" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="role" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="statement" type="sbvr:statement"/>
+  <xs:complexType name="statement">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="meaning" type="xmi:Any" form="unqualified"/>
+      <xs:element name="expression" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="meaning" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="expression" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="text" type="sbvr:text"/>
+  <xs:complexType name="text">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="value" type="xs:string" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="value" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:element name="thing" type="sbvr:thing"/>
+  <xs:complexType name="thing">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+  </xs:complexType>
+  <xs:element name="URI" type="sbvr:URI"/>
+  <xs:complexType name="URI">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="value" type="xs:string" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="value" type="xs:string" use="optional"/>
+  </xs:complexType>
+  <xs:element name="vocabularyNamespace" type="sbvr:vocabularyNamespace"/>
+  <xs:complexType name="vocabularyNamespace">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="xmi:Extension"/>
+      <xs:element name="URI" type="xmi:Any" form="unqualified"/>
+    </xs:choice>
+    <xs:attribute ref="xmi:id"/>
+    <xs:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xs:attribute name="URI" type="sbvr:IDREFS" use="optional"/>
+  </xs:complexType>
+  <xs:element name="attributiveNamespaceIsForSubjectConcept" type="sbvr:attributiveNamespaceIsForSubjectConcept"/>
+  <xs:complexType name="attributiveNamespaceIsForSubjectConcept">
+    <xs:all>
+      <xs:element name="attributiveNamespace" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="subjectConcept" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="attributiveNamespace" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="subjectConcept" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="attributiveNamespaceIsWithinVocabularyNamespace" type="sbvr:attributiveNamespaceIsWithinVocabularyNamespace"/>
+  <xs:complexType name="attributiveNamespaceIsWithinVocabularyNamespace">
+    <xs:all>
+      <xs:element name="attributiveNamespace" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="vocabularyNamespace" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="attributiveNamespace" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="vocabularyNamespace" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="conceptHasDefinition" type="sbvr:conceptHasDefinition"/>
+  <xs:complexType name="conceptHasDefinition">
+    <xs:all>
+      <xs:element name="concept" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="definition" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="concept" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="definition" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="conceptHasDesignation" type="sbvr:conceptHasDesignation"/>
+  <xs:complexType name="conceptHasDesignation">
+    <xs:all>
+      <xs:element name="concept" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="designation" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="concept" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="designation" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="conceptHasExtension" type="sbvr:conceptHasExtension"/>
+  <xs:complexType name="conceptHasExtension">
+    <xs:all>
+      <xs:element name="concept" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="extension" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="concept" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="extension" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="conceptHasInstance" type="sbvr:conceptHasInstance"/>
+  <xs:complexType name="conceptHasInstance">
+    <xs:all>
+      <xs:element name="concept" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="instance" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="concept" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="instance" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="conceptIncorporatesCharacteristic" type="sbvr:conceptIncorporatesCharacteristic"/>
+  <xs:complexType name="conceptIncorporatesCharacteristic">
+    <xs:all>
+      <xs:element name="concept" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="characteristic" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="concept" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="characteristic" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="conceptIsClosedInConceptualSchema" type="sbvr:conceptIsClosedInConceptualSchema"/>
+  <xs:complexType name="conceptIsClosedInConceptualSchema">
+    <xs:all>
+      <xs:element name="concept" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="conceptualSchema" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="concept" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="conceptualSchema" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="concept1IsCoextensiveWithConcept2" type="sbvr:concept1IsCoextensiveWithConcept2"/>
+  <xs:complexType name="concept1IsCoextensiveWithConcept2">
+    <xs:all>
+      <xs:element name="concept1" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="concept2" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="concept1" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="concept2" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="concept1SpecializesConcept2" type="sbvr:concept1SpecializesConcept2"/>
+  <xs:complexType name="concept1SpecializesConcept2">
+    <xs:all>
+      <xs:element name="concept1" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="concept2" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="concept1" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="concept2" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="conceptualSchemaIncludesConcept" type="sbvr:conceptualSchemaIncludesConcept"/>
+  <xs:complexType name="conceptualSchemaIncludesConcept">
+    <xs:all>
+      <xs:element name="conceptualSchema" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="concept" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="conceptualSchema" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="concept" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="conceptualSchemaIncludesFact" type="sbvr:conceptualSchemaIncludesFact"/>
+  <xs:complexType name="conceptualSchemaIncludesFact">
+    <xs:all>
+      <xs:element name="conceptualSchema" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="fact" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="conceptualSchema" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="fact" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="designationHasSignifier" type="sbvr:designationHasSignifier"/>
+  <xs:complexType name="designationHasSignifier">
+    <xs:all>
+      <xs:element name="designation" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="signifier" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="designation" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="signifier" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="designationIsInNamespace" type="sbvr:designationIsInNamespace"/>
+  <xs:complexType name="designationIsInNamespace">
+    <xs:all>
+      <xs:element name="designation" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="namespace" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="designation" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="namespace" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="expressionRepresentsMeaning" type="sbvr:expressionRepresentsMeaning"/>
+  <xs:complexType name="expressionRepresentsMeaning">
+    <xs:all>
+      <xs:element name="expression" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="meaning" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="expression" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="meaning" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="factModelIncludesFact" type="sbvr:factModelIncludesFact"/>
+  <xs:complexType name="factModelIncludesFact">
+    <xs:all>
+      <xs:element name="factModel" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="fact" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="factModel" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="fact" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="factModelIsBasedOnConceptualSchema" type="sbvr:factModelIsBasedOnConceptualSchema"/>
+  <xs:complexType name="factModelIsBasedOnConceptualSchema">
+    <xs:all>
+      <xs:element name="factModel" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="conceptualSchema" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="factModel" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="conceptualSchema" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="factTypeFormDemonstratesDesignation" type="sbvr:factTypeFormDemonstratesDesignation"/>
+  <xs:complexType name="factTypeFormDemonstratesDesignation">
+    <xs:all>
+      <xs:element name="factTypeForm" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="designation" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="factTypeForm" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="designation" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="factTypeFormIsInNamespace" type="sbvr:factTypeFormIsInNamespace"/>
+  <xs:complexType name="factTypeFormIsInNamespace">
+    <xs:all>
+      <xs:element name="factTypeForm" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="namespace" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="factTypeForm" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="namespace" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="factTypeHasFactTypeForm" type="sbvr:factTypeHasFactTypeForm"/>
+  <xs:complexType name="factTypeHasFactTypeForm">
+    <xs:all>
+      <xs:element name="factType" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="factTypeForm" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="factType" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="factTypeForm" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="factTypeIsInternallyClosedInConceptualSchema" type="sbvr:factTypeIsInternallyClosedInConceptualSchema"/>
+  <xs:complexType name="factTypeIsInternallyClosedInConceptualSchema">
+    <xs:all>
+      <xs:element name="factType" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="conceptualSchema" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="factType" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="conceptualSchema" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="factTypeRoleIsInFactType" type="sbvr:factTypeRoleIsInFactType"/>
+  <xs:complexType name="factTypeRoleIsInFactType">
+    <xs:all>
+      <xs:element name="factTypeRole" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="factType" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="factTypeRole" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="factType" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="meaningCorrespondsToThing" type="sbvr:meaningCorrespondsToThing"/>
+  <xs:complexType name="meaningCorrespondsToThing">
+    <xs:all>
+      <xs:element name="meaning" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="thing" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="meaning" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="thing" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="namespaceHasURI" type="sbvr:namespaceHasURI"/>
+  <xs:complexType name="namespaceHasURI">
+    <xs:all>
+      <xs:element name="namespace" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="URI" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="namespace" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="URI" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="namespace1IncorporatesNamespace2" type="sbvr:namespace1IncorporatesNamespace2"/>
+  <xs:complexType name="namespace1IncorporatesNamespace2">
+    <xs:all>
+      <xs:element name="namespace1" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="namespace2" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="namespace1" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="namespace2" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="placeholderIsAtStartingCharacterPosition" type="sbvr:placeholderIsAtStartingCharacterPosition"/>
+  <xs:complexType name="placeholderIsAtStartingCharacterPosition">
+    <xs:all>
+      <xs:element name="placeholder" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="startingCharacterPosition" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="placeholder" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="startingCharacterPosition" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="placeholderIsInFactTypeForm" type="sbvr:placeholderIsInFactTypeForm"/>
+  <xs:complexType name="placeholderIsInFactTypeForm">
+    <xs:all>
+      <xs:element name="placeholder" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="factTypeForm" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="placeholder" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="factTypeForm" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="placeholderUsesDesignation" type="sbvr:placeholderUsesDesignation"/>
+  <xs:complexType name="placeholderUsesDesignation">
+    <xs:all>
+      <xs:element name="placeholder" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="designation" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="placeholder" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="designation" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="quantity1EqualsQuantity2" type="sbvr:quantity1EqualsQuantity2"/>
+  <xs:complexType name="quantity1EqualsQuantity2">
+    <xs:all>
+      <xs:element name="quantity1" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="quantity2" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="quantity1" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="quantity2" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="quantity1IsLessThanQuantity2" type="sbvr:quantity1IsLessThanQuantity2"/>
+  <xs:complexType name="quantity1IsLessThanQuantity2">
+    <xs:all>
+      <xs:element name="quantity1" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="quantity2" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="quantity1" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="quantity2" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="referenceSchemeExtensionallyUsesFactTypeRole" type="sbvr:referenceSchemeExtensionallyUsesFactTypeRole"/>
+  <xs:complexType name="referenceSchemeExtensionallyUsesFactTypeRole">
+    <xs:all>
+      <xs:element name="referenceScheme" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="factTypeRole" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="referenceScheme" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="factTypeRole" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="referenceSchemeIsForConcept" type="sbvr:referenceSchemeIsForConcept"/>
+  <xs:complexType name="referenceSchemeIsForConcept">
+    <xs:all>
+      <xs:element name="referenceScheme" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="concept" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="referenceScheme" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="concept" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="referenceSchemeSimplyUsesFactTypeRole" type="sbvr:referenceSchemeSimplyUsesFactTypeRole"/>
+  <xs:complexType name="referenceSchemeSimplyUsesFactTypeRole">
+    <xs:all>
+      <xs:element name="referenceScheme" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="factTypeRole" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="referenceScheme" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="factTypeRole" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="referenceSchemeUsesCharacteristic" type="sbvr:referenceSchemeUsesCharacteristic"/>
+  <xs:complexType name="referenceSchemeUsesCharacteristic">
+    <xs:all>
+      <xs:element name="referenceScheme" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="characteristic" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="referenceScheme" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="characteristic" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="representationHasExpression" type="sbvr:representationHasExpression"/>
+  <xs:complexType name="representationHasExpression">
+    <xs:all>
+      <xs:element name="representation" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="expression" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="representation" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="expression" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="representationRepresentsMeaning" type="sbvr:representationRepresentsMeaning"/>
+  <xs:complexType name="representationRepresentsMeaning">
+    <xs:all>
+      <xs:element name="representation" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="meaning" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="representation" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="meaning" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="roleRangesOverObjectType" type="sbvr:roleRangesOverObjectType"/>
+  <xs:complexType name="roleRangesOverObjectType">
+    <xs:all>
+      <xs:element name="role" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="objectType" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="role" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="objectType" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="setHasCardinality" type="sbvr:setHasCardinality"/>
+  <xs:complexType name="setHasCardinality">
+    <xs:all>
+      <xs:element name="set" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="cardinality" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="set" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="cardinality" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="statementExpressesProposition" type="sbvr:statementExpressesProposition"/>
+  <xs:complexType name="statementExpressesProposition">
+    <xs:all>
+      <xs:element name="statement" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="proposition" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="statement" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="proposition" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="thingIsInSet" type="sbvr:thingIsInSet"/>
+  <xs:complexType name="thingIsInSet">
+    <xs:all>
+      <xs:element name="thing" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="set" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="thing" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="set" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="thing1IsThing2" type="sbvr:thing1IsThing2"/>
+  <xs:complexType name="thing1IsThing2">
+    <xs:all>
+      <xs:element name="thing1" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="thing2" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="thing1" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="thing2" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:element name="vocabularyNamespaceIsForLanguage" type="sbvr:vocabularyNamespaceIsForLanguage"/>
+  <xs:complexType name="vocabularyNamespaceIsForLanguage">
+    <xs:all>
+      <xs:element name="vocabularyNamespace" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element name="language" form="unqualified" minOccurs="0">
+         <xs:complexType>
+           <xs:attributeGroup ref="xmi:LinkAttribs"/>
+         </xs:complexType>
+      </xs:element>
+      <xs:element ref="xmi:Extension" minOccurs="0"/>
+    </xs:all>
+    <xs:attribute name="vocabularyNamespace" type="xs:IDREF" use="optional"/>
+    <xs:attribute name="language" type="xs:IDREF" use="optional"/>
+  </xs:complexType>
+  <xs:simpleType xmi:id="IDREFS" name="IDREFS">
+    <xs:list itemType="xs:IDREF"/>
+  </xs:simpleType>
+</xs:schema>
+

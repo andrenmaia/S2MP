@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xmi:XMI xmlns:sbvr="http://www.omg.org/spec/SBVR/20070901/SBVR.xml" version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+  <sbvr:term xmi:id="Term1021" signifier="Bicicleta" />
+  <sbvr:term xmi:id="Term1020" signifier="Caminhao" />
+  <sbvr:term xmi:id="Term1010" signifier="Carro" />
+  <sbvr:term xmi:id="Term1016" signifier="Cor" />
+  <sbvr:term xmi:id="Term1019" signifier="Moto" />
+  <sbvr:term xmi:id="Term1011" signifier="Motor" />
+  <sbvr:term xmi:id="Term1014" signifier="Pessoa" />
+  <sbvr:term xmi:id="Term1017" signifier="Placa" />
+  <sbvr:term xmi:id="Term1012" signifier="Porta" />
+  <sbvr:term xmi:id="Term1015" signifier="Potencia" />
+  <sbvr:term xmi:id="Term1013" signifier="Roda" />
+  <sbvr:term xmi:id="Term1018" signifier="Veiculo" />
+  <sbvr:text xmi:id="Bicicleta" value="Bicicleta" />
+  <sbvr:text xmi:id="Caminhao" value="Caminhao" />
+  <sbvr:text xmi:id="Carro" value="Automovel" />
+  <sbvr:text xmi:id="Carro" value="Carro" />
+  <sbvr:text xmi:id="Cor" value="Cor" />
+  <sbvr:text xmi:id="Moto" value="Moto" />
+  <sbvr:text xmi:id="Motor" value="Motor" />
+  <sbvr:text xmi:id="Pessoa" value="Individuo" />
+  <sbvr:text xmi:id="Pessoa" value="Pessoa" />
+  <sbvr:text xmi:id="Placa" value="Placa" />
+  <sbvr:text xmi:id="Porta" value="Porta" />
+  <sbvr:text xmi:id="Potencia" value="Potencia" />
+  <sbvr:text xmi:id="Roda" value="Roda" />
+  <sbvr:text xmi:id="Veiculo" value="Veiculo" />
+</xmi:XMI>

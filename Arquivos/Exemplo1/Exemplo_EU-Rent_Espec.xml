@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RuleXpressPublication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\Program Files\RuleArts\RuleXpress\Documents\rx_itemreport.xsd" language="en-us" reportdate="2012-10-17" reportmember="RuleXpress Administrator" title="Exemplo_EU-Rent_Espec">
+  <Layout>
+    <Document orientation="portrait">
+      <EmptyProperties show="false" />
+    </Document>
+    <Header show="true">
+      <ShortcutList show="true" />
+      <AppliedFilters show="true" />
+      <GeneralInformation show="true" />
+    </Header>
+    <Item>
+      <Term show="true" displayMode="table">
+        <UsedByTerm show="true" displayMode="reference" />
+        <UsesTerm show="true" displayMode="reference" />
+        <UsedByFact show="true" displayMode="reference" />
+        <UsesFact show="true" displayMode="reference" />
+        <UsedByRule show="true" displayMode="reference" />
+        <UsedByDecisionTable show="true" displayMode="reference" />
+      </Term>
+      <Fact show="true" displayMode="list">
+        <UsedByTerm show="true" displayMode="reference" />
+        <UsesTerm show="true" displayMode="reference" />
+        <UsesFactSymbol show="true" displayMode="reference" />
+        <UsedByRule show="true" displayMode="reference" />
+      </Fact>
+      <FactSymbol show="true" displayMode="list">
+        <UsedByFact show="true" displayMode="reference" />
+      </FactSymbol>
+      <Rule show="true" displayMode="list">
+        <UsesTerm show="true" displayMode="reference" />
+        <UsesFact show="true" displayMode="reference" />
+        <RuleRelation show="true" displayMode="reference" />
+        <UsedByRuleGroup show="true" displayMode="reference" />
+      </Rule>
+      <DecisionTable show="true" displayMode="list">
+        <UsesTerm show="true" displayMode="reference" />
+        <UsedByDecisionTable show="true" displayMode="reference" />
+        <UsesDecisionTable show="true" displayMode="reference" />
+        <UsedByRuleGroup show="true" displayMode="reference" />
+      </DecisionTable>
+      <RuleGroup show="true" displayMode="list">
+        <UsesRule show="true" displayMode="reference" />
+        <UsesDecisionTable show="true" displayMode="reference" />
+        <UsedByRuleGroup show="true" displayMode="reference" />
+        <UsesRuleGroup show="true" displayMode="reference" />
+      </RuleGroup>
+      <QualityItem show="true" displayMode="list">
+        <UsedByTerm show="true" displayMode="reference" />
+        <UsesTerm show="true" displayMode="reference" />
+        <UsedByFact show="true" displayMode="reference" />
+        <UsesFact show="true" displayMode="reference" />
+        <UsedByFactSymbol show="true" displayMode="reference" />
+        <UsedByRule show="true" displayMode="reference" />
+        <UsedByDecisionTable show="true" displayMode="reference" />
+        <UsesRule show="true" displayMode="reference" />
+        <UsesDecisionTable show="true" displayMode="reference" />
+        <RuleRelation show="true" displayMode="reference" />
+        <UsedByRuleGroup show="true" displayMode="reference" />
+        <UsesRuleGroup show="true" displayMode="reference" />
+      </QualityItem>
+    </Item>
+  </Layout>
+  <AppliedFilter />
+  <Content>
+    <Community ID="Comm1" signifier="RuleXpress" description="" />
+    <Term ID="Term1031" signifier="appoints" qualitygrade="5">
+      <ViolatedQualityItem>
+        <Ref>QAItm2001</Ref>
+        <Text>Concept must be defined, computed or derived</Text>
+      </ViolatedQualityItem>
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="appoints" PropertyValueID="2362">
+            <Text>appoints</Text>
+          </Value>
+          <SubProperty ConceptID="95">
+            <Name>WPAR</Name>
+            <Value />
+          </SubProperty>
+        </ItemProperty>
+      </ItemProperties>
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="4.74" PropertyValueID="2374">
+            <Text>4.74</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition />
+      <UsedByTerm>
+        <Ref>Term1027</Ref>
+        <Text>company</Text>
+      </UsedByTerm>
+      <UsedByRule>
+        <Ref>Rule1006</Ref>
+        <Text>Rule 11</Text>
+      </UsedByRule>
+    </Term>
+    <Term ID="Term1027" signifier="company" qualitygrade="5">
+      <ViolatedQualityItem>
+        <Ref>QAItm4002</Ref>
+        <Text>A set of Definitions must not be circular</Text>
+      </ViolatedQualityItem>
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="company" PropertyValueID="2329">
+            <Text>company</Text>
+          </Value>
+          <SubProperty ConceptID="95">
+            <Name>WPAR</Name>
+            <Value />
+          </SubProperty>
+        </ItemProperty>
+      </ItemProperties>
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="4.74" PropertyValueID="2351">
+            <Text>4.74</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition>
+        <TermRef idref="Term1031">appoints</TermRef>
+        <Text> </Text>
+        <TermRef idref="Term1028">officer</TermRef>
+      </Definition>
+      <UsedByTerm>
+        <Ref>Term1030</Ref>
+        <Text>EU-Rent</Text>
+      </UsedByTerm>
+      <UsedByTerm>
+        <Ref>Term1028</Ref>
+        <Text>officer</Text>
+      </UsedByTerm>
+    </Term>
+    <Term ID="Term1030" signifier="EU-Rent" qualitygrade="10">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="EU-Rent" PropertyValueID="2352">
+            <Text>EU-Rent</Text>
+          </Value>
+          <SubProperty ConceptID="95">
+            <Name>WPAR</Name>
+            <Value />
+          </SubProperty>
+        </ItemProperty>
+      </ItemProperties>
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="10" PropertyValueID="2375">
+            <Text>10</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition>
+        <Text>is a </Text>
+        <TermRef idref="Term1027">company</TermRef>
+      </Definition>
+      <UsedByRule>
+        <Ref>Rule1006</Ref>
+        <Text>Rule 11</Text>
+      </UsedByRule>
+    </Term>
+    <Term ID="Term1028" signifier="officer" qualitygrade="5">
+      <ViolatedQualityItem>
+        <Ref>QAItm4002</Ref>
+        <Text>A set of Definitions must not be circular</Text>
+      </ViolatedQualityItem>
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="officer" PropertyValueID="2335">
+            <Text>officer</Text>
+          </Value>
+          <SubProperty ConceptID="95">
+            <Name>WPAR</Name>
+            <Value />
+          </SubProperty>
+        </ItemProperty>
+      </ItemProperties>
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="4.74" PropertyValueID="2376">
+            <Text>4.74</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition>
+        <Text>is an instance of </Text>
+        <TermRef idref="Term1027">company</TermRef>
+      </Definition>
+      <UsedByTerm>
+        <Ref>Term1027</Ref>
+        <Text>company</Text>
+      </UsedByTerm>
+      <UsedByRule>
+        <Ref>Rule1006</Ref>
+        <Text>Rule 11</Text>
+      </UsedByRule>
+    </Term>
+    <FactSymbol ID="FctSym4" signifier="...[1] consists of ...[2]" qualitygrade="10">
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="10" PropertyValueID="2225">
+            <Text>10</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <FactSymbolExpression>
+        <Text>...[1] consists of ...[2]</Text>
+      </FactSymbolExpression>
+      <FactSymbolExpression>
+        <Text>...[2] is included in ...[1]</Text>
+      </FactSymbolExpression>
+    </FactSymbol>
+    <FactSymbol ID="FctSym3" signifier="...[1] has ...[2]" qualitygrade="10">
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="10" PropertyValueID="2226">
+            <Text>10</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <FactSymbolExpression>
+        <Text>...[1] has ...[2]</Text>
+      </FactSymbolExpression>
+      <FactSymbolExpression>
+        <Text>...[2] is property of ...[1]</Text>
+      </FactSymbolExpression>
+    </FactSymbol>
+    <FactSymbol ID="FctSym2" signifier="...[2] is a category of ...[1]" qualitygrade="10">
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="10" PropertyValueID="2227">
+            <Text>10</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <FactSymbolExpression>
+        <Text>...[2] is a category of ...[1]</Text>
+      </FactSymbolExpression>
+      <FactSymbolExpression>
+        <Text>...[1] is categorized as ...[2]</Text>
+      </FactSymbolExpression>
+    </FactSymbol>
+    <FactSymbol ID="FctSym1" signifier="...[2] is an instance of ...[1]" qualitygrade="10">
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="10" PropertyValueID="2228">
+            <Text>10</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <FactSymbolExpression>
+        <Text>...[2] is an instance of ...[1]</Text>
+      </FactSymbolExpression>
+      <FactSymbolExpression>
+        <Text>...[1] has the instance ...[2]</Text>
+      </FactSymbolExpression>
+    </FactSymbol>
+    <Rule ID="Rule1006" signifier="Rule 11" qualitygrade="10">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Name</Name>
+          <Value StrVal="Rule 11" PropertyValueID="2412">
+            <Text>Rule 11</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="10" PropertyValueID="2414">
+            <Text>10</Text>
+          </Value>
+        </ItemProperty>
+        <ItemProperty ConceptID="122">
+          <Name>Status</Name>
+          <Value />
+        </ItemProperty>
+      </ItemProperties>
+      <Statement>
+        <DerivedTermRef idref="Term1030">EU-Rent</DerivedTermRef>
+        <Text> must </Text>
+        <TermRef idref="Term1031">appoints</TermRef>
+        <Text> at least 3 </Text>
+        <TermRef idref="Term1028">officer</TermRef>
+      </Statement>
+    </Rule>
+    <QualityItem ID="QAItm4002" name="A set of Definitions must not be circular">
+      <Description>
+        <p>Circular sets of Definitions literally express meanings that can never be pinned down (resolved) precisely. Left unclear is whether two or more things are the same, or if not, how exactly they differ. A circular set of Definitions is generally of the form:</p>
+<ul>
+	<li>"an X is a Y that ...", "a Y is an X that ...", </li>
+	<li>"an X is a Y that ...", "a Y is a Z that ...", "a Z is an X that ...".</li>
+	<li>... and so on.</li>
+</ul></Description>
+      <Motivation>
+        <p>To ensure that all Definitions lead to meaningful distinctions.</p>
+      </Motivation>
+      <Examples>
+        <h4>Improper example:</h4>
+<ul>
+	<li>Definition of Product: an item needed by a party </li>
+	<li>Definition of Item: a product ordered by a customer</li>
+</ul>
+<h4>Proper:</h4>
+<ul>
+	<li>Definition of Product: a good produced for sale </li>
+	<li>Definition of Item: a good ordered by a customer</li>
+	<li>Definition of Good: (as per dictionary definition)</li>
+</ul></Examples>
+      <UsedByTerm>
+        <Ref>Term1027</Ref>
+        <Text>company</Text>
+      </UsedByTerm>
+      <UsedByTerm>
+        <Ref>Term1028</Ref>
+        <Text>officer</Text>
+      </UsedByTerm>
+    </QualityItem>
+    <QualityItem ID="QAItm2001" name="Concept must be defined, computed or derived">
+      <Description>
+        <p>Every base Term (one that is not derived or computed) must have an explicit Definition to convey its meaning. (In straightforward cases, the Definition can be based directly on a dictionary definition.) Every derived or computed Term must have a Rule indicating the logic for its derivation or computation, a Definition, or optionally, both.</p>
+      </Description>
+      <Motivation>
+        <p>To ensure the meaning of a term has been made explicit.<br />
+To avoid misinterpretation.</p>
+      </Motivation>
+      <Examples>
+        <p>Example term: Salary</p>
+
+<p>Definition: Salary is ...<br />
+Computation: Salary must be computed as ...
+Derivation: Salary is a [other known term] that ...</p></Examples>
+      <UsedByTerm>
+        <Ref>Term1031</Ref>
+        <Text>appoints</Text>
+      </UsedByTerm>
+    </QualityItem>
+  </Content>
+</RuleXpressPublication>

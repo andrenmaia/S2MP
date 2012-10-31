@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RuleXpressPublication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\Program Files\RuleArts\RuleXpress\Documents\rx_itemreport.xsd" language="en-us" reportdate="2012-10-11" reportmember="RuleXpress Administrator" title="Complete RuleXpress Report 2">
+  <Layout>
+    <Document orientation="portrait">
+      <EmptyProperties show="false" />
+    </Document>
+    <Header show="true">
+      <ShortcutList show="true" />
+      <AppliedFilters show="true" />
+      <GeneralInformation show="true" />
+    </Header>
+    <Item>
+      <Term show="true" displayMode="table">
+        <UsedByTerm show="true" displayMode="reference" />
+        <UsesTerm show="true" displayMode="reference" />
+        <UsedByFact show="true" displayMode="reference" />
+        <UsesFact show="true" displayMode="reference" />
+        <UsedByRule show="true" displayMode="reference" />
+        <UsedByDecisionTable show="true" displayMode="reference" />
+      </Term>
+      <Fact show="true" displayMode="list">
+        <UsedByTerm show="true" displayMode="reference" />
+        <UsesTerm show="true" displayMode="reference" />
+        <UsesFactSymbol show="true" displayMode="reference" />
+        <UsedByRule show="true" displayMode="reference" />
+      </Fact>
+      <FactSymbol show="true" displayMode="list">
+        <UsedByFact show="true" displayMode="reference" />
+      </FactSymbol>
+      <Rule show="true" displayMode="list">
+        <UsesTerm show="true" displayMode="reference" />
+        <UsesFact show="true" displayMode="reference" />
+        <RuleRelation show="true" displayMode="reference" />
+        <UsedByRuleGroup show="true" displayMode="reference" />
+      </Rule>
+      <DecisionTable show="true" displayMode="list">
+        <UsesTerm show="true" displayMode="reference" />
+        <UsedByDecisionTable show="true" displayMode="reference" />
+        <UsesDecisionTable show="true" displayMode="reference" />
+        <UsedByRuleGroup show="true" displayMode="reference" />
+      </DecisionTable>
+      <RuleGroup show="true" displayMode="list">
+        <UsesRule show="true" displayMode="reference" />
+        <UsesDecisionTable show="true" displayMode="reference" />
+        <UsedByRuleGroup show="true" displayMode="reference" />
+        <UsesRuleGroup show="true" displayMode="reference" />
+      </RuleGroup>
+      <QualityItem show="true" displayMode="list">
+        <UsedByTerm show="true" displayMode="reference" />
+        <UsesTerm show="true" displayMode="reference" />
+        <UsedByFact show="true" displayMode="reference" />
+        <UsesFact show="true" displayMode="reference" />
+        <UsedByFactSymbol show="true" displayMode="reference" />
+        <UsedByRule show="true" displayMode="reference" />
+        <UsedByDecisionTable show="true" displayMode="reference" />
+        <UsesRule show="true" displayMode="reference" />
+        <UsesDecisionTable show="true" displayMode="reference" />
+        <RuleRelation show="true" displayMode="reference" />
+        <UsedByRuleGroup show="true" displayMode="reference" />
+        <UsesRuleGroup show="true" displayMode="reference" />
+      </QualityItem>
+    </Item>
+  </Layout>
+  <AppliedFilter />
+  <Content>
+    <Community ID="Comm1" signifier="RuleXpress" description="" />
+    <Term ID="Term1025" signifier="Caminhao" qualitygrade="0">
+      <ViolatedQualityItem>
+        <Ref>QAItm4001</Ref>
+        <Text>The Term defined by a Definition must not be used to initiate the Definition</Text>
+      </ViolatedQualityItem>
+      <ViolatedQualityItem>
+        <Ref>QAItm2000</Ref>
+        <Text>A Term should be used in a least one Rule Statement or Definition</Text>
+      </ViolatedQualityItem>
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Caminhao" PropertyValueID="2296">
+            <Text>Caminhao</Text>
+          </Value>
+          <SubProperty ConceptID="95">
+            <Name>WPAR</Name>
+            <Value />
+          </SubProperty>
+        </ItemProperty>
+      </ItemProperties>
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="0" PropertyValueID="2323">
+            <Text>0</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition>
+        <TermRef idref="Term1025">Caminhao</TermRef>
+        <Text> is a </Text>
+        <TermRef idref="Term1026">Veiculo</TermRef>
+      </Definition>
+      <UsedByTerm>
+        <Ref>Term1025</Ref>
+        <Text>Caminhao</Text>
+      </UsedByTerm>
+    </Term>
+    <Term ID="Term1023" signifier="Carro" qualitygrade="0">
+      <ViolatedQualityItem>
+        <Ref>QAItm4001</Ref>
+        <Text>The Term defined by a Definition must not be used to initiate the Definition</Text>
+      </ViolatedQualityItem>
+      <ViolatedQualityItem>
+        <Ref>QAItm2000</Ref>
+        <Text>A Term should be used in a least one Rule Statement or Definition</Text>
+      </ViolatedQualityItem>
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Carro" PropertyValueID="2284">
+            <Text>Carro</Text>
+          </Value>
+          <SubProperty ConceptID="95">
+            <Name>WPAR</Name>
+            <Value />
+          </SubProperty>
+        </ItemProperty>
+      </ItemProperties>
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="0" PropertyValueID="2318">
+            <Text>0</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition>
+        <TermRef idref="Term1023">Carro</TermRef>
+        <Text> is a </Text>
+        <TermRef idref="Term1026">Veiculo</TermRef>
+      </Definition>
+      <UsedByTerm>
+        <Ref>Term1023</Ref>
+        <Text>Carro</Text>
+      </UsedByTerm>
+    </Term>
+    <Term ID="Term1024" signifier="Moto" qualitygrade="0">
+      <ViolatedQualityItem>
+        <Ref>QAItm4001</Ref>
+        <Text>The Term defined by a Definition must not be used to initiate the Definition</Text>
+      </ViolatedQualityItem>
+      <ViolatedQualityItem>
+        <Ref>QAItm2000</Ref>
+        <Text>A Term should be used in a least one Rule Statement or Definition</Text>
+      </ViolatedQualityItem>
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Moto" PropertyValueID="2290">
+            <Text>Moto</Text>
+          </Value>
+          <SubProperty ConceptID="95">
+            <Name>WPAR</Name>
+            <Value />
+          </SubProperty>
+        </ItemProperty>
+      </ItemProperties>
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="0" PropertyValueID="2324">
+            <Text>0</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition>
+        <TermRef idref="Term1024">Moto</TermRef>
+        <Text> is a </Text>
+        <TermRef idref="Term1026">Veiculo</TermRef>
+      </Definition>
+      <UsedByTerm>
+        <Ref>Term1024</Ref>
+        <Text>Moto</Text>
+      </UsedByTerm>
+    </Term>
+    <Term ID="Term1026" signifier="Veiculo" qualitygrade="5">
+      <ViolatedQualityItem>
+        <Ref>QAItm4001</Ref>
+        <Text>The Term defined by a Definition must not be used to initiate the Definition</Text>
+      </ViolatedQualityItem>
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Veiculo" PropertyValueID="2305">
+            <Text>Veiculo</Text>
+          </Value>
+          <SubProperty ConceptID="95">
+            <Name>WPAR</Name>
+            <Value />
+          </SubProperty>
+        </ItemProperty>
+      </ItemProperties>
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="4.74" PropertyValueID="2325">
+            <Text>4.74</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition>
+        <TermRef idref="Term1026">Veiculo</TermRef>
+        <Text> is a Transportation</Text>
+      </Definition>
+      <UsedByTerm>
+        <Ref>Term1025</Ref>
+        <Text>Caminhao</Text>
+      </UsedByTerm>
+      <UsedByTerm>
+        <Ref>Term1023</Ref>
+        <Text>Carro</Text>
+      </UsedByTerm>
+      <UsedByTerm>
+        <Ref>Term1024</Ref>
+        <Text>Moto</Text>
+      </UsedByTerm>
+      <UsedByTerm>
+        <Ref>Term1026</Ref>
+        <Text>Veiculo</Text>
+      </UsedByTerm>
+      <UsedByRule>
+        <Ref>Rule1005</Ref>
+        <Text>Rule 11</Text>
+      </UsedByRule>
+    </Term>
+    <FactSymbol ID="FctSym4" signifier="...[1] consists of ...[2]" qualitygrade="10">
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="10" PropertyValueID="2225">
+            <Text>10</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <FactSymbolExpression>
+        <Text>...[1] consists of ...[2]</Text>
+      </FactSymbolExpression>
+      <FactSymbolExpression>
+        <Text>...[2] is included in ...[1]</Text>
+      </FactSymbolExpression>
+    </FactSymbol>
+    <FactSymbol ID="FctSym3" signifier="...[1] has ...[2]" qualitygrade="10">
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="10" PropertyValueID="2226">
+            <Text>10</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <FactSymbolExpression>
+        <Text>...[1] has ...[2]</Text>
+      </FactSymbolExpression>
+      <FactSymbolExpression>
+        <Text>...[2] is property of ...[1]</Text>
+      </FactSymbolExpression>
+    </FactSymbol>
+    <FactSymbol ID="FctSym2" signifier="...[2] is a category of ...[1]" qualitygrade="10">
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="10" PropertyValueID="2227">
+            <Text>10</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <FactSymbolExpression>
+        <Text>...[2] is a category of ...[1]</Text>
+      </FactSymbolExpression>
+      <FactSymbolExpression>
+        <Text>...[1] is categorized as ...[2]</Text>
+      </FactSymbolExpression>
+    </FactSymbol>
+    <FactSymbol ID="FctSym1" signifier="...[2] is an instance of ...[1]" qualitygrade="10">
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="10" PropertyValueID="2228">
+            <Text>10</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <FactSymbolExpression>
+        <Text>...[2] is an instance of ...[1]</Text>
+      </FactSymbolExpression>
+      <FactSymbolExpression>
+        <Text>...[1] has the instance ...[2]</Text>
+      </FactSymbolExpression>
+    </FactSymbol>
+    <Rule ID="Rule1005" signifier="Rule 11" qualitygrade="10">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Name</Name>
+          <Value StrVal="Rule 11" PropertyValueID="2312">
+            <Text>Rule 11</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <ItemProperties>
+        <GroupName>B. Management</GroupName>
+        <ItemProperty ConceptID="30">
+          <Name>Quality Grade</Name>
+          <Value RealVal="10" PropertyValueID="2326">
+            <Text>10</Text>
+          </Value>
+        </ItemProperty>
+        <ItemProperty ConceptID="122">
+          <Name>Status</Name>
+          <Value />
+        </ItemProperty>
+      </ItemProperties>
+      <Statement>
+        <TermRef idref="Term1026">Veiculo</TermRef>
+        <Text> must have Roda</Text>
+      </Statement>
+    </Rule>
+    <QualityItem ID="QAItm4001" name="The Term defined by a Definition must not be used to initiate the Definition">
+      <Description>
+        <p>A Definition should never be given in the form of "An X is an X that ...", which implies there is some difference between X and that same X referenced a second time. Any given thing "X" is always simply itself. Such "self-circular definitions" cause ambiguity since they fail to express the intended meaning cleanly.</p>
+      </Description>
+      <Motivation>
+        <ul>
+	<li>To ensure that the wording of Definitions is sensible and meaningful.</li>
+	<li>To avoid distinctions that are logically impossible.</li>
+</ul>
+      </Motivation>
+      <Examples>
+        <h4>Improper example:</h4>
+<p>Definition of Party: a party with legal standing</p>
+<h4>Proper:</h4>
+<p>Definition of Party: a person or organization with legal standing</p>
+</Examples>
+      <UsedByTerm>
+        <Ref>Term1024</Ref>
+        <Text>Moto</Text>
+      </UsedByTerm>
+      <UsedByTerm>
+        <Ref>Term1023</Ref>
+        <Text>Carro</Text>
+      </UsedByTerm>
+      <UsedByTerm>
+        <Ref>Term1026</Ref>
+        <Text>Veiculo</Text>
+      </UsedByTerm>
+      <UsedByTerm>
+        <Ref>Term1025</Ref>
+        <Text>Caminhao</Text>
+      </UsedByTerm>
+    </QualityItem>
+    <QualityItem ID="QAItm2000" name="A Term should be used in at least one Rule Statement or Definition">
+      <Description>
+        <p>A good Vocabulary is one that covers all the Concepts the business needs – and no more. If a Term has been supplanted by some other Term(s), or remains unused in building Definitions or expressing Rules, it should be removed from the Vocabulary.</p>
+      </Description>
+      <Motivation>
+        <p>To keep a Vocabulary as trim as possible.<br />
+To ensure no Term is overlooked as the Vocabulary is developed, deployed or revised.</p>
+      </Motivation>
+      <Examples>
+        <p>No samples for the selected quality rule are available.</p>
+      </Examples>
+      <UsedByTerm>
+        <Ref>Term1023</Ref>
+        <Text>Carro</Text>
+      </UsedByTerm>
+      <UsedByTerm>
+        <Ref>Term1024</Ref>
+        <Text>Moto</Text>
+      </UsedByTerm>
+      <UsedByTerm>
+        <Ref>Term1025</Ref>
+        <Text>Caminhao</Text>
+      </UsedByTerm>
+    </QualityItem>
+  </Content>
+</RuleXpressPublication>

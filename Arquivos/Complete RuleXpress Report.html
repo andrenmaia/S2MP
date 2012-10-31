@@ -1,0 +1,887 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Complete RuleXpress Report</title>
+<style type="text/css"><!--body {
+	font: 0.92em sans-serif;
+	page-break-inside: avoid;
+	background: #fffff5;
+	line-height: 12pt;
+}
+
+img {
+	border: 0;
+}
+
+/* links */
+
+a, a:visited, a:active, a:hover {
+	color: blue;
+}
+
+a.violatedqualityitem, a.violatedqualityitem:visited, a.violatedqualityitem:active {
+	color: blue;
+}
+
+a.shortcut, a.shortcut:visited, a.shortcut:active {
+	color: royalblue;
+}
+
+a.term, a.term:visited, a.term:active {
+	color: blue;
+}
+
+.termref, .termref:visited, .termref:active {
+	color: blue;
+}
+
+.derivedtermref, .derivedtermref:visited, .derivedtermref:active {
+	color: green;
+}
+
+.termreftext {
+	color: blue;
+}
+
+.derivedtermreftext {
+	color: olive;
+}
+
+.itemproperty {
+
+}
+
+.subitemproperty {
+
+}
+/* diff color coding */
+
+span.deleted {
+	color: #afafaf;
+	text-decoration: line-through;
+}
+
+span.moved {
+	color: blue;
+}
+
+span.inserted {
+	color: green;
+}
+
+span.missing {
+	color: red;
+}
+
+/* other text coloring */
+
+.synonym {
+	color: #5d5e80;
+	font-style: italic;
+}
+
+.definition, .statement {
+	font-weight: normal;
+}
+
+.signifier {
+	font-weight: bold;
+}
+
+/* headers */
+
+h2 {
+	color: #10147f;
+}
+
+h3 {
+	color: #10147f;
+	font-variant: small-caps;
+	border-bottom: 1px solid #10147f;	
+}
+
+/* h4 is reserved for headers in Quality Item descriptions etc. */
+
+h4 {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+h5 {
+	color: #10147f;
+	background: #e8f3ff;
+	padding-left: 0.5em;
+	margin-bottom: 0.3em;
+}
+
+/* tables */
+
+table {
+	border: 0;
+	border-collapse: collapse;
+}
+
+table, td, th {
+	font-size: 0.92em;
+	page-break-inside: avoid;
+	vertical-align: top;
+}
+
+td, th {
+	padding: 5px;
+}
+
+th {
+	text-align: left;
+}
+
+tr.item td {
+	border-top: 1px dotted #ddd;
+}
+
+tr.oddrow {
+	background-color: #f2f2ea;
+}
+
+td.usage, tr.usage td {
+	background-color: #f0f6ef;
+	border-top: 1px dotted olive;
+	padding: 5px;
+}
+
+td.usageheader, tr.usageheader td {
+	background-color: #fof6ef;
+	padding: 5px;
+}
+
+td.tablerowspacerwithborder, tr.tablerowspacerwithborder td {
+	border-top: 1px dotted olive;
+}
+
+td h3 {
+	font-size: 1.3em;
+}
+
+td.header {
+	color: #808000;
+	font-weight: bold;
+}
+
+td.subheader {
+	color: #a6a600;
+	font-weight: bold;
+}
+
+th, td.key {
+	background: #e8f3ff;
+	color: #10147f;
+	font-weight: bold;
+}
+
+/* decision tables */
+
+table.decisiontable {
+	border: 1px solid #444;
+	margin: 10px 0px 10px 10px;
+}
+
+table.decisiontable td {
+	border: 1px solid #444;
+}
+
+/* lists */
+
+ul, ol {
+	padding-left: 1.1em;
+	margin: 0;
+	list-style-type: square;
+}
+
+li.rulename {
+	list-style-type: circle;
+	margin-left: 15px;
+}
+-->
+</style>
+</head>
+<body><a href="http://www.rulearts.com" title="RuleArts"><img src="http://files.rulearts.com/downloads/Public/RuleXpress_tm_sm.png" alt="RuleXpress"></a><h2></h2>
+<table>
+<tr>
+<td class="header">Title</td>
+<td>Complete RuleXpress Report</td>
+</tr>
+<tr>
+<td class="header">Date</td>
+<td>2012-10-10</td>
+</tr>
+<tr>
+<td class="header">Member</td>
+<td>RuleXpress Administrator</td>
+</tr>
+<tr>
+<td class="header">Shortcut to Report Items</td>
+</tr>
+<tr>
+<td colspan="2">
+<ul>
+<li><a href="#RXRules" class="shortcut">Rules</a></li>
+<li><a href="#RXTerms" class="shortcut">Terms</a></li>
+<li><a href="#RXWordings" class="shortcut">Wordings</a></li>
+<li><a href="#RXViolatedQualityItems" class="shortcut">Violated Quality Item(s)</a></li>
+</ul>
+</td>
+</tr>
+</table>
+<h3>Community: RuleXpress</h3>
+<table>
+<tr>
+<td class="header">Description</td>
+<td colspan="3"></td>
+</tr>
+</table><!--Rules: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<h3><a name="RXRules"></a>Rules</h3>
+<table>
+<tr>
+<td class="key" colspan="3"><a name="Rule1001"></a><span class="signifier">Rule 11</span> <span class="definition"><tr>
+<td class="header">Statement</td>
+<td>Each <a href="#Term1010" class="termref" title="A Carro or Automovel is a Veiculo used to transport some Pessoa between places">Carro</a> has at least one <a href="#Term1016" class="termref" title="">Cor</a></td>
+</tr></span></td>
+</tr>
+<tr>
+<td class="subheader">B. Management</td>
+</tr>
+<tr class="itemproperty">
+<td>Quality Grade</td>
+<td>5.12</td>
+<td></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td class="header">Violated Quality Item(s)</td>
+</tr>
+<tr>
+<td colspan="3">
+<ul>
+<li><a href="#QAItm3000" class="violatedqualityitem">A Rule Statement must include a Rule Keyword</a></li>
+<li><a href="#QAItm3001" class="violatedqualityitem">A Rule Statement must include a preferred Rule Keyword</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="3"><a name="Rule1002"></a><span class="signifier">Rule 12</span> <span class="definition"><tr>
+<td class="header">Statement</td>
+<td>Each <a href="#Term1010" class="termref" title="A Carro or Automovel is a Veiculo used to transport some Pessoa between places">Carro</a> contains exactly one <a href="#Term1017" class="termref" title="">Placa</a>, exactly 4 <a href="#Term1013" class="termref" title="">Roda</a>, at least 2 <a href="#Term1012" class="termref" title="It is required that Porta be in a Carro , Automovel or Caminhao">Porta</a></td>
+</tr></span></td>
+</tr>
+<tr>
+<td class="subheader">B. Management</td>
+</tr>
+<tr class="itemproperty">
+<td>Quality Grade</td>
+<td>5.12</td>
+<td></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td class="header">Violated Quality Item(s)</td>
+</tr>
+<tr>
+<td colspan="3">
+<ul>
+<li><a href="#QAItm3000" class="violatedqualityitem">A Rule Statement must include a Rule Keyword</a></li>
+<li><a href="#QAItm3001" class="violatedqualityitem">A Rule Statement must include a preferred Rule Keyword</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="3"><a name="Rule1003"></a><span class="signifier">Rule 13</span> <span class="definition"><tr>
+<td class="header">Statement</td>
+<td>Each <a href="#Term1010" class="termref" title="A Carro or Automovel is a Veiculo used to transport some Pessoa between places">Carro</a> has exactly 4 <a href="#Term1013" class="termref" title="">Roda</a></td>
+</tr></span></td>
+</tr>
+<tr>
+<td class="subheader">B. Management</td>
+</tr>
+<tr class="itemproperty">
+<td>Quality Grade</td>
+<td>5.12</td>
+<td></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td class="header">Violated Quality Item(s)</td>
+</tr>
+<tr>
+<td colspan="3">
+<ul>
+<li><a href="#QAItm3000" class="violatedqualityitem">A Rule Statement must include a Rule Keyword</a></li>
+<li><a href="#QAItm3001" class="violatedqualityitem">A Rule Statement must include a preferred Rule Keyword</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+</table><!--DecisionTables: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $--><!--RuleGroups: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $--><!--Terms: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<h3><a name="RXTerms"></a>Terms</h3>
+<table>
+<tr>
+<td class="key">Term</td>
+<td class="key">Definition</td>
+<td class="key">Quality Grade</td>
+<td class="key">Violated Quality Item(s)</td>
+<td class="key">Used by Term(s)</td>
+<td class="key">Used by Rule(s)</td>
+</tr>
+<tr class="item">
+<td><a name="Term1021"></a><span class="signifier">Bicicleta</span></td>
+<td></td>
+<td>0</td>
+<td>
+<ul>
+<li><a href="#QAItm2000">A Term should be used in at least one Rule Statement or Definition</a></li>
+<li><a href="#QAItm2001">Concept must be defined, computed or derived</a></li>
+</ul>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="item">
+<td><a name="Term1020"></a><span class="signifier">Caminhao</span></td>
+<td></td>
+<td>4.74</td>
+<td>
+<ul>
+<li><a href="#QAItm2001">Concept must be defined, computed or derived</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#Term1012">Porta</a></li>
+</ul>
+</td>
+<td></td>
+</tr>
+<tr class="item">
+<td><a name="Term1010"></a><span class="signifier">Carro</span><span class="synonym">  (Automovel) </span></td>
+<td>A <a href="#Term1010" class="termref" title="A Carro or Automovel is a Veiculo used to transport some Pessoa between places">Carro</a> or <a href="#Term1010" class="termref" title="A Carro or Automovel is a Veiculo used to transport some Pessoa between places">Automovel</a> is a <a href="#Term1018" class="termref" title="">Veiculo</a> used to transport some <a href="#Term1014" class="termref" title="">Pessoa</a> between places</td>
+<td>4.74</td>
+<td>
+<ul>
+<li><a href="#QAItm4001">The Term defined by a Definition must not be used to initiate the Definition</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#Term1010">Carro</a></li>
+<li><a href="#Term1012">Porta</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#Rule1001">Rule 11</a></li>
+<li><a href="#Rule1002">Rule 12</a></li>
+<li><a href="#Rule1003">Rule 13</a></li>
+</ul>
+</td>
+</tr>
+<tr class="item">
+<td><a name="Term1016"></a><span class="signifier">Cor</span></td>
+<td></td>
+<td>4.74</td>
+<td>
+<ul>
+<li><a href="#QAItm2001">Concept must be defined, computed or derived</a></li>
+</ul>
+</td>
+<td></td>
+<td>
+<ul>
+<li><a href="#Rule1001">Rule 11</a></li>
+</ul>
+</td>
+</tr>
+<tr class="item">
+<td><a name="Term1019"></a><span class="signifier">Moto</span></td>
+<td></td>
+<td>0</td>
+<td>
+<ul>
+<li><a href="#QAItm2000">A Term should be used in at least one Rule Statement or Definition</a></li>
+<li><a href="#QAItm2001">Concept must be defined, computed or derived</a></li>
+</ul>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="item">
+<td><a name="Term1011"></a><span class="signifier">Motor</span></td>
+<td></td>
+<td>0</td>
+<td>
+<ul>
+<li><a href="#QAItm2000">A Term should be used in at least one Rule Statement or Definition</a></li>
+<li><a href="#QAItm2001">Concept must be defined, computed or derived</a></li>
+</ul>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="item">
+<td><a name="Term1014"></a><span class="signifier">Pessoa</span><span class="synonym">  (Individuo) </span></td>
+<td></td>
+<td>4.74</td>
+<td>
+<ul>
+<li><a href="#QAItm2001">Concept must be defined, computed or derived</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#Term1010">Carro</a></li>
+</ul>
+</td>
+<td></td>
+</tr>
+<tr class="item">
+<td><a name="Term1017"></a><span class="signifier">Placa</span></td>
+<td></td>
+<td>4.74</td>
+<td>
+<ul>
+<li><a href="#QAItm2001">Concept must be defined, computed or derived</a></li>
+</ul>
+</td>
+<td></td>
+<td>
+<ul>
+<li><a href="#Rule1002">Rule 12</a></li>
+</ul>
+</td>
+</tr>
+<tr class="item">
+<td><a name="Term1012"></a><span class="signifier">Porta</span></td>
+<td>It is required that <a href="#Term1012" class="termref" title="It is required that Porta be in a Carro , Automovel or Caminhao">Porta</a> be in a <a href="#Term1010" class="termref" title="A Carro or Automovel is a Veiculo used to transport some Pessoa between places">Carro</a>, <a href="#Term1010" class="termref" title="A Carro or Automovel is a Veiculo used to transport some Pessoa between places">Automovel</a> or <a href="#Term1020" class="termref" title="">Caminhao</a></td>
+<td>0</td>
+<td>
+<ul>
+<li><a href="#QAItm4001">The Term defined by a Definition must not be used to initiate the Definition</a></li>
+<li><a href="#QAItm2002">A Concept must not contain rule keywords</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#Term1012">Porta</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#Rule1002">Rule 12</a></li>
+</ul>
+</td>
+</tr>
+<tr class="item">
+<td><a name="Term1015"></a><span class="signifier">Potencia</span></td>
+<td></td>
+<td>0</td>
+<td>
+<ul>
+<li><a href="#QAItm2000">A Term should be used in at least one Rule Statement or Definition</a></li>
+<li><a href="#QAItm2001">Concept must be defined, computed or derived</a></li>
+</ul>
+</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="item">
+<td><a name="Term1013"></a><span class="signifier">Roda</span></td>
+<td></td>
+<td>4.74</td>
+<td>
+<ul>
+<li><a href="#QAItm2001">Concept must be defined, computed or derived</a></li>
+</ul>
+</td>
+<td></td>
+<td>
+<ul>
+<li><a href="#Rule1002">Rule 12</a></li>
+<li><a href="#Rule1003">Rule 13</a></li>
+</ul>
+</td>
+</tr>
+<tr class="item">
+<td><a name="Term1018"></a><span class="signifier">Veiculo</span></td>
+<td></td>
+<td>4.74</td>
+<td>
+<ul>
+<li><a href="#QAItm2001">Concept must be defined, computed or derived</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#Term1010">Carro</a></li>
+</ul>
+</td>
+<td></td>
+</tr>
+</table><!--Facts: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $--><!--FactSymbols: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<h3><a name="RXWordings"></a>Wordings</h3>
+<table>
+<tr>
+<td class="key" colspan="3"><a name="FctSym4"></a>...[1] consists of ...[2]<br>...[2] is included in ...[1]</td>
+</tr>
+<tr>
+<td class="subheader">B. Management</td>
+</tr>
+<tr class="itemproperty">
+<td>Quality Grade</td>
+<td>10</td>
+<td></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="3"><a name="FctSym3"></a>...[1] has ...[2]<br>...[2] is property of ...[1]</td>
+</tr>
+<tr>
+<td class="subheader">B. Management</td>
+</tr>
+<tr class="itemproperty">
+<td>Quality Grade</td>
+<td>10</td>
+<td></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="3"><a name="FctSym2"></a>...[2] is a category of ...[1]<br>...[1] is categorized as ...[2]</td>
+</tr>
+<tr>
+<td class="subheader">B. Management</td>
+</tr>
+<tr class="itemproperty">
+<td>Quality Grade</td>
+<td>10</td>
+<td></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="3"><a name="FctSym1"></a>...[2] is an instance of ...[1]<br>...[1] has the instance ...[2]</td>
+</tr>
+<tr>
+<td class="subheader">B. Management</td>
+</tr>
+<tr class="itemproperty">
+<td>Quality Grade</td>
+<td>10</td>
+<td></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td> </td>
+</tr>
+</table><!--QualityItems: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<h3><a name="RXViolatedQualityItems"></a>Violated Quality Item(s)</h3>
+<table>
+<tr>
+<td class="key" colspan="2"><a name="QAItm3001">A Rule Statement must include a preferred Rule Keyword</a></td>
+</tr>
+<tr>
+<td class="header">Description</td>
+<td><Description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>A Rule Keyword can be indicated as the preferred for a Community in writing Rules. A high degree of consistency in writing Rules can be achieved by always using these select Rule Keywords.</p>
+<ul>
+<li>Must (not)</li>
+<li>May ... only (if)</li>
+</ul></Description></td>
+</tr>
+<tr>
+<td class="header">Motivation</td>
+<td><Motivation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>To ensure a high degree of consistency in how Statements are indicated to be Rules.</p>
+</Motivation></td>
+</tr>
+<tr>
+<td class="header">Examples</td>
+<td><Examples xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<h4>Improper example:</h4>
+<p>It is obligatory that a deposit for a reservation using a credit card be processed the same day it is received if accompanied by a signed credit card authorization form.</p>
+<h4>Proper example:</h4>
+<p>A deposit for a reservation using a credit card must be processed the same day it is received if accompanied by a signed credit card authorization form.</p></Examples></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td colspan="3" class="header">Used by Rule(s)</td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Rule1001">Rule 11</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Rule1002">Rule 12</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Rule1003">Rule 13</a></td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="2"><a name="QAItm3000">A Rule Statement must include a Rule Keyword</a></td>
+</tr>
+<tr>
+<td class="header">Description</td>
+<td><Description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>A wide range of word phrases can signal that a Statement is clearly intended as a Rule. One of these Rule Keywords should appear in each Rule.</p>
+<h4>Preferred:</h4>
+<ul>
+<li>Must (not)</li>
+<li>May ... only (if)</li>
+</ul>
+<h4>Other:</h4>
+<ul>
+<li>Obligatory, Obligation</li>
+<li>Oblige, Obliges, Obliged</li>
+<li>Required, Requires</li>
+<li>Should (not)</li>
+<li>Mandatory</li>
+<li>Mandate, Mandates (as verb), Mandated</li>
+<li>Need, Needs (as verb)</li>
+<li>Ought (not) (to)</li>
+<li>Have (to), has (to)</li>
+<li>Prohibition, Prohibited, Prohibits</li>
+<li>Forbidden, Forbids, Forbidding</li>
+<li>(no/not/does not ... ) Permission, Permitted, Permit</li>
+<li>Mustn't, Shouldn't</li>
+<li>(not) Allowed, Disallowed</li>
+<li>Only (if) ... may</li>
+<li>Permitted .. only (if), Only (if) ... permitted, Permits ... only (if)</li>
+<li>Allowed .. only (if), Only (if) ... allowed, Allows ... only (if)</li>
+<li>Need not ... only (if)</li>
+<li>Only (if) … not mandatory, Only (if) … not mandated, Not mandatory … only (if), Not mandated … only (if), Not mandate(s) (as verb) … only (if)</li>
+<li>Only (if) … not prohibited, Only (if) … not forbidden, Only (if) … not required, Only (if) … not disallowed</li>
+<li>Not prohibited … only (if), Not prohibit… only (if)</li>
+<li>Not forbidden … only (if), Not forbid … only (if)</li>
+<li>Not required… only (if), Does not require …. only (if)</li>
+<li>Not disallow… only (if), Not disallowed … only (if)</li>
+</ul></Description></td>
+</tr>
+<tr>
+<td class="header">Motivation</td>
+<td><Motivation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>To signal explicitly that a Statement expresses some form of Rule.</p>
+</Motivation></td>
+</tr>
+<tr>
+<td class="header">Examples</td>
+<td><Examples xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<h4>Improper example:</h4>
+<p>A deposit for a reservation using a credit card will be processed the same day it is received if accompanied by a signed credit card authorization form.</p>
+<h4>Proper example:</h4>
+<p>It is mandated that a deposit for a reservation using a credit card be processed the same day it is received if accompanied by a signed credit card authorization form.</p></Examples></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td colspan="3" class="header">Used by Rule(s)</td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Rule1001">Rule 11</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Rule1002">Rule 12</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Rule1003">Rule 13</a></td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="2"><a name="QAItm2002">A Concept must not contain rule keywords</a></td>
+</tr>
+<tr>
+<td class="header">Description</td>
+<td><Description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>The Definition of a Concept should express its essence – what it fundamentally means to the business – not indicate or suggest any Rule or other Guidance. All Rules and other Guidance should be expressed separately from Definitions, so that change to the Rules can be managed more effectively.</p>
+</Description></td>
+</tr>
+<tr>
+<td class="header">Motivation</td>
+<td><Motivation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>To maintain a clear separation between Definitions and Guidance Statements.<br>
+To create as stable a base of meanings as possible.<br>
+To enable rapid change.</p>
+</Motivation></td>
+</tr>
+<tr>
+<td class="header">Examples</td>
+<td><Examples xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<h4>Improper Example</h4>
+<ul>
+<li>Term: Individual Customer</li>
+<li>Definition: a Customer that must not be a company, organization or legal entity</li>
+</ul>
+<h4>Proper Example</h4>
+<ul>
+<li>Term: Individual Customer</li>
+<li>Definition: a Customer that is a Person acting in his/her own behalf</li>
+<li>Rule: An Individual Customer must not be a company, organization or legal entity.</li>
+</ul></Examples></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td colspan="3" class="header">Used by Term(s)</td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1012">Porta</a></td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="2"><a name="QAItm4001">The Term defined by a Definition must not be used to initiate the Definition</a></td>
+</tr>
+<tr>
+<td class="header">Description</td>
+<td><Description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>A Definition should never be given in the form of "An X is an X that ...", which implies there is some difference between X and that same X referenced a second time. Any given thing "X" is always simply itself. Such "self-circular definitions" cause ambiguity since they fail to express the intended meaning cleanly.</p>
+</Description></td>
+</tr>
+<tr>
+<td class="header">Motivation</td>
+<td><Motivation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ul>
+<li>To ensure that the wording of Definitions is sensible and meaningful.</li>
+<li>To avoid distinctions that are logically impossible.</li>
+</ul>
+</Motivation></td>
+</tr>
+<tr>
+<td class="header">Examples</td>
+<td><Examples xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<h4>Improper example:</h4>
+<p>Definition of Party: a party with legal standing</p>
+<h4>Proper:</h4>
+<p>Definition of Party: a person or organization with legal standing</p>
+</Examples></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td colspan="3" class="header">Used by Term(s)</td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1012">Porta</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1010">Carro</a></td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="2"><a name="QAItm2001">Concept must be defined, computed or derived</a></td>
+</tr>
+<tr>
+<td class="header">Description</td>
+<td><Description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>Every base Term (one that is not derived or computed) must have an explicit Definition to convey its meaning. (In straightforward cases, the Definition can be based directly on a dictionary definition.) Every derived or computed Term must have a Rule indicating the logic for its derivation or computation, a Definition, or optionally, both.</p>
+</Description></td>
+</tr>
+<tr>
+<td class="header">Motivation</td>
+<td><Motivation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>To ensure the meaning of a term has been made explicit.<br>
+To avoid misinterpretation.</p>
+</Motivation></td>
+</tr>
+<tr>
+<td class="header">Examples</td>
+<td><Examples xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>Example term: Salary</p>
+<p>Definition: Salary is ...<br>
+Computation: Salary must be computed as ...
+Derivation: Salary is a [other known term] that ...</p></Examples></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td colspan="3" class="header">Used by Term(s)</td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1016">Cor</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1017">Placa</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1015">Potencia</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1013">Roda</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1014">Pessoa</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1021">Bicicleta</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1011">Motor</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1020">Caminhao</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1018">Veiculo</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1019">Moto</a></td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="2"><a name="QAItm2000">A Term should be used in at least one Rule Statement or Definition</a></td>
+</tr>
+<tr>
+<td class="header">Description</td>
+<td><Description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>A good Vocabulary is one that covers all the Concepts the business needs – and no more. If a Term has been supplanted by some other Term(s), or remains unused in building Definitions or expressing Rules, it should be removed from the Vocabulary.</p>
+</Description></td>
+</tr>
+<tr>
+<td class="header">Motivation</td>
+<td><Motivation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>To keep a Vocabulary as trim as possible.<br>
+To ensure no Term is overlooked as the Vocabulary is developed, deployed or revised.</p>
+</Motivation></td>
+</tr>
+<tr>
+<td class="header">Examples</td>
+<td><Examples xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>No samples for the selected quality rule are available.</p>
+</Examples></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td colspan="3" class="header">Used by Term(s)</td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1019">Moto</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1015">Potencia</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1011">Motor</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1021">Bicicleta</a></td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+</table>
+</body>
+</html>

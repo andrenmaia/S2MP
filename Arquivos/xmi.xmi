@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xmi:XMI xmlns:sbvr="http://www.omg.org/spec/SBVR/20070901/SBVR.xml" version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+  <sbvr:Term xmi:id="Term1021" signifier="Bicicleta" meaning="meaning" />
+  <sbvr:Term xmi:id="Term1020" signifier="Caminhao" meaning="meaning" />
+  <sbvr:Term xmi:id="Term1010" signifier="Carro" meaning="meaning" />
+  <sbvr:Term xmi:id="Term1016" signifier="Cor" meaning="meaning" />
+  <sbvr:Term xmi:id="Term1019" signifier="Moto" meaning="meaning" />
+  <sbvr:Term xmi:id="Term1011" signifier="Motor" meaning="meaning" />
+  <sbvr:Term xmi:id="Term1014" signifier="Pessoa" meaning="meaning" />
+  <sbvr:Term xmi:id="Term1017" signifier="Placa" meaning="meaning" />
+  <sbvr:Term xmi:id="Term1012" signifier="Porta" meaning="meaning" />
+  <sbvr:Term xmi:id="Term1015" signifier="Potencia" meaning="meaning" />
+  <sbvr:Term xmi:id="Term1013" signifier="Roda" meaning="meaning" />
+  <sbvr:Term xmi:id="Term1018" signifier="Veiculo" meaning="meaning" />
+</xmi:XMI>

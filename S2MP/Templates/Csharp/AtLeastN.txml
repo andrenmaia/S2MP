@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>AtLeastN</Name>
+  <Version>1.0</Version>
+  <TextTemplateToParse>
+  if (@@entityA@@.Count &lt; @@N@@) 
+  { 
+    throw new BusinessException("A quantidade de @@entityA@@ deve ser maior que @@N@@"; 
+  }
+  </TextTemplateToParse>
+  <Language>Csharp</Language>
+</Template>

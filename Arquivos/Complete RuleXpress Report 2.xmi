@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xmi:XMI xmlns:sbvr="http://www.omg.org/spec/SBVR/20070901/SBVR.xml" version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+  <sbvr:term xmi:id="Term1025" signifier="Caminhao" />
+  <sbvr:term xmi:id="Term1023" signifier="Carro" />
+  <sbvr:term xmi:id="Term1024" signifier="Moto" />
+  <sbvr:term xmi:id="Term1026" signifier="Veiculo" />
+  <sbvr:text xmi:id="Caminhao" value="Caminhao" />
+  <sbvr:text xmi:id="Carro" value="Carro" />
+  <sbvr:text xmi:id="Moto" value="Moto" />
+  <sbvr:text xmi:id="Veiculo" value="Veiculo" />
+</xmi:XMI>

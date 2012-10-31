@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Exemplo_EU-Rent_Espec</title>
+<style type="text/css"><!--body {
+	font: 0.92em sans-serif;
+	page-break-inside: avoid;
+	background: #fffff5;
+	line-height: 12pt;
+}
+
+img {
+	border: 0;
+}
+
+/* links */
+
+a, a:visited, a:active, a:hover {
+	color: blue;
+}
+
+a.violatedqualityitem, a.violatedqualityitem:visited, a.violatedqualityitem:active {
+	color: blue;
+}
+
+a.shortcut, a.shortcut:visited, a.shortcut:active {
+	color: royalblue;
+}
+
+a.term, a.term:visited, a.term:active {
+	color: blue;
+}
+
+.termref, .termref:visited, .termref:active {
+	color: blue;
+}
+
+.derivedtermref, .derivedtermref:visited, .derivedtermref:active {
+	color: green;
+}
+
+.termreftext {
+	color: blue;
+}
+
+.derivedtermreftext {
+	color: olive;
+}
+
+.itemproperty {
+
+}
+
+.subitemproperty {
+
+}
+/* diff color coding */
+
+span.deleted {
+	color: #afafaf;
+	text-decoration: line-through;
+}
+
+span.moved {
+	color: blue;
+}
+
+span.inserted {
+	color: green;
+}
+
+span.missing {
+	color: red;
+}
+
+/* other text coloring */
+
+.synonym {
+	color: #5d5e80;
+	font-style: italic;
+}
+
+.definition, .statement {
+	font-weight: normal;
+}
+
+.signifier {
+	font-weight: bold;
+}
+
+/* headers */
+
+h2 {
+	color: #10147f;
+}
+
+h3 {
+	color: #10147f;
+	font-variant: small-caps;
+	border-bottom: 1px solid #10147f;	
+}
+
+/* h4 is reserved for headers in Quality Item descriptions etc. */
+
+h4 {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+h5 {
+	color: #10147f;
+	background: #e8f3ff;
+	padding-left: 0.5em;
+	margin-bottom: 0.3em;
+}
+
+/* tables */
+
+table {
+	border: 0;
+	border-collapse: collapse;
+}
+
+table, td, th {
+	font-size: 0.92em;
+	page-break-inside: avoid;
+	vertical-align: top;
+}
+
+td, th {
+	padding: 5px;
+}
+
+th {
+	text-align: left;
+}
+
+tr.item td {
+	border-top: 1px dotted #ddd;
+}
+
+tr.oddrow {
+	background-color: #f2f2ea;
+}
+
+td.usage, tr.usage td {
+	background-color: #f0f6ef;
+	border-top: 1px dotted olive;
+	padding: 5px;
+}
+
+td.usageheader, tr.usageheader td {
+	background-color: #fof6ef;
+	padding: 5px;
+}
+
+td.tablerowspacerwithborder, tr.tablerowspacerwithborder td {
+	border-top: 1px dotted olive;
+}
+
+td h3 {
+	font-size: 1.3em;
+}
+
+td.header {
+	color: #808000;
+	font-weight: bold;
+}
+
+td.subheader {
+	color: #a6a600;
+	font-weight: bold;
+}
+
+th, td.key {
+	background: #e8f3ff;
+	color: #10147f;
+	font-weight: bold;
+}
+
+/* decision tables */
+
+table.decisiontable {
+	border: 1px solid #444;
+	margin: 10px 0px 10px 10px;
+}
+
+table.decisiontable td {
+	border: 1px solid #444;
+}
+
+/* lists */
+
+ul, ol {
+	padding-left: 1.1em;
+	margin: 0;
+	list-style-type: square;
+}
+
+li.rulename {
+	list-style-type: circle;
+	margin-left: 15px;
+}
+-->
+</style>
+</head>
+<body><a href="http://www.rulearts.com" title="RuleArts"><img src="http://files.rulearts.com/downloads/Public/RuleXpress_tm_sm.png" alt="RuleXpress"></a><h2></h2>
+<table>
+<tr>
+<td class="header">Title</td>
+<td>Exemplo_EU-Rent_Espec</td>
+</tr>
+<tr>
+<td class="header">Date</td>
+<td>2012-10-17</td>
+</tr>
+<tr>
+<td class="header">Member</td>
+<td>RuleXpress Administrator</td>
+</tr>
+<tr>
+<td class="header">Shortcut to Report Items</td>
+</tr>
+<tr>
+<td colspan="2">
+<ul>
+<li><a href="#RXRules" class="shortcut">Rules</a></li>
+<li><a href="#RXTerms" class="shortcut">Terms</a></li>
+<li><a href="#RXWordings" class="shortcut">Wordings</a></li>
+<li><a href="#RXViolatedQualityItems" class="shortcut">Violated Quality Item(s)</a></li>
+</ul>
+</td>
+</tr>
+</table>
+<h3>Community: RuleXpress</h3>
+<table>
+<tr>
+<td class="header">Description</td>
+<td colspan="3"></td>
+</tr>
+</table><!--Rules: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<h3><a name="RXRules"></a>Rules</h3>
+<table>
+<tr>
+<td class="key" colspan="3"><a name="Rule1006"></a><span class="signifier">Rule 11</span> <span class="definition"><tr>
+<td class="header">Statement</td>
+<td><a href="#Term1030" class="derivedtermref" title="is a company">EU-Rent</a> must <a href="#Term1031" class="termref" title="">appoints</a> at least 3 <a href="#Term1028" class="termref" title="is an instance of company">officer</a></td>
+</tr></span></td>
+</tr>
+<tr>
+<td class="subheader">B. Management</td>
+</tr>
+<tr class="itemproperty">
+<td>Quality Grade</td>
+<td>10</td>
+<td></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td> </td>
+</tr>
+</table><!--DecisionTables: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $--><!--RuleGroups: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $--><!--Terms: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<h3><a name="RXTerms"></a>Terms</h3>
+<table>
+<tr>
+<td class="key">Term</td>
+<td class="key">Definition</td>
+<td class="key">Quality Grade</td>
+<td class="key">Violated Quality Item(s)</td>
+<td class="key">Used by Term(s)</td>
+<td class="key">Used by Rule(s)</td>
+</tr>
+<tr class="item">
+<td><a name="Term1031"></a><span class="signifier">appoints</span></td>
+<td></td>
+<td>4.74</td>
+<td>
+<ul>
+<li><a href="#QAItm2001">Concept must be defined, computed or derived</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#Term1027">company</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#Rule1006">Rule 11</a></li>
+</ul>
+</td>
+</tr>
+<tr class="item">
+<td><a name="Term1027"></a><span class="signifier">company</span></td>
+<td><a href="#Term1031" class="termref" title="">appoints</a> <a href="#Term1028" class="termref" title="is an instance of company">officer</a></td>
+<td>4.74</td>
+<td>
+<ul>
+<li><a href="#QAItm4002">A set of Definitions must not be circular</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#Term1030">EU-Rent</a></li>
+<li><a href="#Term1028">officer</a></li>
+</ul>
+</td>
+<td></td>
+</tr>
+<tr class="item">
+<td><a name="Term1030"></a><span class="signifier">EU-Rent</span></td>
+<td>is a <a href="#Term1027" class="termref" title="appoints officer">company</a></td>
+<td>10</td>
+<td></td>
+<td></td>
+<td>
+<ul>
+<li><a href="#Rule1006">Rule 11</a></li>
+</ul>
+</td>
+</tr>
+<tr class="item">
+<td><a name="Term1028"></a><span class="signifier">officer</span></td>
+<td>is an instance of <a href="#Term1027" class="termref" title="appoints officer">company</a></td>
+<td>4.74</td>
+<td>
+<ul>
+<li><a href="#QAItm4002">A set of Definitions must not be circular</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#Term1027">company</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#Rule1006">Rule 11</a></li>
+</ul>
+</td>
+</tr>
+</table><!--Facts: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $--><!--FactSymbols: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<h3><a name="RXWordings"></a>Wordings</h3>
+<table>
+<tr>
+<td class="key" colspan="3"><a name="FctSym4"></a>...[1] consists of ...[2]<br>...[2] is included in ...[1]</td>
+</tr>
+<tr>
+<td class="subheader">B. Management</td>
+</tr>
+<tr class="itemproperty">
+<td>Quality Grade</td>
+<td>10</td>
+<td></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="3"><a name="FctSym3"></a>...[1] has ...[2]<br>...[2] is property of ...[1]</td>
+</tr>
+<tr>
+<td class="subheader">B. Management</td>
+</tr>
+<tr class="itemproperty">
+<td>Quality Grade</td>
+<td>10</td>
+<td></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="3"><a name="FctSym2"></a>...[2] is a category of ...[1]<br>...[1] is categorized as ...[2]</td>
+</tr>
+<tr>
+<td class="subheader">B. Management</td>
+</tr>
+<tr class="itemproperty">
+<td>Quality Grade</td>
+<td>10</td>
+<td></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="3"><a name="FctSym1"></a>...[2] is an instance of ...[1]<br>...[1] has the instance ...[2]</td>
+</tr>
+<tr>
+<td class="subheader">B. Management</td>
+</tr>
+<tr class="itemproperty">
+<td>Quality Grade</td>
+<td>10</td>
+<td></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td> </td>
+</tr>
+</table><!--QualityItems: $Id: rx_itementries.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<h3><a name="RXViolatedQualityItems"></a>Violated Quality Item(s)</h3>
+<table>
+<tr>
+<td class="key" colspan="2"><a name="QAItm4002">A set of Definitions must not be circular</a></td>
+</tr>
+<tr>
+<td class="header">Description</td>
+<td><Description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>Circular sets of Definitions literally express meanings that can never be pinned down (resolved) precisely. Left unclear is whether two or more things are the same, or if not, how exactly they differ. A circular set of Definitions is generally of the form:</p>
+<ul>
+<li>"an X is a Y that ...", "a Y is an X that ...", </li>
+<li>"an X is a Y that ...", "a Y is a Z that ...", "a Z is an X that ...".</li>
+<li>... and so on.</li>
+</ul></Description></td>
+</tr>
+<tr>
+<td class="header">Motivation</td>
+<td><Motivation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>To ensure that all Definitions lead to meaningful distinctions.</p>
+</Motivation></td>
+</tr>
+<tr>
+<td class="header">Examples</td>
+<td><Examples xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<h4>Improper example:</h4>
+<ul>
+<li>Definition of Product: an item needed by a party </li>
+<li>Definition of Item: a product ordered by a customer</li>
+</ul>
+<h4>Proper:</h4>
+<ul>
+<li>Definition of Product: a good produced for sale </li>
+<li>Definition of Item: a good ordered by a customer</li>
+<li>Definition of Good: (as per dictionary definition)</li>
+</ul></Examples></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td colspan="3" class="header">Used by Term(s)</td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1027">company</a></td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1028">officer</a></td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+<tr>
+<td class="key" colspan="2"><a name="QAItm2001">Concept must be defined, computed or derived</a></td>
+</tr>
+<tr>
+<td class="header">Description</td>
+<td><Description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>Every base Term (one that is not derived or computed) must have an explicit Definition to convey its meaning. (In straightforward cases, the Definition can be based directly on a dictionary definition.) Every derived or computed Term must have a Rule indicating the logic for its derivation or computation, a Definition, or optionally, both.</p>
+</Description></td>
+</tr>
+<tr>
+<td class="header">Motivation</td>
+<td><Motivation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>To ensure the meaning of a term has been made explicit.<br>
+To avoid misinterpretation.</p>
+</Motivation></td>
+</tr>
+<tr>
+<td class="header">Examples</td>
+<td><Examples xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p>Example term: Salary</p>
+<p>Definition: Salary is ...<br>
+Computation: Salary must be computed as ...
+Derivation: Salary is a [other known term] that ...</p></Examples></td>
+</tr><!--UsesUsedBy: $Id: rx_usesusedby.xslt 5559 2011-10-07 14:27:55Z rik $-->
+<tr>
+<td colspan="3" class="header">Used by Term(s)</td>
+</tr>
+<tr class="usage">
+<td colspan="3"><a href="#Term1031">appoints</a></td>
+</tr>
+<tr>
+<td> </td>
+</tr>
+</table>
+</body>
+</html>

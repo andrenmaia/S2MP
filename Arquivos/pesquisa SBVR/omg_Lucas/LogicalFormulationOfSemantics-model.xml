@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:cmof="http://schema.omg.org/spec/MOF/2.0/cmof.xml">
+  <cmof:Package xmi:id="LogicalFormulationOfSemanticsVocabulary" name="Logical Formulation of Semantics Vocabulary" uri="http://www.omg.org/spec/SBVR/20070901/LogicalFormulationOfSemantics.xml">
+    <ownedMember xmi:type="cmof:Class" name="actuality" xmi:id="actuality" superClass="stateOfAffairs"/>
+    <ownedMember xmi:type="cmof:Class" name="aggregation formulation" xmi:id="aggregationFormulation" superClass="projectingFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="answer nominalization" xmi:id="answerNominalization" superClass="projectingFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="at-least-n quantification" xmi:id="at-least-nQuantification" superClass="quantification">
+      <ownedAttribute xmi:type="cmof:Property" name="minimum cardinality" xmi:id="at-least-nQuantification.minimumCardinality" type="nonnegativeInteger" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="at-most-n quantification" xmi:id="at-most-nQuantification" superClass="quantification">
+      <ownedAttribute xmi:type="cmof:Property" name="maximum cardinality" xmi:id="at-most-nQuantification.maximumCardinality" type="nonnegativeInteger" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="at-most-one quantification" xmi:id="at-most-oneQuantification" superClass="at-most-nQuantification"/>
+    <ownedMember xmi:type="cmof:Class" name="atomic formulation" xmi:id="atomicFormulation" superClass="logicalFormulation">
+      <ownedAttribute xmi:type="cmof:Property" name="role binding" xmi:id="atomicFormulation.roleBinding" type="roleBinding" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="attributive namespace" xmi:id="attributiveNamespace" superClass="namespace"/>
+    <ownedMember xmi:type="cmof:Class" name="auxiliary variable" xmi:id="auxiliaryVariable" superClass="variable"/>
+    <ownedMember xmi:type="cmof:Class" name="bag projection" xmi:id="bagProjection" superClass="projection"/>
+    <ownedMember xmi:type="cmof:Class" name="binary fact type" xmi:id="binaryFactType" superClass="factType"/>
+    <ownedMember xmi:type="cmof:Class" name="binary logical operation" xmi:id="binaryLogicalOperation" superClass="logicalOperation">
+      <ownedAttribute xmi:type="cmof:Property" name="logical operand 1" xmi:id="binaryLogicalOperation.logicalOperand1" type="logicalFormulation" lower="1" upper="1"/>
+      <ownedAttribute xmi:type="cmof:Property" name="logical operand 2" xmi:id="binaryLogicalOperation.logicalOperand2" type="logicalFormulation" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="bindable target" xmi:id="bindableTarget" superClass="thing"/>
+    <ownedMember xmi:type="cmof:Class" name="characteristic" xmi:id="characteristic" superClass="factType"/>
+    <elementImport xmi:type="cmof:ElementImport" alias="unary fact type" xmi:id="unaryFactType" importedElement="characteristic"/>
+    <ownedMember xmi:type="cmof:Class" name="closed logical formulation" xmi:id="closedLogicalFormulation" superClass="logicalFormulation closedSemanticFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="closed projection" xmi:id="closedProjection" superClass="projection"/>
+    <ownedMember xmi:type="cmof:Class" name="closed semantic formulation" xmi:id="closedSemanticFormulation" superClass="semanticFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="concept" xmi:id="concept" superClass="meaning">
+      <ownedAttribute xmi:type="cmof:Property" name="instance" xmi:id="concept.instance" type="thing" lower="0" upper="*"/>
+      <ownedAttribute xmi:type="cmof:Property" name="definition" xmi:id="concept.definition" type="definition" lower="0" upper="*"/>
+      <ownedAttribute xmi:type="cmof:Property" name="designation" xmi:id="concept.designation" type="designation" lower="0" upper="*"/>
+      <ownedAttribute xmi:type="cmof:Property" name="extension" xmi:id="concept.extension" type="set" lower="1" upper="1"/>
+      <ownedAttribute xmi:type="cmof:Property" name="attributive namespace" xmi:id="concept.attributiveNamespace" type="attributiveNamespace" lower="0" upper="*"/>
+      <ownedAttribute xmi:type="cmof:Property" name="reference scheme" xmi:id="concept.referenceScheme" type="referenceScheme" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="concept type" xmi:id="conceptType" superClass="objectType"/>
+    <ownedMember xmi:type="cmof:Class" name="conceptual schema" xmi:id="conceptualSchema" superClass="thing"/>
+    <ownedMember xmi:type="cmof:Class" name="conjunction" xmi:id="conjunction" superClass="binaryLogicalOperation"/>
+    <ownedMember xmi:type="cmof:Class" name="definition" xmi:id="definition" superClass="representation"/>
+    <ownedMember xmi:type="cmof:Class" name="designation" xmi:id="designation" superClass="representation">
+      <ownedAttribute xmi:type="cmof:Property" name="signifier" xmi:id="designation.signifier" type="expression" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="disjunction" xmi:id="disjunction" superClass="binaryLogicalOperation"/>
+    <elementImport xmi:type="cmof:ElementImport" alias="inclusive disjunction" xmi:id="inclusiveDisjunction" importedElement="disjunction"/>
+    <ownedMember xmi:type="cmof:Class" name="equivalence" xmi:id="equivalence" superClass="binaryLogicalOperation"/>
+    <elementImport xmi:type="cmof:ElementImport" alias="material equivalence" xmi:id="materialEquivalence" importedElement="equivalence"/>
+    <ownedMember xmi:type="cmof:Class" name="exactly-n quantification" xmi:id="exactly-nQuantification" superClass="quantification">
+      <ownedAttribute xmi:type="cmof:Property" name="cardinality" xmi:id="exactly-nQuantification.cardinality" type="nonnegativeInteger" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="exactly-one quantification" xmi:id="exactly-oneQuantification" superClass="exactly-nQuantification"/>
+    <ownedMember xmi:type="cmof:Class" name="exclusive disjunction" xmi:id="exclusiveDisjunction" superClass="binaryLogicalOperation"/>
+    <ownedMember xmi:type="cmof:Class" name="existential quantification" xmi:id="existentialQuantification" superClass="at-least-nQuantification"/>
+    <ownedMember xmi:type="cmof:Class" name="expression" xmi:id="expression" superClass="bindableTarget"/>
+    <ownedMember xmi:type="cmof:Class" name="fact" xmi:id="fact" superClass="proposition"/>
+    <ownedMember xmi:type="cmof:Class" name="fact model" xmi:id="factModel" superClass="thing"/>
+    <elementImport xmi:type="cmof:ElementImport" alias="conceptual model" xmi:id="conceptualModel" importedElement="factModel"/>
+    <ownedMember xmi:type="cmof:Class" name="fact type" xmi:id="factType" superClass="concept">
+      <ownedAttribute xmi:type="cmof:Property" name="fact type form" xmi:id="factType.factTypeForm" type="factTypeForm" lower="0" upper="*"/>
+      <ownedAttribute xmi:type="cmof:Property" name="role" xmi:id="factType.role" type="factTypeRole" lower="1" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="verb concept" xmi:id="verbConcept" importedElement="factType"/>
+    <ownedMember xmi:type="cmof:Class" name="fact type form" xmi:id="factTypeForm" superClass="representation">
+      <ownedAttribute xmi:type="cmof:Property" name="placeholder" xmi:id="factTypeForm.placeholder" type="placeholder" lower="1" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="fact type has fact in fact model" xmi:id="factTypeHasFactInFactModel">
+      <ownedAttribute xmi:type="cmof:Property" name="fact type" xmi:id="factTypeHasFactInFactModel.factType" type="factType" lower="1" upper="1"/>
+      <ownedAttribute xmi:type="cmof:Property" name="fact" xmi:id="factTypeHasFactInFactModel.fact" type="fact" lower="1" upper="1"/>
+      <ownedAttribute xmi:type="cmof:Property" name="fact model" xmi:id="factTypeHasFactInFactModel.factModel" type="factModel" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="fact type nominalization" xmi:id="factTypeNominalization" superClass="projectingFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="fact type role" xmi:id="factTypeRole" superClass="role">
+      <ownedAttribute xmi:type="cmof:Property" name="role binding" xmi:id="factTypeRole.roleBinding" type="roleBinding" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="implication" xmi:id="implication" superClass="binaryLogicalOperation">
+      <ownedAttribute xmi:type="cmof:Property" name="antecedent" xmi:id="implication.antecedent" type="logicalFormulation" lower="1" upper="1"/>
+      <ownedAttribute xmi:type="cmof:Property" name="consequent" xmi:id="implication.consequent" type="logicalFormulation" lower="1" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="material implication" xmi:id="materialImplication" importedElement="implication"/>
+    <ownedMember xmi:type="cmof:Class" name="individual concept" xmi:id="individualConcept" superClass="nounConcept bindableTarget"/>
+    <ownedMember xmi:type="cmof:Class" name="instantiation formulation" xmi:id="instantiationFormulation" superClass="logicalFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="integer" xmi:id="integer" superClass="number">
+      <ownedAttribute xmi:type="cmof:Property" name="value" xmi:id="integer.value" lower="0" upper="1">
+        <type xmi:type="cmof:PrimitiveType" href="http://schema.omg.org/spec/UML/2.0/uml.xml#Integer"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="language" xmi:id="language" superClass="thing"/>
+    <ownedMember xmi:type="cmof:Class" name="logical formulation" xmi:id="logicalFormulation" superClass="semanticFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="logical formulation kind" xmi:id="logicalFormulationKind" superClass="objectType"/>
+    <ownedMember xmi:type="cmof:Class" name="logical negation" xmi:id="logicalNegation" superClass="logicalOperation"/>
+    <ownedMember xmi:type="cmof:Class" name="logical operation" xmi:id="logicalOperation" superClass="logicalFormulation">
+      <ownedAttribute xmi:type="cmof:Property" name="logical operand" xmi:id="logicalOperation.logicalOperand" type="logicalFormulation" lower="1" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="meaning" xmi:id="meaning" superClass="thing">
+      <ownedAttribute xmi:type="cmof:Property" name="representation" xmi:id="meaning.representation" type="representation" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="modal formulation" xmi:id="modalFormulation" superClass="logicalFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="namespace" xmi:id="namespace" superClass="thing">
+      <ownedAttribute xmi:type="cmof:Property" name="URI" xmi:id="namespace.URI" type="URI" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="nand formulation" xmi:id="nandFormulation" superClass="binaryLogicalOperation"/>
+    <ownedMember xmi:type="cmof:Class" name="necessity formulation" xmi:id="necessityFormulation" superClass="modalFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="nonnegative integer" xmi:id="nonnegativeInteger" superClass="integer"/>
+    <ownedMember xmi:type="cmof:Class" name="nor formulation" xmi:id="norFormulation" superClass="binaryLogicalOperation"/>
+    <ownedMember xmi:type="cmof:Class" name="noun concept" xmi:id="nounConcept" superClass="concept"/>
+    <ownedMember xmi:type="cmof:Class" name="noun concept nominalization" xmi:id="nounConceptNominalization" superClass="projectingFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="noun form" xmi:id="nounForm" superClass="factTypeForm"/>
+    <ownedMember xmi:type="cmof:Class" name="number" xmi:id="number" superClass="quantity"/>
+    <ownedMember xmi:type="cmof:Class" name="numeric range quantification" xmi:id="numericRangeQuantification" superClass="quantification">
+      <ownedAttribute xmi:type="cmof:Property" name="maximum cardinality" xmi:id="numericRangeQuantification.maximumCardinality" type="nonnegativeInteger" lower="1" upper="1"/>
+      <ownedAttribute xmi:type="cmof:Property" name="minimum cardinality" xmi:id="numericRangeQuantification.minimumCardinality" type="nonnegativeInteger" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="object type" xmi:id="objectType" superClass="concept"/>
+    <elementImport xmi:type="cmof:ElementImport" alias="general concept" xmi:id="generalConcept" importedElement="objectType"/>
+    <ownedMember xmi:type="cmof:Class" name="objectification" xmi:id="objectification" superClass="logicalFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="obligation formulation" xmi:id="obligationFormulation" superClass="modalFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="permissibility formulation" xmi:id="permissibilityFormulation" superClass="modalFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="placeholder" xmi:id="placeholder" superClass="designation">
+      <ownedAttribute xmi:type="cmof:Property" name="starting character position" xmi:id="placeholder.startingCharacterPosition" type="positiveInteger" lower="0" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="positive integer" xmi:id="positiveInteger" superClass="nonnegativeInteger"/>
+    <ownedMember xmi:type="cmof:Class" name="possibility formulation" xmi:id="possibilityFormulation" superClass="modalFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="projecting formulation" xmi:id="projectingFormulation" superClass="logicalFormulation">
+      <ownedAttribute xmi:type="cmof:Property" name="projection" xmi:id="projectingFormulation.projection" type="projection" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="projection" xmi:id="projection" superClass="semanticFormulation">
+      <ownedAttribute xmi:type="cmof:Property" name="constraining formulation" xmi:id="projection.constrainingFormulation" type="logicalFormulation" lower="0" upper="1"/>
+      <ownedAttribute xmi:type="cmof:Property" name="projection variable" xmi:id="projection.projectionVariable" type="variable" lower="1" upper="*"/>
+      <ownedAttribute xmi:type="cmof:Property" name="auxiliary variable" xmi:id="projection.auxiliaryVariable" type="auxiliaryVariable" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="proposition" xmi:id="proposition" superClass="meaning">
+      <ownedAttribute xmi:type="cmof:Property" name="statement" xmi:id="proposition.statement" type="statement" lower="0" upper="*"/>
+      <ownedAttribute xmi:type="cmof:Property" name="is obligated to be true" xmi:id="proposition.isObligatedToBeTrue" lower="0" upper="1">
+        <type xmi:type="cmof:PrimitiveType" href="http://schema.omg.org/spec/UML/2.0/uml.xml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" name="is permitted to be true" xmi:id="proposition.isPermittedToBeTrue" lower="0" upper="1">
+        <type xmi:type="cmof:PrimitiveType" href="http://schema.omg.org/spec/UML/2.0/uml.xml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" name="is true" xmi:id="proposition.isTrue" lower="0" upper="1">
+        <type xmi:type="cmof:PrimitiveType" href="http://schema.omg.org/spec/UML/2.0/uml.xml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" name="is false" xmi:id="proposition.isFalse" lower="0" upper="1">
+        <type xmi:type="cmof:PrimitiveType" href="http://schema.omg.org/spec/UML/2.0/uml.xml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" name="is possibly true" xmi:id="proposition.isPossiblyTrue" lower="0" upper="1">
+        <type xmi:type="cmof:PrimitiveType" href="http://schema.omg.org/spec/UML/2.0/uml.xml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" name="is necessarily true" xmi:id="proposition.isNecessarilyTrue" lower="0" upper="1">
+        <type xmi:type="cmof:PrimitiveType" href="http://schema.omg.org/spec/UML/2.0/uml.xml#Boolean"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="proposition nominalization" xmi:id="propositionNominalization" superClass="logicalFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="quantification" xmi:id="quantification" superClass="logicalFormulation">
+      <ownedAttribute xmi:type="cmof:Property" name="scope formulation" xmi:id="quantification.scopeFormulation" type="logicalFormulation" lower="0" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="quantity" xmi:id="quantity" superClass="nounConcept"/>
+    <ownedMember xmi:type="cmof:Class" name="question" xmi:id="question" superClass="meaning"/>
+    <ownedMember xmi:type="cmof:Class" name="question nominalization" xmi:id="questionNominalization" superClass="projectingFormulation"/>
+    <ownedMember xmi:type="cmof:Class" name="reference scheme" xmi:id="referenceScheme" superClass="thing">
+      <ownedAttribute xmi:type="cmof:Property" name="identifying characteristic" xmi:id="referenceScheme.identifyingCharacteristic" type="characteristic" lower="0" upper="*"/>
+      <ownedAttribute xmi:type="cmof:Property" name="simply used role" xmi:id="referenceScheme.simplyUsedRole" type="factTypeRole" lower="0" upper="*"/>
+      <ownedAttribute xmi:type="cmof:Property" name="extensionally used role" xmi:id="referenceScheme.extensionallyUsedRole" type="factTypeRole" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="representation" xmi:id="representation" superClass="actuality">
+      <ownedAttribute xmi:type="cmof:Property" name="meaning" xmi:id="representation.meaning" type="meaning" lower="1" upper="1"/>
+      <ownedAttribute xmi:type="cmof:Property" name="expression" xmi:id="representation.expression" type="expression" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="role" xmi:id="role" superClass="nounConcept"/>
+    <ownedMember xmi:type="cmof:Class" name="role binding" xmi:id="roleBinding" superClass="thing"/>
+    <ownedMember xmi:type="cmof:Class" name="semantic formulation" xmi:id="semanticFormulation" superClass="thing"/>
+    <ownedMember xmi:type="cmof:Class" name="sentential form" xmi:id="sententialForm" superClass="factTypeForm"/>
+    <elementImport xmi:type="cmof:ElementImport" alias="fact type reading" xmi:id="factTypeReading" importedElement="sententialForm"/>
+    <ownedMember xmi:type="cmof:Class" name="set" xmi:id="set" superClass="thing">
+      <ownedAttribute xmi:type="cmof:Property" name="element" xmi:id="set.element" type="thing" lower="0" upper="*"/>
+      <ownedAttribute xmi:type="cmof:Property" name="cardinality" xmi:id="set.cardinality" type="nonnegativeInteger" lower="0" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="set projection" xmi:id="setProjection" superClass="projection"/>
+    <ownedMember xmi:type="cmof:Class" name="state of affairs" xmi:id="stateOfAffairs" superClass="thing"/>
+    <ownedMember xmi:type="cmof:Class" name="state of affairs involves thing in role" xmi:id="stateOfAffairsInvolvesThingInRole">
+      <ownedAttribute xmi:type="cmof:Property" name="state of affairs" xmi:id="stateOfAffairsInvolvesThingInRole.stateOfAffairs" type="stateOfAffairs" lower="1" upper="1"/>
+      <ownedAttribute xmi:type="cmof:Property" name="thing" xmi:id="stateOfAffairsInvolvesThingInRole.thing" type="thing" lower="1" upper="1"/>
+      <ownedAttribute xmi:type="cmof:Property" name="role" xmi:id="stateOfAffairsInvolvesThingInRole.role" type="role" lower="1" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="thing fills role in state of affairs" xmi:id="thingFillsRoleInStateOfAffairs" importedElement="stateOfAffairsInvolvesThingInRole"/>
+    <ownedMember xmi:type="cmof:Class" name="statement" xmi:id="statement" superClass="representation"/>
+    <ownedMember xmi:type="cmof:Class" name="text" xmi:id="text" superClass="expression">
+      <ownedAttribute xmi:type="cmof:Property" name="value" xmi:id="text.value" lower="0" upper="1">
+        <type xmi:type="cmof:PrimitiveType" href="http://schema.omg.org/spec/UML/2.0/uml.xml#String"/>
+      </ownedAttribute>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="thing" xmi:id="thing"/>
+    <ownedMember xmi:type="cmof:Class" name="universal quantification" xmi:id="universalQuantification" superClass="quantification"/>
+    <ownedMember xmi:type="cmof:Class" name="URI" xmi:id="URI" superClass="text"/>
+    <elementImport xmi:type="cmof:ElementImport" alias="uniform resource identifier" xmi:id="uniformResourceIdentifier" importedElement="URI"/>
+    <ownedMember xmi:type="cmof:Class" name="variable" xmi:id="variable" superClass="bindableTarget">
+      <ownedAttribute xmi:type="cmof:Property" name="ranged-over concept" xmi:id="variable.ranged-overConcept" type="concept" lower="0" upper="1"/>
+      <ownedAttribute xmi:type="cmof:Property" name="projection position" xmi:id="variable.projectionPosition" type="positiveInteger" lower="0" upper="1"/>
+      <ownedAttribute xmi:type="cmof:Property" name="is unitary" xmi:id="variable.isUnitary" lower="0" upper="1">
+        <type xmi:type="cmof:PrimitiveType" href="http://schema.omg.org/spec/UML/2.0/uml.xml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="cmof:Property" name="restricting formulation" xmi:id="variable.restrictingFormulation" type="logicalFormulation" lower="0" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Class" name="vocabulary namespace" xmi:id="vocabularyNamespace" superClass="namespace"/>
+    <ownedMember xmi:type="cmof:Class" name="whether-or-not formulation" xmi:id="whether-or-notFormulation" superClass="binaryLogicalOperation">
+      <ownedAttribute xmi:type="cmof:Property" name="inconsequent" xmi:id="whether-or-notFormulation.inconsequent" type="logicalFormulation" lower="1" upper="1"/>
+      <ownedAttribute xmi:type="cmof:Property" name="consequent" xmi:id="whether-or-notFormulation.consequent" type="logicalFormulation" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="at-least-n quantification has minimum cardinality" xmi:id="at-least-nQuantificationHasMinimumCardinality" memberEnd="at-least-nQuantificationHasMinimumCardinality.at-least-nQuantification at-least-nQuantificationHasMinimumCardinality.minimumCardinality">
+      <ownedEnd xmi:type="cmof:Property" name="at-least-n quantification" xmi:id="at-least-nQuantificationHasMinimumCardinality.at-least-nQuantification" type="at-least-nQuantification" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="minimum cardinality" xmi:id="at-least-nQuantificationHasMinimumCardinality.minimumCardinality" type="nonnegativeInteger" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="at-most-n quantification has maximum cardinality" xmi:id="at-most-nQuantificationHasMaximumCardinality" memberEnd="at-most-nQuantificationHasMaximumCardinality.at-most-nQuantification at-most-nQuantificationHasMaximumCardinality.maximumCardinality">
+      <ownedEnd xmi:type="cmof:Property" name="at-most-n quantification" xmi:id="at-most-nQuantificationHasMaximumCardinality.at-most-nQuantification" type="at-most-nQuantification" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="maximum cardinality" xmi:id="at-most-nQuantificationHasMaximumCardinality.maximumCardinality" type="nonnegativeInteger" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="atomic formulation is based on fact type" xmi:id="atomicFormulationIsBasedOnFactType" memberEnd="atomicFormulationIsBasedOnFactType.atomicFormulation atomicFormulationIsBasedOnFactType.factType">
+      <ownedEnd xmi:type="cmof:Property" name="atomic formulation" xmi:id="atomicFormulationIsBasedOnFactType.atomicFormulation" type="atomicFormulation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="fact type" xmi:id="atomicFormulationIsBasedOnFactType.factType" type="factType" lower="1" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="fact type underlies atomic formulation" xmi:id="factTypeUnderliesAtomicFormulation" importedElement="atomicFormulationIsBasedOnFactType"/>
+    <ownedMember xmi:type="cmof:Association" name="attributive namespace is for subject concept" xmi:id="attributiveNamespaceIsForSubjectConcept" memberEnd="attributiveNamespaceIsForSubjectConcept.attributiveNamespace attributiveNamespaceIsForSubjectConcept.subjectConcept">
+      <ownedEnd xmi:type="cmof:Property" name="attributive namespace" xmi:id="attributiveNamespaceIsForSubjectConcept.attributiveNamespace" type="attributiveNamespace" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="subject concept" xmi:id="attributiveNamespaceIsForSubjectConcept.subjectConcept" type="concept" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="attributive namespace is within vocabulary namespace" xmi:id="attributiveNamespaceIsWithinVocabularyNamespace" memberEnd="attributiveNamespaceIsWithinVocabularyNamespace.attributiveNamespace attributiveNamespaceIsWithinVocabularyNamespace.vocabularyNamespace">
+      <ownedEnd xmi:type="cmof:Property" name="attributive namespace" xmi:id="attributiveNamespaceIsWithinVocabularyNamespace.attributiveNamespace" type="attributiveNamespace" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="vocabulary namespace" xmi:id="attributiveNamespaceIsWithinVocabularyNamespace.vocabularyNamespace" type="vocabularyNamespace" lower="0" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="vocabulary namespace includes attributive namespace" xmi:id="vocabularyNamespaceIncludesAttributiveNamespace" importedElement="attributiveNamespaceIsWithinVocabularyNamespace"/>
+    <ownedMember xmi:type="cmof:Association" name="binary logical operation has logical operand 1" xmi:id="binaryLogicalOperationHasLogicalOperand1" memberEnd="binaryLogicalOperationHasLogicalOperand1.binaryLogicalOperation binaryLogicalOperationHasLogicalOperand1.logicalOperand1">
+      <ownedEnd xmi:type="cmof:Property" name="binary logical operation" xmi:id="binaryLogicalOperationHasLogicalOperand1.binaryLogicalOperation" type="binaryLogicalOperation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="logical operand 1" xmi:id="binaryLogicalOperationHasLogicalOperand1.logicalOperand1" type="logicalFormulation" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="binary logical operation has logical operand 2" xmi:id="binaryLogicalOperationHasLogicalOperand2" memberEnd="binaryLogicalOperationHasLogicalOperand2.binaryLogicalOperation binaryLogicalOperationHasLogicalOperand2.logicalOperand2">
+      <ownedEnd xmi:type="cmof:Property" name="binary logical operation" xmi:id="binaryLogicalOperationHasLogicalOperand2.binaryLogicalOperation" type="binaryLogicalOperation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="logical operand 2" xmi:id="binaryLogicalOperationHasLogicalOperand2.logicalOperand2" type="logicalFormulation" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="closed logical formulation formalizes statement" xmi:id="closedLogicalFormulationFormalizesStatement" memberEnd="closedLogicalFormulationFormalizesStatement.closedLogicalFormulation closedLogicalFormulationFormalizesStatement.statement">
+      <ownedEnd xmi:type="cmof:Property" name="closed logical formulation" xmi:id="closedLogicalFormulationFormalizesStatement.closedLogicalFormulation" type="closedLogicalFormulation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="statement" xmi:id="closedLogicalFormulationFormalizesStatement.statement" type="statement" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="closed logical formulation means proposition" xmi:id="closedLogicalFormulationMeansProposition" memberEnd="closedLogicalFormulationMeansProposition.closedLogicalFormulation closedLogicalFormulationMeansProposition.proposition">
+      <ownedEnd xmi:type="cmof:Property" name="closed logical formulation" xmi:id="closedLogicalFormulationMeansProposition.closedLogicalFormulation" type="closedLogicalFormulation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="proposition" xmi:id="closedLogicalFormulationMeansProposition.proposition" type="proposition" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="closed projection defines fact type" xmi:id="closedProjectionDefinesFactType" memberEnd="closedProjectionDefinesFactType.closedProjection closedProjectionDefinesFactType.factType">
+      <ownedEnd xmi:type="cmof:Property" name="closed projection" xmi:id="closedProjectionDefinesFactType.closedProjection" type="closedProjection" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="fact type" xmi:id="closedProjectionDefinesFactType.factType" type="factType" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="closed projection defines noun concept" xmi:id="closedProjectionDefinesNounConcept" memberEnd="closedProjectionDefinesNounConcept.closedProjection closedProjectionDefinesNounConcept.nounConcept">
+      <ownedEnd xmi:type="cmof:Property" name="closed projection" xmi:id="closedProjectionDefinesNounConcept.closedProjection" type="closedProjection" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="noun concept" xmi:id="closedProjectionDefinesNounConcept.nounConcept" type="nounConcept" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="closed projection formalizes definition" xmi:id="closedProjectionFormalizesDefinition" memberEnd="closedProjectionFormalizesDefinition.closedProjection closedProjectionFormalizesDefinition.definition">
+      <ownedEnd xmi:type="cmof:Property" name="closed projection" xmi:id="closedProjectionFormalizesDefinition.closedProjection" type="closedProjection" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="definition" xmi:id="closedProjectionFormalizesDefinition.definition" type="definition" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="closed projection means question" xmi:id="closedProjectionMeansQuestion" memberEnd="closedProjectionMeansQuestion.closedProjection closedProjectionMeansQuestion.question">
+      <ownedEnd xmi:type="cmof:Property" name="closed projection" xmi:id="closedProjectionMeansQuestion.closedProjection" type="closedProjection" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="question" xmi:id="closedProjectionMeansQuestion.question" type="question" lower="0" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="closed semantic formulation formulates meaning" xmi:id="closedSemanticFormulationFormulatesMeaning" memberEnd="closedSemanticFormulationFormulatesMeaning.closedSemanticFormulation closedSemanticFormulationFormulatesMeaning.meaning">
+      <ownedEnd xmi:type="cmof:Property" name="closed semantic formulation" xmi:id="closedSemanticFormulationFormulatesMeaning.closedSemanticFormulation" type="closedSemanticFormulation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="meaning" xmi:id="closedSemanticFormulationFormulatesMeaning.meaning" type="meaning" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="concept has definition" xmi:id="conceptHasDefinition" memberEnd="conceptHasDefinition.concept conceptHasDefinition.definition">
+      <ownedEnd xmi:type="cmof:Property" name="concept" xmi:id="conceptHasDefinition.concept" type="concept" lower="1" upper="1"/>
+      <ownedEnd xmi:type="cmof:Property" name="definition" xmi:id="conceptHasDefinition.definition" type="definition" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="concept has designation" xmi:id="conceptHasDesignation" memberEnd="conceptHasDesignation.concept conceptHasDesignation.designation">
+      <ownedEnd xmi:type="cmof:Property" name="concept" xmi:id="conceptHasDesignation.concept" type="concept" lower="1" upper="1"/>
+      <ownedEnd xmi:type="cmof:Property" name="designation" xmi:id="conceptHasDesignation.designation" type="designation" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="concept has extension" xmi:id="conceptHasExtension" memberEnd="conceptHasExtension.concept conceptHasExtension.extension">
+      <ownedEnd xmi:type="cmof:Property" name="concept" xmi:id="conceptHasExtension.concept" type="concept" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="extension" xmi:id="conceptHasExtension.extension" type="set" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="concept has instance" xmi:id="conceptHasInstance" memberEnd="conceptHasInstance.concept conceptHasInstance.instance">
+      <ownedEnd xmi:type="cmof:Property" name="concept" xmi:id="conceptHasInstance.concept" type="concept" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="instance" xmi:id="conceptHasInstance.instance" type="thing" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="concept incorporates characteristic" xmi:id="conceptIncorporatesCharacteristic" memberEnd="conceptIncorporatesCharacteristic.concept conceptIncorporatesCharacteristic.characteristic">
+      <ownedEnd xmi:type="cmof:Property" name="concept" xmi:id="conceptIncorporatesCharacteristic.concept" type="concept" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="characteristic" xmi:id="conceptIncorporatesCharacteristic.characteristic" type="characteristic" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="concept is closed in conceptual schema" xmi:id="conceptIsClosedInConceptualSchema" memberEnd="conceptIsClosedInConceptualSchema.concept conceptIsClosedInConceptualSchema.conceptualSchema">
+      <ownedEnd xmi:type="cmof:Property" name="concept" xmi:id="conceptIsClosedInConceptualSchema.concept" type="concept" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="conceptual schema" xmi:id="conceptIsClosedInConceptualSchema.conceptualSchema" type="conceptualSchema" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="concept1 is coextensive with concept2" xmi:id="concept1IsCoextensiveWithConcept2" memberEnd="concept1IsCoextensiveWithConcept2.concept1 concept1IsCoextensiveWithConcept2.concept2">
+      <ownedEnd xmi:type="cmof:Property" name="concept1" xmi:id="concept1IsCoextensiveWithConcept2.concept1" type="concept" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="concept2" xmi:id="concept1IsCoextensiveWithConcept2.concept2" type="concept" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="concept1 specializes concept2" xmi:id="concept1SpecializesConcept2" memberEnd="concept1SpecializesConcept2.concept1 concept1SpecializesConcept2.concept2">
+      <ownedEnd xmi:type="cmof:Property" name="concept1" xmi:id="concept1SpecializesConcept2.concept1" type="concept" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="concept2" xmi:id="concept1SpecializesConcept2.concept2" type="concept" lower="0" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="concept2 generalizes concept1" xmi:id="concept2GeneralizesConcept1" importedElement="concept1SpecializesConcept2"/>
+    <ownedMember xmi:type="cmof:Association" name="conceptual schema includes concept" xmi:id="conceptualSchemaIncludesConcept" memberEnd="conceptualSchemaIncludesConcept.conceptualSchema conceptualSchemaIncludesConcept.concept">
+      <ownedEnd xmi:type="cmof:Property" name="conceptual schema" xmi:id="conceptualSchemaIncludesConcept.conceptualSchema" type="conceptualSchema" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="concept" xmi:id="conceptualSchemaIncludesConcept.concept" type="concept" lower="0" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="concept is in conceptual schema" xmi:id="conceptIsInConceptualSchema" importedElement="conceptualSchemaIncludesConcept"/>
+    <ownedMember xmi:type="cmof:Association" name="conceptual schema includes fact" xmi:id="conceptualSchemaIncludesFact" memberEnd="conceptualSchemaIncludesFact.conceptualSchema conceptualSchemaIncludesFact.fact">
+      <ownedEnd xmi:type="cmof:Property" name="conceptual schema" xmi:id="conceptualSchemaIncludesFact.conceptualSchema" type="conceptualSchema" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="fact" xmi:id="conceptualSchemaIncludesFact.fact" type="fact" lower="0" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="fact is in conceptual schema" xmi:id="factIsInConceptualSchema" importedElement="conceptualSchemaIncludesFact"/>
+    <ownedMember xmi:type="cmof:Association" name="designation has signifier" xmi:id="designationHasSignifier" memberEnd="designationHasSignifier.designation designationHasSignifier.signifier">
+      <ownedEnd xmi:type="cmof:Property" name="designation" xmi:id="designationHasSignifier.designation" type="designation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="signifier" xmi:id="designationHasSignifier.signifier" type="expression" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="designation is in namespace" xmi:id="designationIsInNamespace" memberEnd="designationIsInNamespace.designation designationIsInNamespace.namespace">
+      <ownedEnd xmi:type="cmof:Property" name="designation" xmi:id="designationIsInNamespace.designation" type="designation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="namespace" xmi:id="designationIsInNamespace.namespace" type="namespace" lower="0" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="namespace contains designation" xmi:id="namespaceContainsDesignation" importedElement="designationIsInNamespace"/>
+    <ownedMember xmi:type="cmof:Association" name="exactly-n quantification has cardinality" xmi:id="exactly-nQuantificationHasCardinality" memberEnd="exactly-nQuantificationHasCardinality.exactly-nQuantification exactly-nQuantificationHasCardinality.cardinality">
+      <ownedEnd xmi:type="cmof:Property" name="exactly-n quantification" xmi:id="exactly-nQuantificationHasCardinality.exactly-nQuantification" type="exactly-nQuantification" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="cardinality" xmi:id="exactly-nQuantificationHasCardinality.cardinality" type="nonnegativeInteger" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="expression represents meaning" xmi:id="expressionRepresentsMeaning" memberEnd="expressionRepresentsMeaning.expression expressionRepresentsMeaning.meaning">
+      <ownedEnd xmi:type="cmof:Property" name="expression" xmi:id="expressionRepresentsMeaning.expression" type="expression" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="meaning" xmi:id="expressionRepresentsMeaning.meaning" type="meaning" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="fact model includes fact" xmi:id="factModelIncludesFact" memberEnd="factModelIncludesFact.factModel factModelIncludesFact.fact">
+      <ownedEnd xmi:type="cmof:Property" name="fact model" xmi:id="factModelIncludesFact.factModel" type="factModel" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="fact" xmi:id="factModelIncludesFact.fact" type="fact" lower="0" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="fact is in fact model" xmi:id="factIsInFactModel" importedElement="factModelIncludesFact"/>
+    <ownedMember xmi:type="cmof:Association" name="fact model is based on conceptual schema" xmi:id="factModelIsBasedOnConceptualSchema" memberEnd="factModelIsBasedOnConceptualSchema.factModel factModelIsBasedOnConceptualSchema.conceptualSchema">
+      <ownedEnd xmi:type="cmof:Property" name="fact model" xmi:id="factModelIsBasedOnConceptualSchema.factModel" type="factModel" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="conceptual schema" xmi:id="factModelIsBasedOnConceptualSchema.conceptualSchema" type="conceptualSchema" lower="0" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="conceptual schema underlies fact model" xmi:id="conceptualSchemaUnderliesFactModel" importedElement="factModelIsBasedOnConceptualSchema"/>
+    <ownedMember xmi:type="cmof:Association" name="fact type form demonstrates designation" xmi:id="factTypeFormDemonstratesDesignation" memberEnd="factTypeFormDemonstratesDesignation.factTypeForm factTypeFormDemonstratesDesignation.designation">
+      <ownedEnd xmi:type="cmof:Property" name="fact type form" xmi:id="factTypeFormDemonstratesDesignation.factTypeForm" type="factTypeForm" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="designation" xmi:id="factTypeFormDemonstratesDesignation.designation" type="designation" lower="0" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="fact type form is in namespace" xmi:id="factTypeFormIsInNamespace" memberEnd="factTypeFormIsInNamespace.factTypeForm factTypeFormIsInNamespace.namespace">
+      <ownedEnd xmi:type="cmof:Property" name="fact type form" xmi:id="factTypeFormIsInNamespace.factTypeForm" type="factTypeForm" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="namespace" xmi:id="factTypeFormIsInNamespace.namespace" type="namespace" lower="0" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="namespace contains fact type form" xmi:id="namespaceContainsFactTypeForm" importedElement="factTypeFormIsInNamespace"/>
+    <ownedMember xmi:type="cmof:Association" name="fact type has fact type form" xmi:id="factTypeHasFactTypeForm" memberEnd="factTypeHasFactTypeForm.factType factTypeHasFactTypeForm.factTypeForm">
+      <ownedEnd xmi:type="cmof:Property" name="fact type" xmi:id="factTypeHasFactTypeForm.factType" type="factType" lower="1" upper="1"/>
+      <ownedEnd xmi:type="cmof:Property" name="fact type form" xmi:id="factTypeHasFactTypeForm.factTypeForm" type="factTypeForm" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="fact type is internally closed in conceptual schema" xmi:id="factTypeIsInternallyClosedInConceptualSchema" memberEnd="factTypeIsInternallyClosedInConceptualSchema.factType factTypeIsInternallyClosedInConceptualSchema.conceptualSchema">
+      <ownedEnd xmi:type="cmof:Property" name="fact type" xmi:id="factTypeIsInternallyClosedInConceptualSchema.factType" type="factType" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="conceptual schema" xmi:id="factTypeIsInternallyClosedInConceptualSchema.conceptualSchema" type="conceptualSchema" lower="0" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="fact type is semi-closed in conceptual schema" xmi:id="factTypeIsSemi-closedInConceptualSchema" importedElement="factTypeIsInternallyClosedInConceptualSchema"/>
+    <ownedMember xmi:type="cmof:Association" name="fact type role has role binding" xmi:id="factTypeRoleHasRoleBinding" memberEnd="factTypeRoleHasRoleBinding.factTypeRole factTypeRoleHasRoleBinding.roleBinding">
+      <ownedEnd xmi:type="cmof:Property" name="fact type role" xmi:id="factTypeRoleHasRoleBinding.factTypeRole" type="factTypeRole" lower="1" upper="1"/>
+      <ownedEnd xmi:type="cmof:Property" name="role binding" xmi:id="factTypeRoleHasRoleBinding.roleBinding" type="roleBinding" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="fact type role is in fact type" xmi:id="factTypeRoleIsInFactType" memberEnd="factTypeRoleIsInFactType.factTypeRole factTypeRoleIsInFactType.factType">
+      <ownedEnd xmi:type="cmof:Property" name="fact type role" xmi:id="factTypeRoleIsInFactType.factTypeRole" type="factTypeRole" lower="1" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="fact type" xmi:id="factTypeRoleIsInFactType.factType" type="factType" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="implication has antecedent" xmi:id="implicationHasAntecedent" memberEnd="implicationHasAntecedent.implication implicationHasAntecedent.antecedent">
+      <ownedEnd xmi:type="cmof:Property" name="implication" xmi:id="implicationHasAntecedent.implication" type="implication" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="antecedent" xmi:id="implicationHasAntecedent.antecedent" type="logicalFormulation" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="implication has consequent" xmi:id="implicationHasConsequent" memberEnd="implicationHasConsequent.implication implicationHasConsequent.consequent">
+      <ownedEnd xmi:type="cmof:Property" name="implication" xmi:id="implicationHasConsequent.implication" type="implication" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="consequent" xmi:id="implicationHasConsequent.consequent" type="logicalFormulation" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="instantiation formulation binds to bindable target" xmi:id="instantiationFormulationBindsToBindableTarget" memberEnd="instantiationFormulationBindsToBindableTarget.instantiationFormulation instantiationFormulationBindsToBindableTarget.bindableTarget">
+      <ownedEnd xmi:type="cmof:Property" name="instantiation formulation" xmi:id="instantiationFormulationBindsToBindableTarget.instantiationFormulation" type="instantiationFormulation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="bindable target" xmi:id="instantiationFormulationBindsToBindableTarget.bindableTarget" type="bindableTarget" lower="1" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="bindable target is bound to instantiation formulation" xmi:id="bindableTargetIsBoundToInstantiationFormulation" importedElement="instantiationFormulationBindsToBindableTarget"/>
+    <ownedMember xmi:type="cmof:Association" name="instantiation formulation considers concept" xmi:id="instantiationFormulationConsidersConcept" memberEnd="instantiationFormulationConsidersConcept.instantiationFormulation instantiationFormulationConsidersConcept.concept">
+      <ownedEnd xmi:type="cmof:Property" name="instantiation formulation" xmi:id="instantiationFormulationConsidersConcept.instantiationFormulation" type="instantiationFormulation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="concept" xmi:id="instantiationFormulationConsidersConcept.concept" type="concept" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="logical formulation constrains projection" xmi:id="logicalFormulationConstrainsProjection" memberEnd="logicalFormulationConstrainsProjection.logicalFormulation logicalFormulationConstrainsProjection.projection">
+      <ownedEnd xmi:type="cmof:Property" name="logical formulation" xmi:id="logicalFormulationConstrainsProjection.logicalFormulation" type="logicalFormulation" lower="0" upper="1"/>
+      <ownedEnd xmi:type="cmof:Property" name="projection" xmi:id="logicalFormulationConstrainsProjection.projection" type="projection" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="logical formulation restricts variable" xmi:id="logicalFormulationRestrictsVariable" memberEnd="logicalFormulationRestrictsVariable.logicalFormulation logicalFormulationRestrictsVariable.variable">
+      <ownedEnd xmi:type="cmof:Property" name="logical formulation" xmi:id="logicalFormulationRestrictsVariable.logicalFormulation" type="logicalFormulation" lower="0" upper="1"/>
+      <ownedEnd xmi:type="cmof:Property" name="variable" xmi:id="logicalFormulationRestrictsVariable.variable" type="variable" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="logical operation has logical operand" xmi:id="logicalOperationHasLogicalOperand" memberEnd="logicalOperationHasLogicalOperand.logicalOperation logicalOperationHasLogicalOperand.logicalOperand">
+      <ownedEnd xmi:type="cmof:Property" name="logical operation" xmi:id="logicalOperationHasLogicalOperand.logicalOperation" type="logicalOperation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="logical operand" xmi:id="logicalOperationHasLogicalOperand.logicalOperand" type="logicalFormulation" lower="1" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="meaning corresponds to thing" xmi:id="meaningCorrespondsToThing" memberEnd="meaningCorrespondsToThing.meaning meaningCorrespondsToThing.thing">
+      <ownedEnd xmi:type="cmof:Property" name="meaning" xmi:id="meaningCorrespondsToThing.meaning" type="meaning" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="thing" xmi:id="meaningCorrespondsToThing.thing" type="thing" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="modal formulation embeds logical formulation" xmi:id="modalFormulationEmbedsLogicalFormulation" memberEnd="modalFormulationEmbedsLogicalFormulation.modalFormulation modalFormulationEmbedsLogicalFormulation.logicalFormulation">
+      <ownedEnd xmi:type="cmof:Property" name="modal formulation" xmi:id="modalFormulationEmbedsLogicalFormulation.modalFormulation" type="modalFormulation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="logical formulation" xmi:id="modalFormulationEmbedsLogicalFormulation.logicalFormulation" type="logicalFormulation" lower="1" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="logical formulation is embedded in modal formulation" xmi:id="logicalFormulationIsEmbeddedInModalFormulation" importedElement="modalFormulationEmbedsLogicalFormulation"/>
+    <ownedMember xmi:type="cmof:Association" name="namespace has URI" xmi:id="namespaceHasURI" memberEnd="namespaceHasURI.namespace namespaceHasURI.URI">
+      <ownedEnd xmi:type="cmof:Property" name="namespace" xmi:id="namespaceHasURI.namespace" type="namespace" lower="0" upper="1"/>
+      <ownedEnd xmi:type="cmof:Property" name="URI" xmi:id="namespaceHasURI.URI" type="URI" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="namespace1 incorporates namespace2" xmi:id="namespace1IncorporatesNamespace2" memberEnd="namespace1IncorporatesNamespace2.namespace1 namespace1IncorporatesNamespace2.namespace2">
+      <ownedEnd xmi:type="cmof:Property" name="namespace1" xmi:id="namespace1IncorporatesNamespace2.namespace1" type="namespace" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="namespace2" xmi:id="namespace1IncorporatesNamespace2.namespace2" type="namespace" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="numeric range quantification has maximum cardinality" xmi:id="numericRangeQuantificationHasMaximumCardinality" memberEnd="numericRangeQuantificationHasMaximumCardinality.numericRangeQuantification numericRangeQuantificationHasMaximumCardinality.maximumCardinality">
+      <ownedEnd xmi:type="cmof:Property" name="numeric range quantification" xmi:id="numericRangeQuantificationHasMaximumCardinality.numericRangeQuantification" type="numericRangeQuantification" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="maximum cardinality" xmi:id="numericRangeQuantificationHasMaximumCardinality.maximumCardinality" type="nonnegativeInteger" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="numeric range quantification has minimum cardinality" xmi:id="numericRangeQuantificationHasMinimumCardinality" memberEnd="numericRangeQuantificationHasMinimumCardinality.numericRangeQuantification numericRangeQuantificationHasMinimumCardinality.minimumCardinality">
+      <ownedEnd xmi:type="cmof:Property" name="numeric range quantification" xmi:id="numericRangeQuantificationHasMinimumCardinality.numericRangeQuantification" type="numericRangeQuantification" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="minimum cardinality" xmi:id="numericRangeQuantificationHasMinimumCardinality.minimumCardinality" type="nonnegativeInteger" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="objectification binds to bindable target" xmi:id="objectificationBindsToBindableTarget" memberEnd="objectificationBindsToBindableTarget.objectification objectificationBindsToBindableTarget.bindableTarget">
+      <ownedEnd xmi:type="cmof:Property" name="objectification" xmi:id="objectificationBindsToBindableTarget.objectification" type="objectification" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="bindable target" xmi:id="objectificationBindsToBindableTarget.bindableTarget" type="bindableTarget" lower="1" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="bindable target is bound to objectification" xmi:id="bindableTargetIsBoundToObjectification" importedElement="objectificationBindsToBindableTarget"/>
+    <ownedMember xmi:type="cmof:Association" name="objectification considers logical formulation" xmi:id="objectificationConsidersLogicalFormulation" memberEnd="objectificationConsidersLogicalFormulation.objectification objectificationConsidersLogicalFormulation.logicalFormulation">
+      <ownedEnd xmi:type="cmof:Property" name="objectification" xmi:id="objectificationConsidersLogicalFormulation.objectification" type="objectification" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="logical formulation" xmi:id="objectificationConsidersLogicalFormulation.logicalFormulation" type="logicalFormulation" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="placeholder is at starting character position" xmi:id="placeholderIsAtStartingCharacterPosition" memberEnd="placeholderIsAtStartingCharacterPosition.placeholder placeholderIsAtStartingCharacterPosition.startingCharacterPosition">
+      <ownedEnd xmi:type="cmof:Property" name="placeholder" xmi:id="placeholderIsAtStartingCharacterPosition.placeholder" type="placeholder" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="starting character position" xmi:id="placeholderIsAtStartingCharacterPosition.startingCharacterPosition" type="positiveInteger" lower="0" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="placeholder has starting character position" xmi:id="placeholderHasStartingCharacterPosition" importedElement="placeholderIsAtStartingCharacterPosition"/>
+    <ownedMember xmi:type="cmof:Association" name="placeholder is in fact type form" xmi:id="placeholderIsInFactTypeForm" memberEnd="placeholderIsInFactTypeForm.placeholder placeholderIsInFactTypeForm.factTypeForm">
+      <ownedEnd xmi:type="cmof:Property" name="placeholder" xmi:id="placeholderIsInFactTypeForm.placeholder" type="placeholder" lower="1" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="fact type form" xmi:id="placeholderIsInFactTypeForm.factTypeForm" type="factTypeForm" lower="1" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="fact type form has placeholder" xmi:id="factTypeFormHasPlaceholder" importedElement="placeholderIsInFactTypeForm"/>
+    <ownedMember xmi:type="cmof:Association" name="placeholder uses designation" xmi:id="placeholderUsesDesignation" memberEnd="placeholderUsesDesignation.placeholder placeholderUsesDesignation.designation">
+      <ownedEnd xmi:type="cmof:Property" name="placeholder" xmi:id="placeholderUsesDesignation.placeholder" type="placeholder" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="designation" xmi:id="placeholderUsesDesignation.designation" type="designation" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="projecting formulation binds to bindable target" xmi:id="projectingFormulationBindsToBindableTarget" memberEnd="projectingFormulationBindsToBindableTarget.projectingFormulation projectingFormulationBindsToBindableTarget.bindableTarget">
+      <ownedEnd xmi:type="cmof:Property" name="projecting formulation" xmi:id="projectingFormulationBindsToBindableTarget.projectingFormulation" type="projectingFormulation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="bindable target" xmi:id="projectingFormulationBindsToBindableTarget.bindableTarget" type="bindableTarget" lower="1" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="bindable target is bound to projecting formulation" xmi:id="bindableTargetIsBoundToProjectingFormulation" importedElement="projectingFormulationBindsToBindableTarget"/>
+    <ownedMember xmi:type="cmof:Association" name="projecting formulation has projection" xmi:id="projectingFormulationHasProjection" memberEnd="projectingFormulationHasProjection.projectingFormulation projectingFormulationHasProjection.projection">
+      <ownedEnd xmi:type="cmof:Property" name="projecting formulation" xmi:id="projectingFormulationHasProjection.projectingFormulation" type="projectingFormulation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="projection" xmi:id="projectingFormulationHasProjection.projection" type="projection" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="projection has auxiliary variable" xmi:id="projectionHasAuxiliaryVariable" memberEnd="projectionHasAuxiliaryVariable.projection projectionHasAuxiliaryVariable.auxiliaryVariable">
+      <ownedEnd xmi:type="cmof:Property" name="projection" xmi:id="projectionHasAuxiliaryVariable.projection" type="projection" lower="1" upper="1"/>
+      <ownedEnd xmi:type="cmof:Property" name="auxiliary variable" xmi:id="projectionHasAuxiliaryVariable.auxiliaryVariable" type="auxiliaryVariable" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="projection is on variable" xmi:id="projectionIsOnVariable" memberEnd="projectionIsOnVariable.projection projectionIsOnVariable.variable">
+      <ownedEnd xmi:type="cmof:Property" name="projection" xmi:id="projectionIsOnVariable.projection" type="projection" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="variable" xmi:id="projectionIsOnVariable.variable" type="variable" lower="1" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="variable is in projection" xmi:id="variableIsInProjection" importedElement="projectionIsOnVariable"/>
+    <ownedMember xmi:type="cmof:Association" name="proposition nominalization binds to bindable target" xmi:id="propositionNominalizationBindsToBindableTarget" memberEnd="propositionNominalizationBindsToBindableTarget.propositionNominalization propositionNominalizationBindsToBindableTarget.bindableTarget">
+      <ownedEnd xmi:type="cmof:Property" name="proposition nominalization" xmi:id="propositionNominalizationBindsToBindableTarget.propositionNominalization" type="propositionNominalization" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="bindable target" xmi:id="propositionNominalizationBindsToBindableTarget.bindableTarget" type="bindableTarget" lower="1" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="bindable target is bound to proposition nominalization" xmi:id="bindableTargetIsBoundToPropositionNominalization" importedElement="propositionNominalizationBindsToBindableTarget"/>
+    <ownedMember xmi:type="cmof:Association" name="proposition nominalization considers logical formulation" xmi:id="propositionNominalizationConsidersLogicalFormulation" memberEnd="propositionNominalizationConsidersLogicalFormulation.propositionNominalization propositionNominalizationConsidersLogicalFormulation.logicalFormulation">
+      <ownedEnd xmi:type="cmof:Property" name="proposition nominalization" xmi:id="propositionNominalizationConsidersLogicalFormulation.propositionNominalization" type="propositionNominalization" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="logical formulation" xmi:id="propositionNominalizationConsidersLogicalFormulation.logicalFormulation" type="logicalFormulation" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="quantification introduces variable" xmi:id="quantificationIntroducesVariable" memberEnd="quantificationIntroducesVariable.quantification quantificationIntroducesVariable.variable">
+      <ownedEnd xmi:type="cmof:Property" name="quantification" xmi:id="quantificationIntroducesVariable.quantification" type="quantification" lower="0" upper="1"/>
+      <ownedEnd xmi:type="cmof:Property" name="variable" xmi:id="quantificationIntroducesVariable.variable" type="variable" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="quantification scopes over logical formulation" xmi:id="quantificationScopesOverLogicalFormulation" memberEnd="quantificationScopesOverLogicalFormulation.quantification quantificationScopesOverLogicalFormulation.logicalFormulation">
+      <ownedEnd xmi:type="cmof:Property" name="quantification" xmi:id="quantificationScopesOverLogicalFormulation.quantification" type="quantification" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="logical formulation" xmi:id="quantificationScopesOverLogicalFormulation.logicalFormulation" type="logicalFormulation" lower="0" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="quantity1 equals quantity2" xmi:id="quantity1EqualsQuantity2" memberEnd="quantity1EqualsQuantity2.quantity1 quantity1EqualsQuantity2.quantity2">
+      <ownedEnd xmi:type="cmof:Property" name="quantity1" xmi:id="quantity1EqualsQuantity2.quantity1" type="quantity" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="quantity2" xmi:id="quantity1EqualsQuantity2.quantity2" type="quantity" lower="0" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="quantity1 is equals to quantity2" xmi:id="quantity1IsEqualsToQuantity2" importedElement="quantity1EqualsQuantity2"/>
+    <ownedMember xmi:type="cmof:Association" name="quantity1 is less than quantity2" xmi:id="quantity1IsLessThanQuantity2" memberEnd="quantity1IsLessThanQuantity2.quantity1 quantity1IsLessThanQuantity2.quantity2">
+      <ownedEnd xmi:type="cmof:Property" name="quantity1" xmi:id="quantity1IsLessThanQuantity2.quantity1" type="quantity" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="quantity2" xmi:id="quantity1IsLessThanQuantity2.quantity2" type="quantity" lower="0" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="quantity2 is greater than quantity1" xmi:id="quantity2IsGreaterThanQuantity1" importedElement="quantity1IsLessThanQuantity2"/>
+    <ownedMember xmi:type="cmof:Association" name="reference scheme extensionally uses fact type role" xmi:id="referenceSchemeExtensionallyUsesFactTypeRole" memberEnd="referenceSchemeExtensionallyUsesFactTypeRole.referenceScheme referenceSchemeExtensionallyUsesFactTypeRole.factTypeRole">
+      <ownedEnd xmi:type="cmof:Property" name="reference scheme" xmi:id="referenceSchemeExtensionallyUsesFactTypeRole.referenceScheme" type="referenceScheme" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="fact type role" xmi:id="referenceSchemeExtensionallyUsesFactTypeRole.factTypeRole" type="factTypeRole" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="reference scheme is for concept" xmi:id="referenceSchemeIsForConcept" memberEnd="referenceSchemeIsForConcept.referenceScheme referenceSchemeIsForConcept.concept">
+      <ownedEnd xmi:type="cmof:Property" name="reference scheme" xmi:id="referenceSchemeIsForConcept.referenceScheme" type="referenceScheme" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="concept" xmi:id="referenceSchemeIsForConcept.concept" type="concept" lower="1" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="concept has reference scheme" xmi:id="conceptHasReferenceScheme" importedElement="referenceSchemeIsForConcept"/>
+    <ownedMember xmi:type="cmof:Association" name="reference scheme simply uses fact type role" xmi:id="referenceSchemeSimplyUsesFactTypeRole" memberEnd="referenceSchemeSimplyUsesFactTypeRole.referenceScheme referenceSchemeSimplyUsesFactTypeRole.factTypeRole">
+      <ownedEnd xmi:type="cmof:Property" name="reference scheme" xmi:id="referenceSchemeSimplyUsesFactTypeRole.referenceScheme" type="referenceScheme" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="fact type role" xmi:id="referenceSchemeSimplyUsesFactTypeRole.factTypeRole" type="factTypeRole" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="reference scheme uses characteristic" xmi:id="referenceSchemeUsesCharacteristic" memberEnd="referenceSchemeUsesCharacteristic.referenceScheme referenceSchemeUsesCharacteristic.characteristic">
+      <ownedEnd xmi:type="cmof:Property" name="reference scheme" xmi:id="referenceSchemeUsesCharacteristic.referenceScheme" type="referenceScheme" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="characteristic" xmi:id="referenceSchemeUsesCharacteristic.characteristic" type="characteristic" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="representation has expression" xmi:id="representationHasExpression" memberEnd="representationHasExpression.representation representationHasExpression.expression">
+      <ownedEnd xmi:type="cmof:Property" name="representation" xmi:id="representationHasExpression.representation" type="representation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="expression" xmi:id="representationHasExpression.expression" type="expression" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="representation represents meaning" xmi:id="representationRepresentsMeaning" memberEnd="representationRepresentsMeaning.representation representationRepresentsMeaning.meaning">
+      <ownedEnd xmi:type="cmof:Property" name="representation" xmi:id="representationRepresentsMeaning.representation" type="representation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="meaning" xmi:id="representationRepresentsMeaning.meaning" type="meaning" lower="1" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="representation has meaning" xmi:id="representationHasMeaning" importedElement="representationRepresentsMeaning"/>
+    <elementImport xmi:type="cmof:ElementImport" alias="meaning has representation" xmi:id="meaningHasRepresentation" importedElement="representationRepresentsMeaning"/>
+    <ownedMember xmi:type="cmof:Association" name="role binding binds to bindable target" xmi:id="roleBindingBindsToBindableTarget" memberEnd="roleBindingBindsToBindableTarget.roleBinding roleBindingBindsToBindableTarget.bindableTarget">
+      <ownedEnd xmi:type="cmof:Property" name="role binding" xmi:id="roleBindingBindsToBindableTarget.roleBinding" type="roleBinding" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="bindable target" xmi:id="roleBindingBindsToBindableTarget.bindableTarget" type="bindableTarget" lower="1" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="role binding references bindable target" xmi:id="roleBindingReferencesBindableTarget" importedElement="roleBindingBindsToBindableTarget"/>
+    <ownedMember xmi:type="cmof:Association" name="role binding occurs in atomic formulation" xmi:id="roleBindingOccursInAtomicFormulation" memberEnd="roleBindingOccursInAtomicFormulation.roleBinding roleBindingOccursInAtomicFormulation.atomicFormulation">
+      <ownedEnd xmi:type="cmof:Property" name="role binding" xmi:id="roleBindingOccursInAtomicFormulation.roleBinding" type="roleBinding" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="atomic formulation" xmi:id="roleBindingOccursInAtomicFormulation.atomicFormulation" type="atomicFormulation" lower="1" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="atomic formulation has role binding" xmi:id="atomicFormulationHasRoleBinding" importedElement="roleBindingOccursInAtomicFormulation"/>
+    <ownedMember xmi:type="cmof:Association" name="role ranges over object type" xmi:id="roleRangesOverObjectType" memberEnd="roleRangesOverObjectType.role roleRangesOverObjectType.objectType">
+      <ownedEnd xmi:type="cmof:Property" name="role" xmi:id="roleRangesOverObjectType.role" type="role" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="object type" xmi:id="roleRangesOverObjectType.objectType" type="objectType" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="set has cardinality" xmi:id="setHasCardinality" memberEnd="setHasCardinality.set setHasCardinality.cardinality">
+      <ownedEnd xmi:type="cmof:Property" name="set" xmi:id="setHasCardinality.set" type="set" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="cardinality" xmi:id="setHasCardinality.cardinality" type="nonnegativeInteger" lower="0" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="statement expresses proposition" xmi:id="statementExpressesProposition" memberEnd="statementExpressesProposition.statement statementExpressesProposition.proposition">
+      <ownedEnd xmi:type="cmof:Property" name="statement" xmi:id="statementExpressesProposition.statement" type="statement" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="proposition" xmi:id="statementExpressesProposition.proposition" type="proposition" lower="1" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="proposition has statement" xmi:id="propositionHasStatement" importedElement="statementExpressesProposition"/>
+    <ownedMember xmi:type="cmof:Association" name="thing is in set" xmi:id="thingIsInSet" memberEnd="thingIsInSet.thing thingIsInSet.set">
+      <ownedEnd xmi:type="cmof:Property" name="thing" xmi:id="thingIsInSet.thing" type="thing" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="set" xmi:id="thingIsInSet.set" type="set" lower="0" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="set includes thing" xmi:id="setIncludesThing" importedElement="thingIsInSet"/>
+    <ownedMember xmi:type="cmof:Association" name="thing1 is thing2" xmi:id="thing1IsThing2" memberEnd="thing1IsThing2.thing1 thing1IsThing2.thing2">
+      <ownedEnd xmi:type="cmof:Property" name="thing1" xmi:id="thing1IsThing2.thing1" type="thing" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="thing2" xmi:id="thing1IsThing2.thing2" type="thing" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="variable has projection position" xmi:id="variableHasProjectionPosition" memberEnd="variableHasProjectionPosition.variable variableHasProjectionPosition.projectionPosition">
+      <ownedEnd xmi:type="cmof:Property" name="variable" xmi:id="variableHasProjectionPosition.variable" type="variable" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="projection position" xmi:id="variableHasProjectionPosition.projectionPosition" type="positiveInteger" lower="0" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="variable is frees within semantic formulation" xmi:id="variableIsFreesWithinSemanticFormulation" memberEnd="variableIsFreesWithinSemanticFormulation.variable variableIsFreesWithinSemanticFormulation.semanticFormulation">
+      <ownedEnd xmi:type="cmof:Property" name="variable" xmi:id="variableIsFreesWithinSemanticFormulation.variable" type="variable" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="semantic formulation" xmi:id="variableIsFreesWithinSemanticFormulation.semanticFormulation" type="semanticFormulation" lower="0" upper="*"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="semantic formulation includes variable without binding" xmi:id="SemanticFormulationIncludesVariableWithoutBinding" importedElement="variableIsFreesWithinSemanticFormulation"/>
+    <ownedMember xmi:type="cmof:Association" name="variable maps to fact type role" xmi:id="variableMapsToFactTypeRole" memberEnd="variableMapsToFactTypeRole.variable variableMapsToFactTypeRole.factTypeRole">
+      <ownedEnd xmi:type="cmof:Property" name="variable" xmi:id="variableMapsToFactTypeRole.variable" type="variable" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="fact type role" xmi:id="variableMapsToFactTypeRole.factTypeRole" type="factTypeRole" lower="0" upper="1"/>
+    </ownedMember>
+    <elementImport xmi:type="cmof:ElementImport" alias="fact type role is mapped from variable" xmi:id="factTypeRoleIsMappedFromVariable" importedElement="variableMapsToFactTypeRole"/>
+    <ownedMember xmi:type="cmof:Association" name="variable ranges over concept" xmi:id="variableRangesOverConcept" memberEnd="variableRangesOverConcept.variable variableRangesOverConcept.concept">
+      <ownedEnd xmi:type="cmof:Property" name="variable" xmi:id="variableRangesOverConcept.variable" type="variable" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="concept" xmi:id="variableRangesOverConcept.concept" type="concept" lower="0" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="vocabulary namespace is for language" xmi:id="vocabularyNamespaceIsForLanguage" memberEnd="vocabularyNamespaceIsForLanguage.vocabularyNamespace vocabularyNamespaceIsForLanguage.language">
+      <ownedEnd xmi:type="cmof:Property" name="vocabulary namespace" xmi:id="vocabularyNamespaceIsForLanguage.vocabularyNamespace" type="vocabularyNamespace" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="language" xmi:id="vocabularyNamespaceIsForLanguage.language" type="language" lower="0" upper="*"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="whether-or-not formulation has consequent" xmi:id="whether-or-notFormulationHasConsequent" memberEnd="whether-or-notFormulationHasConsequent.whether-or-notFormulation whether-or-notFormulationHasConsequent.consequent">
+      <ownedEnd xmi:type="cmof:Property" name="whether-or-not formulation" xmi:id="whether-or-notFormulationHasConsequent.whether-or-notFormulation" type="whether-or-notFormulation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="consequent" xmi:id="whether-or-notFormulationHasConsequent.consequent" type="logicalFormulation" lower="1" upper="1"/>
+    </ownedMember>
+    <ownedMember xmi:type="cmof:Association" name="whether-or-not formulation has inconsequent" xmi:id="whether-or-notFormulationHasInconsequent" memberEnd="whether-or-notFormulationHasInconsequent.whether-or-notFormulation whether-or-notFormulationHasInconsequent.inconsequent">
+      <ownedEnd xmi:type="cmof:Property" name="whether-or-not formulation" xmi:id="whether-or-notFormulationHasInconsequent.whether-or-notFormulation" type="whether-or-notFormulation" lower="0" upper="*"/>
+      <ownedEnd xmi:type="cmof:Property" name="inconsequent" xmi:id="whether-or-notFormulationHasInconsequent.inconsequent" type="logicalFormulation" lower="1" upper="1"/>
+    </ownedMember>
+  </cmof:Package>
+  <cmof:Tag name="org.omg.xmi.nsPrefix" value="sbvr" element="LogicalFormulationOfSemanticsVocabulary"/>
+  <cmof:Tag name="org.omg.xmi.nsURI" value="http://www.omg.org/spec/SBVR/20070901/LogicalFormulationOfSemantics.xml" element="LogicalFormulationOfSemanticsVocabulary"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="aggregationFormulation" element="aggregationFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="answerNominalization" element="answerNominalization"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="minimumCardinality" element="at-least-nQuantification.minimumCardinality"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="at-least-nQuantification.minimumCardinality at-least-nQuantificationHasMinimumCardinality.minimumCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="at-least-nQuantification" element="at-least-nQuantification"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="maximumCardinality" element="at-most-nQuantification.maximumCardinality"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="at-most-nQuantification.maximumCardinality at-most-nQuantificationHasMaximumCardinality.maximumCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="at-most-nQuantification" element="at-most-nQuantification"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="at-most-oneQuantification" element="at-most-oneQuantification"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="roleBinding" element="atomicFormulation.roleBinding"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="atomicFormulation.roleBinding roleBindingOccursInAtomicFormulation.roleBinding"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="atomicFormulation" element="atomicFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="attributiveNamespace" element="attributiveNamespace"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="auxiliaryVariable" element="auxiliaryVariable"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="bagProjection" element="bagProjection"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="binaryFactType" element="binaryFactType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalOperand1" element="binaryLogicalOperation.logicalOperand1"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="binaryLogicalOperation.logicalOperand1 binaryLogicalOperationHasLogicalOperand1.logicalOperand1"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalOperand2" element="binaryLogicalOperation.logicalOperand2"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="binaryLogicalOperation.logicalOperand2 binaryLogicalOperationHasLogicalOperand2.logicalOperand2"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="binaryLogicalOperation" element="binaryLogicalOperation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="bindableTarget" element="bindableTarget"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="characteristic" element="characteristic"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedLogicalFormulation" element="closedLogicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedProjection" element="closedProjection"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedSemanticFormulation" element="closedSemanticFormulation"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="concept.instance conceptHasInstance.instance"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="concept.definition conceptHasDefinition.definition"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="concept.designation conceptHasDesignation.designation"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="concept.extension conceptHasExtension.extension"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="attributiveNamespace" element="concept.attributiveNamespace"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="concept.attributiveNamespace attributiveNamespaceIsForSubjectConcept.attributiveNamespace"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="referenceScheme" element="concept.referenceScheme"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="concept.referenceScheme referenceSchemeIsForConcept.referenceScheme"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptType" element="conceptType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptualSchema" element="conceptualSchema"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="designation.signifier designationHasSignifier.signifier"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="disjunction" element="disjunction"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="equivalence" element="equivalence"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="exactly-nQuantification.cardinality exactly-nQuantificationHasCardinality.cardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="exactly-nQuantification" element="exactly-nQuantification"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="exactly-oneQuantification" element="exactly-oneQuantification"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="exclusiveDisjunction" element="exclusiveDisjunction"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="existentialQuantification" element="existentialQuantification"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factModel" element="factModel"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeForm" element="factType.factTypeForm"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="factType.factTypeForm factTypeHasFactTypeForm.factTypeForm"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="factType.role factTypeRoleIsInFactType.factTypeRole"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factType" element="factType"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="factTypeForm.placeholder placeholderIsInFactTypeForm.placeholder"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeForm" element="factTypeForm"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factType" element="factTypeHasFactInFactModel.factType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factModel" element="factTypeHasFactInFactModel.factModel"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeHasFactInFactModel" element="factTypeHasFactInFactModel"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeNominalization" element="factTypeNominalization"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="roleBinding" element="factTypeRole.roleBinding"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="factTypeRole.roleBinding factTypeRoleHasRoleBinding.roleBinding"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeRole" element="factTypeRole"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="implication.antecedent implicationHasAntecedent.antecedent"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="implication.consequent implicationHasConsequent.consequent"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="implication" element="implication"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="individualConcept" element="individualConcept"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="instantiationFormulation" element="instantiationFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalFormulation" element="logicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalFormulationKind" element="logicalFormulationKind"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalNegation" element="logicalNegation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalOperand" element="logicalOperation.logicalOperand"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="logicalOperation.logicalOperand logicalOperationHasLogicalOperand.logicalOperand"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalOperation" element="logicalOperation"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="meaning.representation representationRepresentsMeaning.representation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="modalFormulation" element="modalFormulation"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="namespace.URI namespaceHasURI.URI"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="nandFormulation" element="nandFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="necessityFormulation" element="necessityFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="nonnegativeInteger" element="nonnegativeInteger"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="norFormulation" element="norFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="nounConcept" element="nounConcept"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="nounConceptNominalization" element="nounConceptNominalization"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="nounForm" element="nounForm"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="maximumCardinality" element="numericRangeQuantification.maximumCardinality"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="numericRangeQuantification.maximumCardinality numericRangeQuantificationHasMaximumCardinality.maximumCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="minimumCardinality" element="numericRangeQuantification.minimumCardinality"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="numericRangeQuantification.minimumCardinality numericRangeQuantificationHasMinimumCardinality.minimumCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="numericRangeQuantification" element="numericRangeQuantification"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="objectType" element="objectType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="obligationFormulation" element="obligationFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="permissibilityFormulation" element="permissibilityFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="startingCharacterPosition" element="placeholder.startingCharacterPosition"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="placeholder.startingCharacterPosition placeholderIsAtStartingCharacterPosition.startingCharacterPosition"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="positiveInteger" element="positiveInteger"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="possibilityFormulation" element="possibilityFormulation"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="projectingFormulation.projection projectingFormulationHasProjection.projection"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="projectingFormulation" element="projectingFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="constrainingFormulation" element="projection.constrainingFormulation"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="projection.constrainingFormulation logicalFormulationConstrainsProjection.logicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="projectionVariable" element="projection.projectionVariable"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="projection.projectionVariable projectionIsOnVariable.variable"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="auxiliaryVariable" element="projection.auxiliaryVariable"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="projection.auxiliaryVariable projectionHasAuxiliaryVariable.auxiliaryVariable"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="proposition.statement statementExpressesProposition.statement"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="isObligatedToBeTrue" element="proposition.isObligatedToBeTrue"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="isPermittedToBeTrue" element="proposition.isPermittedToBeTrue"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="isTrue" element="proposition.isTrue"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="isFalse" element="proposition.isFalse"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="isPossiblyTrue" element="proposition.isPossiblyTrue"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="isNecessarilyTrue" element="proposition.isNecessarilyTrue"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="propositionNominalization" element="propositionNominalization"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="scopeFormulation" element="quantification.scopeFormulation"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="quantification.scopeFormulation quantificationScopesOverLogicalFormulation.logicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="questionNominalization" element="questionNominalization"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="identifyingCharacteristic" element="referenceScheme.identifyingCharacteristic"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="referenceScheme.identifyingCharacteristic referenceSchemeUsesCharacteristic.characteristic"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="simplyUsedRole" element="referenceScheme.simplyUsedRole"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="referenceScheme.simplyUsedRole referenceSchemeSimplyUsesFactTypeRole.factTypeRole"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="extensionallyUsedRole" element="referenceScheme.extensionallyUsedRole"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="referenceScheme.extensionallyUsedRole referenceSchemeExtensionallyUsesFactTypeRole.factTypeRole"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="referenceScheme" element="referenceScheme"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="representation.meaning representationRepresentsMeaning.meaning"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="representation.expression representationHasExpression.expression"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="roleBinding" element="roleBinding"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="semanticFormulation" element="semanticFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="sententialForm" element="sententialForm"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="set.element thingIsInSet.thing"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="set.cardinality setHasCardinality.cardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="setProjection" element="setProjection"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="stateOfAffairs" element="stateOfAffairs"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="stateOfAffairs" element="stateOfAffairsInvolvesThingInRole.stateOfAffairs"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="stateOfAffairsInvolvesThingInRole" element="stateOfAffairsInvolvesThingInRole"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="universalQuantification" element="universalQuantification"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="URI" element="URI"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="ranged-overConcept" element="variable.ranged-overConcept"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="variable.ranged-overConcept variableRangesOverConcept.concept"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="projectionPosition" element="variable.projectionPosition"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="variable.projectionPosition variableHasProjectionPosition.projectionPosition"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="isUnitary" element="variable.isUnitary"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="restrictingFormulation" element="variable.restrictingFormulation"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="variable.restrictingFormulation logicalFormulationRestrictsVariable.logicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="vocabularyNamespace" element="vocabularyNamespace"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="whether-or-notFormulation.inconsequent whether-or-notFormulationHasInconsequent.inconsequent"/>
+  <cmof:Tag name="org.omg.sbvr.sameRole" value="" element="whether-or-notFormulation.consequent whether-or-notFormulationHasConsequent.consequent"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="whether-or-notFormulation" element="whether-or-notFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="at-least-nQuantification" element="at-least-nQuantificationHasMinimumCardinality.at-least-nQuantification"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="minimumCardinality" element="at-least-nQuantificationHasMinimumCardinality.minimumCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="at-least-nQuantificationHasMinimumCardinality" element="at-least-nQuantificationHasMinimumCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="at-most-nQuantification" element="at-most-nQuantificationHasMaximumCardinality.at-most-nQuantification"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="maximumCardinality" element="at-most-nQuantificationHasMaximumCardinality.maximumCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="at-most-nQuantificationHasMaximumCardinality" element="at-most-nQuantificationHasMaximumCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="atomicFormulation" element="atomicFormulationIsBasedOnFactType.atomicFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factType" element="atomicFormulationIsBasedOnFactType.factType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="atomicFormulationIsBasedOnFactType" element="atomicFormulationIsBasedOnFactType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="attributiveNamespace" element="attributiveNamespaceIsForSubjectConcept.attributiveNamespace"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="subjectConcept" element="attributiveNamespaceIsForSubjectConcept.subjectConcept"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="attributiveNamespaceIsForSubjectConcept" element="attributiveNamespaceIsForSubjectConcept"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="attributiveNamespace" element="attributiveNamespaceIsWithinVocabularyNamespace.attributiveNamespace"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="vocabularyNamespace" element="attributiveNamespaceIsWithinVocabularyNamespace.vocabularyNamespace"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="attributiveNamespaceIsWithinVocabularyNamespace" element="attributiveNamespaceIsWithinVocabularyNamespace"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="binaryLogicalOperation" element="binaryLogicalOperationHasLogicalOperand1.binaryLogicalOperation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalOperand1" element="binaryLogicalOperationHasLogicalOperand1.logicalOperand1"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="binaryLogicalOperationHasLogicalOperand1" element="binaryLogicalOperationHasLogicalOperand1"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="binaryLogicalOperation" element="binaryLogicalOperationHasLogicalOperand2.binaryLogicalOperation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalOperand2" element="binaryLogicalOperationHasLogicalOperand2.logicalOperand2"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="binaryLogicalOperationHasLogicalOperand2" element="binaryLogicalOperationHasLogicalOperand2"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedLogicalFormulation" element="closedLogicalFormulationFormalizesStatement.closedLogicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedLogicalFormulationFormalizesStatement" element="closedLogicalFormulationFormalizesStatement"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedLogicalFormulation" element="closedLogicalFormulationMeansProposition.closedLogicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedLogicalFormulationMeansProposition" element="closedLogicalFormulationMeansProposition"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedProjection" element="closedProjectionDefinesFactType.closedProjection"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factType" element="closedProjectionDefinesFactType.factType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedProjectionDefinesFactType" element="closedProjectionDefinesFactType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedProjection" element="closedProjectionDefinesNounConcept.closedProjection"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="nounConcept" element="closedProjectionDefinesNounConcept.nounConcept"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedProjectionDefinesNounConcept" element="closedProjectionDefinesNounConcept"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedProjection" element="closedProjectionFormalizesDefinition.closedProjection"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedProjectionFormalizesDefinition" element="closedProjectionFormalizesDefinition"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedProjection" element="closedProjectionMeansQuestion.closedProjection"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedProjectionMeansQuestion" element="closedProjectionMeansQuestion"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedSemanticFormulation" element="closedSemanticFormulationFormulatesMeaning.closedSemanticFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="closedSemanticFormulationFormulatesMeaning" element="closedSemanticFormulationFormulatesMeaning"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptHasDefinition" element="conceptHasDefinition"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptHasDesignation" element="conceptHasDesignation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptHasExtension" element="conceptHasExtension"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptHasInstance" element="conceptHasInstance"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptIncorporatesCharacteristic" element="conceptIncorporatesCharacteristic"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptualSchema" element="conceptIsClosedInConceptualSchema.conceptualSchema"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptIsClosedInConceptualSchema" element="conceptIsClosedInConceptualSchema"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="concept1IsCoextensiveWithConcept2" element="concept1IsCoextensiveWithConcept2"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="concept1SpecializesConcept2" element="concept1SpecializesConcept2"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptualSchema" element="conceptualSchemaIncludesConcept.conceptualSchema"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptualSchemaIncludesConcept" element="conceptualSchemaIncludesConcept"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptualSchema" element="conceptualSchemaIncludesFact.conceptualSchema"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptualSchemaIncludesFact" element="conceptualSchemaIncludesFact"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="designationHasSignifier" element="designationHasSignifier"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="designationIsInNamespace" element="designationIsInNamespace"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="exactly-nQuantification" element="exactly-nQuantificationHasCardinality.exactly-nQuantification"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="exactly-nQuantificationHasCardinality" element="exactly-nQuantificationHasCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="expressionRepresentsMeaning" element="expressionRepresentsMeaning"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factModel" element="factModelIncludesFact.factModel"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factModelIncludesFact" element="factModelIncludesFact"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factModel" element="factModelIsBasedOnConceptualSchema.factModel"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptualSchema" element="factModelIsBasedOnConceptualSchema.conceptualSchema"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factModelIsBasedOnConceptualSchema" element="factModelIsBasedOnConceptualSchema"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeForm" element="factTypeFormDemonstratesDesignation.factTypeForm"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeFormDemonstratesDesignation" element="factTypeFormDemonstratesDesignation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeForm" element="factTypeFormIsInNamespace.factTypeForm"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeFormIsInNamespace" element="factTypeFormIsInNamespace"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factType" element="factTypeHasFactTypeForm.factType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeForm" element="factTypeHasFactTypeForm.factTypeForm"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeHasFactTypeForm" element="factTypeHasFactTypeForm"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factType" element="factTypeIsInternallyClosedInConceptualSchema.factType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="conceptualSchema" element="factTypeIsInternallyClosedInConceptualSchema.conceptualSchema"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeIsInternallyClosedInConceptualSchema" element="factTypeIsInternallyClosedInConceptualSchema"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeRole" element="factTypeRoleHasRoleBinding.factTypeRole"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="roleBinding" element="factTypeRoleHasRoleBinding.roleBinding"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeRoleHasRoleBinding" element="factTypeRoleHasRoleBinding"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeRole" element="factTypeRoleIsInFactType.factTypeRole"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factType" element="factTypeRoleIsInFactType.factType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeRoleIsInFactType" element="factTypeRoleIsInFactType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="implicationHasAntecedent" element="implicationHasAntecedent"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="implicationHasConsequent" element="implicationHasConsequent"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="instantiationFormulation" element="instantiationFormulationBindsToBindableTarget.instantiationFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="bindableTarget" element="instantiationFormulationBindsToBindableTarget.bindableTarget"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="instantiationFormulationBindsToBindableTarget" element="instantiationFormulationBindsToBindableTarget"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="instantiationFormulation" element="instantiationFormulationConsidersConcept.instantiationFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="instantiationFormulationConsidersConcept" element="instantiationFormulationConsidersConcept"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalFormulation" element="logicalFormulationConstrainsProjection.logicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalFormulationConstrainsProjection" element="logicalFormulationConstrainsProjection"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalFormulation" element="logicalFormulationRestrictsVariable.logicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalFormulationRestrictsVariable" element="logicalFormulationRestrictsVariable"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalOperation" element="logicalOperationHasLogicalOperand.logicalOperation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalOperand" element="logicalOperationHasLogicalOperand.logicalOperand"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalOperationHasLogicalOperand" element="logicalOperationHasLogicalOperand"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="meaningCorrespondsToThing" element="meaningCorrespondsToThing"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="modalFormulation" element="modalFormulationEmbedsLogicalFormulation.modalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalFormulation" element="modalFormulationEmbedsLogicalFormulation.logicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="modalFormulationEmbedsLogicalFormulation" element="modalFormulationEmbedsLogicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="namespaceHasURI" element="namespaceHasURI"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="namespace1IncorporatesNamespace2" element="namespace1IncorporatesNamespace2"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="numericRangeQuantification" element="numericRangeQuantificationHasMaximumCardinality.numericRangeQuantification"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="maximumCardinality" element="numericRangeQuantificationHasMaximumCardinality.maximumCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="numericRangeQuantificationHasMaximumCardinality" element="numericRangeQuantificationHasMaximumCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="numericRangeQuantification" element="numericRangeQuantificationHasMinimumCardinality.numericRangeQuantification"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="minimumCardinality" element="numericRangeQuantificationHasMinimumCardinality.minimumCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="numericRangeQuantificationHasMinimumCardinality" element="numericRangeQuantificationHasMinimumCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="bindableTarget" element="objectificationBindsToBindableTarget.bindableTarget"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="objectificationBindsToBindableTarget" element="objectificationBindsToBindableTarget"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalFormulation" element="objectificationConsidersLogicalFormulation.logicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="objectificationConsidersLogicalFormulation" element="objectificationConsidersLogicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="startingCharacterPosition" element="placeholderIsAtStartingCharacterPosition.startingCharacterPosition"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="placeholderIsAtStartingCharacterPosition" element="placeholderIsAtStartingCharacterPosition"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeForm" element="placeholderIsInFactTypeForm.factTypeForm"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="placeholderIsInFactTypeForm" element="placeholderIsInFactTypeForm"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="placeholderUsesDesignation" element="placeholderUsesDesignation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="projectingFormulation" element="projectingFormulationBindsToBindableTarget.projectingFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="bindableTarget" element="projectingFormulationBindsToBindableTarget.bindableTarget"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="projectingFormulationBindsToBindableTarget" element="projectingFormulationBindsToBindableTarget"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="projectingFormulation" element="projectingFormulationHasProjection.projectingFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="projectingFormulationHasProjection" element="projectingFormulationHasProjection"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="auxiliaryVariable" element="projectionHasAuxiliaryVariable.auxiliaryVariable"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="projectionHasAuxiliaryVariable" element="projectionHasAuxiliaryVariable"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="projectionIsOnVariable" element="projectionIsOnVariable"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="propositionNominalization" element="propositionNominalizationBindsToBindableTarget.propositionNominalization"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="bindableTarget" element="propositionNominalizationBindsToBindableTarget.bindableTarget"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="propositionNominalizationBindsToBindableTarget" element="propositionNominalizationBindsToBindableTarget"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="propositionNominalization" element="propositionNominalizationConsidersLogicalFormulation.propositionNominalization"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalFormulation" element="propositionNominalizationConsidersLogicalFormulation.logicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="propositionNominalizationConsidersLogicalFormulation" element="propositionNominalizationConsidersLogicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="quantificationIntroducesVariable" element="quantificationIntroducesVariable"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="logicalFormulation" element="quantificationScopesOverLogicalFormulation.logicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="quantificationScopesOverLogicalFormulation" element="quantificationScopesOverLogicalFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="quantity1EqualsQuantity2" element="quantity1EqualsQuantity2"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="quantity1IsLessThanQuantity2" element="quantity1IsLessThanQuantity2"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="referenceScheme" element="referenceSchemeExtensionallyUsesFactTypeRole.referenceScheme"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeRole" element="referenceSchemeExtensionallyUsesFactTypeRole.factTypeRole"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="referenceSchemeExtensionallyUsesFactTypeRole" element="referenceSchemeExtensionallyUsesFactTypeRole"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="referenceScheme" element="referenceSchemeIsForConcept.referenceScheme"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="referenceSchemeIsForConcept" element="referenceSchemeIsForConcept"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="referenceScheme" element="referenceSchemeSimplyUsesFactTypeRole.referenceScheme"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeRole" element="referenceSchemeSimplyUsesFactTypeRole.factTypeRole"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="referenceSchemeSimplyUsesFactTypeRole" element="referenceSchemeSimplyUsesFactTypeRole"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="referenceScheme" element="referenceSchemeUsesCharacteristic.referenceScheme"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="referenceSchemeUsesCharacteristic" element="referenceSchemeUsesCharacteristic"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="representationHasExpression" element="representationHasExpression"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="representationRepresentsMeaning" element="representationRepresentsMeaning"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="roleBinding" element="roleBindingBindsToBindableTarget.roleBinding"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="bindableTarget" element="roleBindingBindsToBindableTarget.bindableTarget"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="roleBindingBindsToBindableTarget" element="roleBindingBindsToBindableTarget"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="roleBinding" element="roleBindingOccursInAtomicFormulation.roleBinding"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="atomicFormulation" element="roleBindingOccursInAtomicFormulation.atomicFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="roleBindingOccursInAtomicFormulation" element="roleBindingOccursInAtomicFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="objectType" element="roleRangesOverObjectType.objectType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="roleRangesOverObjectType" element="roleRangesOverObjectType"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="setHasCardinality" element="setHasCardinality"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="statementExpressesProposition" element="statementExpressesProposition"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="thingIsInSet" element="thingIsInSet"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="thing1IsThing2" element="thing1IsThing2"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="projectionPosition" element="variableHasProjectionPosition.projectionPosition"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="variableHasProjectionPosition" element="variableHasProjectionPosition"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="semanticFormulation" element="variableIsFreesWithinSemanticFormulation.semanticFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="variableIsFreesWithinSemanticFormulation" element="variableIsFreesWithinSemanticFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="factTypeRole" element="variableMapsToFactTypeRole.factTypeRole"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="variableMapsToFactTypeRole" element="variableMapsToFactTypeRole"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="variableRangesOverConcept" element="variableRangesOverConcept"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="vocabularyNamespace" element="vocabularyNamespaceIsForLanguage.vocabularyNamespace"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="vocabularyNamespaceIsForLanguage" element="vocabularyNamespaceIsForLanguage"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="whether-or-notFormulation" element="whether-or-notFormulationHasConsequent.whether-or-notFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="whether-or-notFormulationHasConsequent" element="whether-or-notFormulationHasConsequent"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="whether-or-notFormulation" element="whether-or-notFormulationHasInconsequent.whether-or-notFormulation"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="whether-or-notFormulationHasInconsequent" element="whether-or-notFormulationHasInconsequent"/>
+  <cmof:Tag name="org.omg.xmi.xmiName" value="LogicalFormulationOfSemanticsVocabulary" element="LogicalFormulationOfSemanticsVocabulary"/>
+</xmi:XMI>

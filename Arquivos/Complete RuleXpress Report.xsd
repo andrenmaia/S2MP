@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Term">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UsedByTerm" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsesTerm" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsedByFact" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsesFact" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsedByRule" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsedByDecisionTable" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="ViolatedQualityItem" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="ItemProperties" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Definition" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="Text" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element ref="TermRef" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+      <xs:attribute name="ID" type="xs:string" />
+      <xs:attribute name="signifier" type="xs:string" />
+      <xs:attribute name="qualitygrade" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsedByTerm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Ref" type="xs:string" minOccurs="0" msdata:Ordinal="5" />
+        <xs:element name="Text" type="xs:string" minOccurs="0" msdata:Ordinal="6" />
+      </xs:sequence>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsesTerm">
+    <xs:complexType>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsedByFact">
+    <xs:complexType>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsesFact">
+    <xs:complexType>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsedByRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Ref" type="xs:string" minOccurs="0" msdata:Ordinal="5" />
+        <xs:element name="Text" type="xs:string" minOccurs="0" msdata:Ordinal="6" />
+      </xs:sequence>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsedByDecisionTable">
+    <xs:complexType>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FactSymbol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UsedByFact" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="ItemProperties" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="FactSymbolExpression" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Text" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+      <xs:attribute name="ID" type="xs:string" />
+      <xs:attribute name="signifier" type="xs:string" />
+      <xs:attribute name="qualitygrade" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UsesTerm" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsesFact" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="RuleRelation" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsedByRuleGroup" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="ViolatedQualityItem" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="ItemProperties" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Statement" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="Text" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element ref="TermRef" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+      <xs:attribute name="ID" type="xs:string" />
+      <xs:attribute name="signifier" type="xs:string" />
+      <xs:attribute name="qualitygrade" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RuleRelation">
+    <xs:complexType>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsedByRuleGroup">
+    <xs:complexType>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsesDecisionTable">
+    <xs:complexType>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsesRule">
+    <xs:complexType>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UsesRuleGroup">
+    <xs:complexType>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QualityItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Description" type="xs:string" minOccurs="0" msdata:Ordinal="4" />
+        <xs:element name="Motivation" type="xs:string" minOccurs="0" msdata:Ordinal="5" />
+        <xs:element name="Examples" type="xs:string" minOccurs="0" msdata:Ordinal="6" />
+        <xs:element ref="UsedByTerm" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsesTerm" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsedByFact" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsesFact" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="UsedByFactSymbol" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="show" type="xs:string" />
+            <xs:attribute name="displayMode" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="UsedByRule" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsedByDecisionTable" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsesRule" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsesDecisionTable" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="RuleRelation" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsedByRuleGroup" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element ref="UsesRuleGroup" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="show" type="xs:string" />
+      <xs:attribute name="displayMode" type="xs:string" />
+      <xs:attribute name="ID" type="xs:string" />
+      <xs:attribute name="name" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ViolatedQualityItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Ref" type="xs:string" minOccurs="0" />
+        <xs:element name="Text" type="xs:string" minOccurs="0" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ItemProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="GroupName" type="xs:string" minOccurs="0" />
+        <xs:element name="ItemProperty" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+              <xs:element name="Value" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Text" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                  </xs:sequence>
+                  <xs:attribute name="StrVal" type="xs:string" />
+                  <xs:attribute name="PropertyValueID" type="xs:string" />
+                  <xs:attribute name="RealVal" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SubProperty" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                    <xs:element name="Value" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                  </xs:sequence>
+                  <xs:attribute name="ConceptID" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="ConceptID" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Text" nillable="true">
+    <xs:complexType>
+      <xs:simpleContent msdata:ColumnName="Text_Text" msdata:Ordinal="0">
+        <xs:extension base="xs:string">
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TermRef" nillable="true">
+    <xs:complexType>
+      <xs:simpleContent msdata:ColumnName="TermRef_Text" msdata:Ordinal="1">
+        <xs:extension base="xs:string">
+          <xs:attribute name="idref" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RuleXpressPublication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AppliedFilter" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+        <xs:element name="Layout" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Document" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="EmptyProperties" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="show" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="orientation" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Header" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ShortcutList" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="show" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="AppliedFilters" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="show" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="GeneralInformation" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="show" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="show" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Item" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="Term" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="Fact" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="UsedByTerm" minOccurs="0" maxOccurs="unbounded" />
+                          <xs:element ref="UsesTerm" minOccurs="0" maxOccurs="unbounded" />
+                          <xs:element name="UsesFactSymbol" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:attribute name="show" type="xs:string" />
+                              <xs:attribute name="displayMode" type="xs:string" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element ref="UsedByRule" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                        <xs:attribute name="show" type="xs:string" />
+                        <xs:attribute name="displayMode" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="FactSymbol" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element ref="Rule" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="DecisionTable" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="UsesTerm" minOccurs="0" maxOccurs="unbounded" />
+                          <xs:element ref="UsedByDecisionTable" minOccurs="0" maxOccurs="unbounded" />
+                          <xs:element ref="UsesDecisionTable" minOccurs="0" maxOccurs="unbounded" />
+                          <xs:element ref="UsedByRuleGroup" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                        <xs:attribute name="show" type="xs:string" />
+                        <xs:attribute name="displayMode" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="RuleGroup" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element ref="UsesRule" minOccurs="0" maxOccurs="unbounded" />
+                          <xs:element ref="UsesDecisionTable" minOccurs="0" maxOccurs="unbounded" />
+                          <xs:element ref="UsedByRuleGroup" minOccurs="0" maxOccurs="unbounded" />
+                          <xs:element ref="UsesRuleGroup" minOccurs="0" maxOccurs="unbounded" />
+                        </xs:sequence>
+                        <xs:attribute name="show" type="xs:string" />
+                        <xs:attribute name="displayMode" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="QualityItem" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Content" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Community" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="ID" type="xs:string" />
+                  <xs:attribute name="signifier" type="xs:string" />
+                  <xs:attribute name="description" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element ref="Term" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element ref="FactSymbol" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element ref="Rule" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element ref="QualityItem" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="language" type="xs:string" />
+      <xs:attribute name="reportdate" type="xs:string" />
+      <xs:attribute name="reportmember" type="xs:string" />
+      <xs:attribute name="title" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Term" />
+        <xs:element ref="UsedByTerm" />
+        <xs:element ref="UsesTerm" />
+        <xs:element ref="UsedByFact" />
+        <xs:element ref="UsesFact" />
+        <xs:element ref="UsedByRule" />
+        <xs:element ref="UsedByDecisionTable" />
+        <xs:element ref="FactSymbol" />
+        <xs:element ref="Rule" />
+        <xs:element ref="RuleRelation" />
+        <xs:element ref="UsedByRuleGroup" />
+        <xs:element ref="UsesDecisionTable" />
+        <xs:element ref="UsesRule" />
+        <xs:element ref="UsesRuleGroup" />
+        <xs:element ref="QualityItem" />
+        <xs:element ref="ViolatedQualityItem" />
+        <xs:element ref="ItemProperties" />
+        <xs:element ref="Text" />
+        <xs:element ref="TermRef" />
+        <xs:element ref="RuleXpressPublication" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xmi:XMI xmi:version="2.1"
+		 xmlns:xmi="http://schema.omg.org/spec/XMI/2.1"
+		 xmlns:sbvr="http://www.omg.org/spec/SBVR/20070901/SBVR.xml">
+  <sbvr:designation xmi:id="company" signifier="company-t" meaning="company-c"/>
+  <sbvr:objectType xmi:id="company-c"/>
+  <sbvr:text xmi:id="company-t" value="company"/>
+  
+  <sbvr:designation xmi:id="officer" signifier="officer-t" meaning="officer-c"/>
+  <sbvr:objectType xmi:id="officer-c"/>
+  <sbvr:text xmi:id="officer-t" value="officer"/>
+  
+  <sbvr:sententialForm xmi:id="companyAppointsOfficer" expression="cao-t" meaning="cao-c" placeholder="cao-p1 cao-p2"/>
+  <sbvr:factType xmi:id="cao-c" role="cao-r1 cao-r2"/>
+  <sbvr:factTypeFormDemonstratesDesignation factTypeForm="companyAppointsOfficer" designation="appoints"/>
+  <sbvr:designation xmi:id="appoints" signifier="appoints-t" meaning="cao-c"/>
+  <sbvr:text xmi:id="cao-t" value="company appoints officer"/>
+  <sbvr:text xmi:id="appoints-t" value="appoints"/>
+  <sbvr:placeholder xmi:id="cao-p1" expression="company-t" startingCharacterPosition="i1" meaning="cao-r1"/>
+  <sbvr:placeholderUsesDesignation placeholder="cao-p1" designation="company"/>
+  <sbvr:concept1SpecializesConcept2 concept1="cao-r1" concept2="company-c"/>
+  <sbvr:factTypeRole xmi:id="cao-r1"/>
+  <sbvr:positiveInteger xmi:id="i1" value="1"/>
+  <sbvr:placeholder xmi:id="cao-p2" expression="officer-t" startingCharacterPosition="i18" meaning="cao-r2"/>
+  <sbvr:placeholderUsesDesignation placeholder="cao-p2" designation="officer"/>
+  <sbvr:concept1SpecializesConcept2 concept1="cao-r2" concept2="officer-c"/>
+  <sbvr:factTypeRole xmi:id="cao-r2"/>
+  <sbvr:positiveInteger xmi:id="i18" value="18"/>
+  
+  <sbvr:designation xmi:id="EU-Rent" signifier="EU-Rent-t" meaning="EU-Rent-c"/>
+  <sbvr:individualConcept xmi:id="EU-Rent-c"/>
+  <sbvr:text xmi:id="EU-Rent-t" value="EU-Rent"/>
+  <sbvr:concept1SpecializesConcept2 concept1="EU-Rent-c" concept2="company-c"/>
+  
+  <sbvr:statement xmi:id="stmt" expression="stmt-t" meaning="stmt-p"/>
+  <sbvr:text xmi:id="stmt-t" value="EU-Rent must appoint at least 3 officers."/>
+  <sbvr:proposition xmi:id="stmt-p"/>
+  <sbvr:closedLogicalFormulationFormalizesStatement closedLogicalFormulation="ob2" statement="stmt"/>
+  <sbvr:closedLogicalFormulationMeansProposition closedLogicalFormulation="ob2" proposition="stmt-p"/>
+  <sbvr:obligationFormulation xmi:id="ob"/>
+  <sbvr:closedLogicalFormulation xmi:id="ob2"/>
+  <sbvr:thing1IsThing2 thing1="ob" thing2="ob2"/>
+  <sbvr:modalFormulationEmbedsLogicalFormulation modalFormulation="ob" logicalFormulation="am3"/>
+  <sbvr:at-least-nQuantification xmi:id="am3" scopeFormulation="atom" minimumCardinality="i3"/>
+  <sbvr:quantificationIntroducesVariable quantification="am3" variable="v"/>
+  <sbvr:variable xmi:id="v" ranged-overConcept="officer-c" restrictingFormulation="" isUnitary="false"/>
+  <sbvr:atomicFormulation xmi:id="atom" roleBinding="bind1 bind2"/>
+  <sbvr:atomicFormulationIsBasedOnFactType atomicFormulation="atom" factType="cao-c"/>
+  <sbvr:roleBinding xmi:id="bind1"/>
+  <sbvr:roleBindingBindsToBindableTarget roleBinding="bind1" bindableTarget="EU-Rent-c"/>
+  <sbvr:factTypeRoleHasRoleBinding factTypeRole="cao-r1" roleBinding="bind1" />
+  <sbvr:roleBinding xmi:id="bind2"/>
+  <sbvr:roleBindingBindsToBindableTarget roleBinding="bind2" bindableTarget="v"/>
+  <sbvr:factTypeRoleHasRoleBinding factTypeRole="cao-r2" roleBinding="bind2"/>
+  <sbvr:positiveInteger xmi:id="i3" value="3"/>
+</xmi:XMI>

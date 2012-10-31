@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XMI xmlns:inh="http://www.w3.org/2001/XMLSchema-instance" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:sbvr="http://www.omg.org/spec/SBVR/20070901/SBVR.xml" version="2.1">
+
+
+  <sbvr:designation inh:type="sbvr:designation" xmi:id="company" signifier="company-t" meaning="company-c" />
+  <sbvr:objectType inh:type="sbvr:objectType" xmi:id="company-c" />
+  <sbvr:text inh:type="text" id="company-t" value="company" />
+
+  
+  <sbvr:designation inh:type="sbvr:designation" xmi:id="officer" signifier="officer-t" meaning="officer-c" />
+  <sbvr:objectType inh:type="sbvr:objectType" xmi:id="officer-c" />
+  <sbvr:text inh:type="text" id="officer-t" value="officer" />
+
+
+  <sbvr:designation inh:type="sbvr:designation" xmi:id="EU-Rent" signifier="EU-Rent-t" meaning="EU-Rent-c" />
+  <sbvr:text inh:type="text" id="EU-Rent-t" value="EU-Rent" />
+
+  
+
+  <sbvr:designation inh:type="sbvr:designation" xmi:id="appoints" signifier="appoints-t" meaning="appoints-c" />
+  <sbvr:objectType inh:type="sbvr:objectType" xmi:id="appoints-c" />
+
+  <sbvr:objectType inh:type="sbvr:objectType" xmi:id="EU-Rent-c" />
+  <sbvr:text inh:type="text" id="appoints-t" value="appoints" />
+  
+</XMI>

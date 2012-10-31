@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RuleXpressPublication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\Program Files\RuleArts\RuleXpress\Documents\rx_itemreport.xsd" language="en-us" reportdate="2012-10-04" reportmember="RuleXpress Administrator" title="Base Rules &amp; Terms Report">
+  <Layout>
+    <Document nome="andr" orientation="portrait">
+      <EmptyProperties show="true" />
+      <InternalId show="false" />
+    </Document> 
+    <Header show="true">
+      <ShortcutList show="true" />
+      <AppliedFilters show="true" />
+      <GeneralInformation show="true" />
+    </Header>
+    <Item>
+      <Term show="true" displayMode="list">
+        <UsedByTerm show="true" displayMode="reference" />
+        <UsesTerm show="true" displayMode="reference" />
+        <UsedByFact show="true" displayMode="reference" />
+        <UsedByNeighborhood show="true" displayMode="reference" />
+        <UsedByRule show="true" displayMode="reference" />
+        <DerivedByRule show="true" displayMode="reference" />
+        <UsedByDecisionTable show="true" displayMode="reference" />
+        <UsedByDecision show="true" displayMode="reference" />
+        <DerivedByDecision show="true" displayMode="reference" />
+        <DerivedByDecisionTable show="true" displayMode="reference" />
+        <AppliesToDecision show="true" displayMode="reference" />
+      </Term>
+      <Fact show="true" displayMode="list">
+        <UsedByTerm show="true" displayMode="reference" />
+        <UsesTerm show="true" displayMode="reference" />
+        <UsesFactSymbol show="true" displayMode="reference" />
+        <UsedByNeighborhood show="true" displayMode="reference" />
+        <UsedByRule show="true" displayMode="reference" />
+        <UsedByDecisionTable show="true" displayMode="reference" />
+        <DerivedByRule show="true" displayMode="reference" />
+        <DerivedByDecisionTable show="true" displayMode="reference" />
+        <UsedByDecision show="true" displayMode="reference" />
+        <DerivedByDecision show="true" displayMode="reference" />
+        <AppliesToDecision show="true" displayMode="reference" />
+      </Fact>
+      <FactSymbol show="true" displayMode="list">
+        <UsedByFact show="true" displayMode="reference" />
+        <UsedByNeighborhood show="true" displayMode="reference" />
+      </FactSymbol>
+      <Neighborhood show="true" displayMode="list">
+        <UsesTerm show="true" displayMode="reference" />
+        <UsedByFact show="true" displayMode="reference" />
+        <UsesFactSymbol show="true" displayMode="reference" />
+      </Neighborhood>
+      <Rule show="true" displayMode="list">
+        <UsesTerm show="true" displayMode="reference" />
+        <DerivesTerm show="true" displayMode="reference" />
+        <UsesFact show="true" displayMode="reference" />
+        <RuleRelation show="true" displayMode="reference" />
+        <UsedByDecisionTable show="true" displayMode="reference" />
+        <UsedByRuleGroup show="true" displayMode="reference" />
+        <UsedByDecision show="true" displayMode="reference" />
+      </Rule>
+      <DecisionTable show="true" displayMode="list">
+        <UsesTerm show="true" displayMode="reference" />
+        <UsesFact show="true" displayMode="reference" />
+        <DerivesTerm show="true" displayMode="reference" />
+        <DerivesFact show="true" displayMode="reference" />
+        <UsedByDecisionTable show="true" displayMode="reference" />
+        <UsesDecisionTable show="true" displayMode="reference" />
+        <UsedByRuleGroup show="true" displayMode="reference" />
+        <UsedByDecision show="true" displayMode="reference" />
+      </DecisionTable>
+      <RuleGroup show="true" displayMode="list">
+        <UsesRule show="true" displayMode="reference" />
+        <UsesDecisionTable show="true" displayMode="reference" />
+        <UsedByRuleGroup show="true" displayMode="reference" />
+        <UsesRuleGroup show="true" displayMode="reference" />
+        <UsedByDecision show="true" displayMode="reference" />
+      </RuleGroup>
+      <Decision show="true" displayMode="list">
+        <UsesTerm show="true" displayMode="reference" />
+        <DerivesTerm show="true" displayMode="reference" />
+        <BasedOnTerm show="true" displayMode="reference" />
+        <UsesFact show="true" displayMode="reference" />
+        <DerivesFact show="true" displayMode="reference" />
+        <BasedOnFact show="true" displayMode="reference" />
+        <UsesRule show="true" displayMode="reference" />
+        <UsesDecisionTable show="true" displayMode="reference" />
+        <UsesRuleGroup show="true" displayMode="reference" />
+        <UsesDecision show="true" displayMode="reference" />
+        <UsedByDecision show="true" displayMode="reference" />
+      </Decision>
+      <QualityItem show="true" displayMode="list">
+        <UsedByTerm show="true" displayMode="reference" />
+        <UsedByFact show="true" displayMode="reference" />
+        <UsedByFactSymbol show="true" displayMode="reference" />
+        <UsedByRule show="true" displayMode="reference" />
+        <UsedByDecisionTable show="true" displayMode="reference" />
+        <UsedByRuleGroup show="true" displayMode="reference" />
+        <UsedByDecision show="true" displayMode="reference" />
+      </QualityItem>
+    </Item>
+  </Layout>
+  <AppliedFilter />
+  <Content>
+    <Community ID="Comm1" signifier="RuleXpress" description="" />
+    <Term ID="Term1021" signifier="Bicicleta">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Bicicleta" PropertyValueID="2235">
+            <Text>Bicicleta</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition />
+    </Term>
+    <Term ID="Term1020" signifier="Caminhao">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Caminhao" PropertyValueID="2206">
+            <Text>Caminhao</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition />
+    </Term>
+    <Term ID="Term1010" signifier="Carro">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Automovel" PropertyValueID="2233">
+            <Text>Automovel</Text>
+          </Value>
+        </ItemProperty>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Carro" PropertyValueID="2140">
+            <Text>Carro</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition>
+        <Text>A </Text>
+        <TermRef idref="Term1010">Carro</TermRef>
+        <Text> or </Text>
+        <TermRef idref="Term1010">Automovel</TermRef>
+        <Text> is a </Text>
+        <TermRef idref="Term1018">Veiculo</TermRef>
+        <Text> used to transport some </Text>
+        <TermRef idref="Term1014">Pessoa</TermRef>
+        <Text> between places</Text>
+      </Definition>
+    </Term>
+    <Term ID="Term1016" signifier="Cor">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Cor" PropertyValueID="2180">
+            <Text>Cor</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition />
+    </Term>
+    <Term ID="Term1019" signifier="Moto">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Moto" PropertyValueID="2200">
+            <Text>Moto</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition />
+    </Term>
+    <Term ID="Term1011" signifier="Motor">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Motor" PropertyValueID="2146">
+            <Text>Motor</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition />
+    </Term>
+    <Term ID="Term1014" signifier="Pessoa">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Individuo" PropertyValueID="2234">
+            <Text>Individuo</Text>
+          </Value>
+        </ItemProperty>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Pessoa" PropertyValueID="2166">
+            <Text>Pessoa</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition />
+    </Term>
+    <Term ID="Term1017" signifier="Placa">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Placa" PropertyValueID="2186">
+            <Text>Placa</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition />
+    </Term>
+    <Term ID="Term1012" signifier="Porta">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Porta" PropertyValueID="2152">
+            <Text>Porta</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition>
+        <Text>It is required that </Text>
+        <TermRef idref="Term1012">Porta</TermRef>
+        <Text> be in a </Text>
+        <TermRef idref="Term1010">Carro</TermRef>
+        <Text>, </Text>
+        <TermRef idref="Term1010">Automovel</TermRef>
+        <Text> or </Text>
+        <TermRef idref="Term1020">Caminhao</TermRef>
+      </Definition>
+    </Term>
+    <Term ID="Term1015" signifier="Potencia">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Potencia" PropertyValueID="2174">
+            <Text>Potencia</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition />
+    </Term>
+    <Term ID="Term1013" signifier="Roda">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Roda" PropertyValueID="2158">
+            <Text>Roda</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition />
+    </Term>
+    <Term ID="Term1018" signifier="Veiculo">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Synonym</Name>
+          <Value StrVal="Veiculo" PropertyValueID="2194">
+            <Text>Veiculo</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Definition />
+    </Term>
+    <Rule ID="Rule1001" signifier="Rule 11">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Name</Name>
+          <Value StrVal="Rule 11" PropertyValueID="2164">
+            <Text>Rule 11</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Statement>
+        <Text>Each </Text>
+        <TermRef idref="Term1010">Carro</TermRef>
+        <Text> has at least one </Text>
+        <TermRef idref="Term1016">Cor</TermRef>
+      </Statement>
+    </Rule>
+    <Rule ID="Rule1002" signifier="Rule 12">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Name</Name>
+          <Value StrVal="Rule 12" PropertyValueID="2192">
+            <Text>Rule 12</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Statement>
+        <Text>Each </Text>
+        <TermRef idref="Term1010">Carro</TermRef>
+        <Text> contains exactly one </Text>
+        <TermRef idref="Term1017">Placa</TermRef>
+        <Text>, exactly 4 </Text>
+        <TermRef idref="Term1013">Roda</TermRef>
+        <Text>, at least 2 </Text>
+        <TermRef idref="Term1012">Porta</TermRef>
+      </Statement>
+    </Rule>
+    <Rule ID="Rule1003" signifier="Rule 13">
+      <ItemProperties>
+        <GroupName>A. Representation</GroupName>
+        <ItemProperty ConceptID="2">
+          <Name>Name</Name>
+          <Value StrVal="Rule 13" PropertyValueID="2212">
+            <Text>Rule 13</Text>
+          </Value>
+        </ItemProperty>
+      </ItemProperties>
+      <Statement>
+        <Text>Each </Text>
+        <TermRef idref="Term1010">Carro</TermRef>
+        <Text> has exactly 4 </Text>
+        <TermRef idref="Term1013">Roda</TermRef>
+      </Statement>
+    </Rule>
+  </Content>
+</RuleXpressPublication>
