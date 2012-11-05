@@ -27,6 +27,7 @@ namespace S2MP.Model
         /// </returns>
         public List<QueryResult> ExecuteQuery(Query.Query query)
         {
+
             return query.Parse();
         }
 

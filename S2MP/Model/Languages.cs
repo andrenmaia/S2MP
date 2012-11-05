@@ -9,7 +9,7 @@ namespace S2MP.Model
     /// <summary>
     /// Types of languages of templates.
     /// </summary>
-    public enum LanguageEnum
+    public enum Languages
     {
         None,
         Csharp,

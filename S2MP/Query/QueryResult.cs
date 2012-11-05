@@ -16,7 +16,7 @@ namespace S2MP.Query
         /// <summary>
         /// Template used for generate result.
         /// </summary>
-        public Template TemplateUsed { get; set; }
+        internal Template TemplateUsed { get; set; }
 
         /// <summary>
         /// Query result.
@@ -36,7 +36,7 @@ namespace S2MP.Query
         /// <exception cref="ArgumentNullException">
         /// If parameters are null or empty.
         /// </exception>
-        public QueryResult(Template templateToWrite, string result)
+        internal QueryResult(Template templateToWrite, string result)
         {
             //
             // Check if parameters are null and set values to attributes.

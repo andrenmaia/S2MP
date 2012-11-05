@@ -10,7 +10,7 @@ using System.Reflection;
 using System.Linq.Expressions;
 using S2MP;
 using S2MP.Xmi.Definitions;
-using S2MP.Util;
+using S2MP.Xmi;
 using S2MP.Query;
 using S2MP.Model;
 using S2MP.Management;
@@ -44,13 +44,15 @@ namespace S2MP.Console2
 
             // S2MP.Xmi.Definitions.actuality
 
+
             Manager.SetupManager(new Setup(
-                                        @"C:\Users\Maia\Downloads\S2MP\S2MP\S2MP\Templates",
-                                        LanguageEnum.Csharp
-                                    )
+                                            @"C:\TEMP\outs.txt",
+                                            @"C:\GitRepo\S2MP\S2MP\Templates",
+                                            Languages.Csharp
+                                          )
                                 );
 
-            S2MPCommand cmd = new S2MPCommand();
+            S2MPCommand cmd = new ();
             foreach (var item in cmd.ExecuteQuery(new QueryAtLeastN("Client", 10)))
                 Console.Write(item.Result);
 

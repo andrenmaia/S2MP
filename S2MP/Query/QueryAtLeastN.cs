@@ -14,14 +14,14 @@ namespace S2MP.Query
 
         public sealed override List<QueryResult> Parse()
         {
-            string result = base.TemplateToResult.GetTextTemplateParsed(new Dictionary<string, string>() 
+            string result = base.SelectedTemplateToResult.GetTextTemplateParsed(new Dictionary<string, string>() 
                                                         {
                                                             { "@@entityA@@", _entity},
                                                             { "@@N@@", _n.ToString()}
                                                         }
                                                     );
 
-            return new List<QueryResult>() { new QueryResult(base.TemplateToResult, result) };
+            return new List<QueryResult>() { new QueryResult(base.SelectedTemplateToResult, result) };
         }
 
         #endregion
@@ -33,7 +33,6 @@ namespace S2MP.Query
 
         #endregion
 
-
         #region Constructor
 
         public QueryAtLeastN(string entity, int n)
@@ -42,7 +41,7 @@ namespace S2MP.Query
             this._n = n;
 
             // TODO: Implementar um pattern criacional aqui.
-            TemplateToResult = Manager.GetInstance.FindTemplate("AtLeastN");
+            SelectedTemplateToResult = Manager.GetInstance.FindTemplate("AtLeastN");
         }
 
 

@@ -44,19 +44,21 @@
     <Compile Include="Management\Manager.cs" />
     <Compile Include="Management\Setup.cs" />
     <Compile Include="Model\TemplateParseException.cs" />
-    <Compile Include="Model\Writer.cs" />
+    <Compile Include="Model\S2MPCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Query\IQuery.cs" />
+    <Compile Include="Query\Query.cs" />
     <Compile Include="Query\QueryAtLeastN.cs" />
     <Compile Include="Query\QueryResult.cs" />
-    <Compile Include="Model\LanguageEnum.cs" />
+    <Compile Include="Model\Languages.cs" />
     <Compile Include="Model\Template.cs" />
-    <Compile Include="Util\SBVRSerialize.cs" />
+    <Compile Include="Xmi\SBVRSerialize.cs" />
     <Compile Include="Xmi\Definitions\XMI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Templates\Csharp\AtLeastN.txml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

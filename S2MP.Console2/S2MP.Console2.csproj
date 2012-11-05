@@ -53,9 +53,9 @@
     <Content Include="XmiIncrementado.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\S2MP\S2MP.csproj">
+    <ProjectReference Include="..\S2MP\S2MP.Core.csproj">
       <Project>{2DEB7CAD-D0BC-4F97-B1C8-D25E575281C0}</Project>
-      <Name>S2MP</Name>
+      <Name>S2MP.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

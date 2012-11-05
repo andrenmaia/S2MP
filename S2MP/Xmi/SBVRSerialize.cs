@@ -7,9 +7,9 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Reflection;
 
-namespace S2MP.Util
+namespace S2MP.Xmi
 {
-    public class SBVRSerialize
+    internal class SBVRSerialize
     {
         /// <summary>
         /// Deserializer a xmi file to in a sbvr object.

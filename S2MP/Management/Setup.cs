@@ -9,6 +9,12 @@ namespace S2MP.Management
 {
     public class Setup
     {
+
+        /// <summary>
+        /// Path to file xmi from sbvr.
+        /// </summary>
+        public string XmiPath  { get; set; }
+
         /// <summary>
         /// Directory path of templates.
         /// </summary>
@@ -17,7 +23,7 @@ namespace S2MP.Management
         /// <summary>
         /// Selected language of query result.
         /// </summary>
-        public LanguageEnum DefaultLanguageOfQueryResult { get; private set; }
+        public Languages DefaultLanguageOfQueryResult { get; private set; }
 
 
         #region Constructors
@@ -31,12 +37,15 @@ namespace S2MP.Management
         /// <param name="defaultLanguageOfQueryResult">
         /// Selected language of query result.
         /// </param>
-        public Setup(string templatePath, LanguageEnum defaultLanguageOfQueryResult)
+        public Setup(string xmiPath, string templatePath, Languages defaultLanguageOfQueryResult)
         {
-            if (string.IsNullOrEmpty(templatePath) && !Directory.Exists(templatePath))
+            if (string.IsNullOrEmpty(xmiPath) || !File.Exists(xmiPath))
+                throw new FileNotFoundException(string.Concat("The path \"", xmiPath, "\" is invalid."));
+
+            if (string.IsNullOrEmpty(templatePath) || !Directory.Exists(templatePath))
                 throw new DirectoryNotFoundException(string.Concat("The path \"", templatePath, "\" is invalid."));
 
-
+            this.XmiPath = xmiPath;
             this.TemplatesPath = templatePath;
             this.DefaultLanguageOfQueryResult = defaultLanguageOfQueryResult;
 

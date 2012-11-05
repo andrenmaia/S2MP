@@ -73,9 +73,7 @@ namespace S2MP.Management
             _templatesLoaded = new Dictionary<string, Template>();
         }
 
-        private Manager()
-        {
-        }
+        private Manager() { }
 
         #endregion
 
@@ -117,9 +115,9 @@ namespace S2MP.Management
             }
         }
 
-        internal Template FindTemplate(string name, LanguageEnum language = LanguageEnum.None)
+        internal Template FindTemplate(string name, Languages language = Languages.None)
         {
-            return _templatesLoaded[Tuple.Create(name, (language == LanguageEnum.None) ? Manager.CurrentSetUp.DefaultLanguageOfQueryResult : language).ToString()];
+            return _templatesLoaded[Tuple.Create(name, (language == Languages.None) ? Manager.CurrentSetUp.DefaultLanguageOfQueryResult : language).ToString()];
 
             //// TODO: Ler o template real de acordo com a parametrização.
             //// TODO: Obter template da pasta de templates padrão.

@@ -2,14 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using S2MP.Model;
+using S2MP.Management;
 
 namespace S2MP.Query
 {
     /// <summary>
-    /// Query interface.
+    /// Query abstract.
     /// </summary>
-    public interface IQuery
+    public abstract class Query: IQuery
     {
+        #region Attribute
+
+        /// <summary>
+        /// Selected template to result.
+        /// </summary>
+        internal Template SelectedTemplateToResult { get; set; }
+
+        #endregion
+
+        #region Methods
+        
         /// <summary>
         /// Parse a query.
         /// </summary>
@@ -19,6 +32,8 @@ namespace S2MP.Query
         /// <returns>
         /// Collection of QueryResult match between IQuery and SBVR objects.
         /// </returns>
-        List<QueryResult> Parse();
+        public abstract List<QueryResult> Parse();
+
+        #endregion
     }
 }

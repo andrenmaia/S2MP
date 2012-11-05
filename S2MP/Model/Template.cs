@@ -9,7 +9,7 @@ namespace S2MP.Model
     /// <summary>
     /// Template representation.
     /// </summary>
-    public class Template
+    internal class Template
     {
         #region Properties
 
@@ -36,7 +36,7 @@ namespace S2MP.Model
         /// <summary>
         /// Template language.
         /// </summary>
-        public LanguageEnum Language { get; set; }
+        public Languages Language { get; set; }
 
         #endregion
 
