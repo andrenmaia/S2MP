@@ -7,23 +7,22 @@ using System.IO;
 
 namespace S2MP.Management
 {
-    public class Setup
+    public class Setup: ISetup
     {
-
         /// <summary>
         /// Path to file xmi from sbvr.
         /// </summary>
-        public string XmiPath  { get; set; }
+        public string XmiPath { get; set; }
 
         /// <summary>
         /// Directory path of templates.
         /// </summary>
-        public string TemplatesPath { get; private set; }
+        public string TemplatesPath { get; set; }
 
         /// <summary>
         /// Selected language of query result.
         /// </summary>
-        public Languages DefaultLanguageOfQueryResult { get; private set; }
+        public Languages DefaultLanguageOfQueryResult { get; set; }
 
 
         #region Constructors

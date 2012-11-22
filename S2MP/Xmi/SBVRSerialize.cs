@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,9 +30,7 @@ namespace S2MP.Xmi
             Type destinationType = typeof(T);
 
             // Select nodes from xmi file.
-            var nodes = from d in xmi.Items
-                       where d.LocalName == destinationType.Name
-                       select d;
+            var nodes = xmi.Items.Where(x => x.LocalName == destinationType.Name);
 
             // Create deserializer.
             XmlSerializer deserializer = new XmlSerializer(destinationType);
@@ -47,7 +46,9 @@ namespace S2MP.Xmi
                 {
                     XmlAttributeAttribute att = prop.GetCustomAttributes(typeof(XmlAttributeAttribute), false).FirstOrDefault() as XmlAttributeAttribute;
 
-                    if (att != null && !string.IsNullOrEmpty(att.AttributeName) && att.DataType == "IDREF")
+                    if (att != null
+                        && !string.IsNullOrEmpty(att.AttributeName)
+                        && att.DataType == "IDREF")
                     {
                         PropertyInfo info = objectDeserialized.GetType().GetProperty(att.AttributeName);
 
@@ -59,25 +60,6 @@ namespace S2MP.Xmi
                         info.SetValue(objectDeserialized, o.FirstOrDefault(), null);
                     }
                 }
-
-                // Read IDREFS in properties from sbvr's objects.
-                //foreach (var prop in destinationType.GetProperties())
-                //{
-
-                //    XmlAttributeAttribute att = prop.GetCustomAttributes(typeof(XmlAttributeAttribute), false).FirstOrDefault() as XmlAttributeAttribute;
-
-                //    if (att != null && string.IsNullOrEmpty(att.AttributeName) && att.DataType == "IDREFS" && prop.PropertyType == typeof(string))
-                //    {
-                //        string val = prop.GetValue(d, null) as string;
-                //        string[] vals = val.Split(' ');
-
-                //        foreach (var vl in val)
-                //        {
-                //            // xmi: id == vl;
-                //        }
-                //    }
-                //}
-
                 result.Add(objectDeserialized);
             }
 

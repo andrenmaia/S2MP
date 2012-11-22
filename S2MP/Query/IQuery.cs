@@ -10,15 +10,5 @@ namespace S2MP.Query
     /// </summary>
     public interface IQuery
     {
-        /// <summary>
-        /// Parse a query.
-        /// </summary>
-        /// <param name="templateToResult">
-        /// Template to query results.
-        /// </param>
-        /// <returns>
-        /// Collection of QueryResult match between IQuery and SBVR objects.
-        /// </returns>
-        List<QueryResult> Parse();
     }
 }

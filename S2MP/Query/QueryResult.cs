@@ -9,19 +9,19 @@ namespace S2MP.Query
     /// <summary>
     /// Query result over sbvr rules.
     /// </summary>
-    public class QueryResult
+    internal class QueryResult : IQueryResult
     {
         #region Properties
 
         /// <summary>
         /// Template used for generate result.
         /// </summary>
-        internal Template TemplateUsed { get; set; }
+        public Template TemplateUsed { get; set; }
 
         /// <summary>
         /// Query result.
         /// </summary>
-        public string Result { get; private set; }
+        public string Result { get; set; }
 
         #endregion
 

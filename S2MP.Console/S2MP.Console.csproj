@@ -43,6 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandHandler\Commands\CurrentSetupCommand.cs" />
+    <Compile Include="CommandHandler\Commands\HelpCommand.cs" />
+    <Compile Include="CommandHandler\InputCommand.cs" />
+    <Compile Include="CommandHandler\InputCommandFactory.cs" />
+    <Compile Include="CommandHandler\Commands\ListTypeofQueriesCommand.cs" />
+    <Compile Include="CommandHandler\Commands\QueryTypeCommand.cs" />
+    <Compile Include="CommandHandler\Commands\SetupCommand.cs" />
+    <Compile Include="Common\InvalidCommandException.cs" />
+    <Compile Include="Common\InvalidInputException.cs" />
+    <Compile Include="CommandHandler\InputCommandInvoker.cs" />
+    <Compile Include="Common\InvalidCommandInputException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

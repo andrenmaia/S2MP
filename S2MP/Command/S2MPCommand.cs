@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using S2MP.Query;
 
-namespace S2MP.Model
+namespace S2MP.Command
 {
     /// <summary>
     /// It is a template writer.
@@ -25,13 +25,18 @@ namespace S2MP.Model
         /// <returns>
         /// Code written based on template.
         /// </returns>
-        public List<QueryResult> ExecuteQuery(Query.Query query)
+        public List<IQueryResult> ExecuteQuery(Query.Query query)
         {
-
             return query.Parse();
         }
 
-        #endregion
+        public List<IQueryResult> ExecuteQuery(string command, Dictionary<string, string> param)
+        {
+            QueryContext context = new QueryContext();
+            return context.Search(command, param);
+        }
 
+
+        #endregion
     }
 }

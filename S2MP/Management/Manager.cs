@@ -57,12 +57,16 @@ namespace S2MP.Management
         /// <summary>
         /// Get current set up of S2MP.
         /// </summary>
-        internal static Setup CurrentSetUp { get; private set; }
+        public static ISetup CurrentSetup { get; private set; }
 
         /// <summary>
         /// A hash of templates loaded.
         /// </summary>
         private static Dictionary<string, Template> _templatesLoaded;
+
+
+        internal string QueryType { get; private set; }
+        internal Dictionary<string, string> InputParameters { get; private set; }
 
         #endregion
 
@@ -89,14 +93,14 @@ namespace S2MP.Management
         /// <exception cref="InvalidOperationException">
         /// When set up have alread been executed.
         /// </exception>
-        public static void SetupManager(Setup setup)
+        public static void SetupManager(ISetup setup)
         {
-            if (_wasSetUp)
-                throw new InvalidOperationException("Set up S2MP have already been executed.");
+            //if (_wasSetUp)
+            //    throw new InvalidOperationException("Set up S2MP have already been executed.");
 
-            CurrentSetUp = setup;
+            CurrentSetup = setup;
 
-
+            _templatesLoaded.Clear();
             loadTemplates();
 
             _wasSetUp = true;
@@ -104,20 +108,26 @@ namespace S2MP.Management
 
         private static void loadTemplates()
         {
-            foreach (var file in Directory.GetFiles(CurrentSetUp.TemplatesPath, "*.txml", SearchOption.AllDirectories))
+            foreach (var file in Directory.GetFiles(CurrentSetup.TemplatesPath, "*.txml", SearchOption.AllDirectories))
             {
-                XmlSerializer x = new XmlSerializer(typeof(Template));
-                Template tmp = x.Deserialize(File.Open(file, FileMode.Open)) as Template;
-                if (tmp == null)
-                    throw new NullReferenceException(string.Concat("It was not possible deserialize file \"", file, "\" in Template."));
+                using (FileStream fstream = File.Open(file, FileMode.Open))
+                {
+                    XmlSerializer x = new XmlSerializer(typeof(Template));
+                    Template tmp = x.Deserialize(fstream) as Template;
+                    if (tmp == null)
+                        throw new NullReferenceException(string.Concat("It was not possible deserialize file \"", file, "\" in Template."));
 
-                _templatesLoaded.Add(Tuple.Create(tmp.Name, tmp.Language).ToString(), tmp);
+
+                    tmp.Path = file;
+
+                    _templatesLoaded.Add(Tuple.Create(tmp.Name, tmp.Language).ToString(), tmp);
+                }
             }
         }
 
         internal Template FindTemplate(string name, Languages language = Languages.None)
         {
-            return _templatesLoaded[Tuple.Create(name, (language == Languages.None) ? Manager.CurrentSetUp.DefaultLanguageOfQueryResult : language).ToString()];
+            return _templatesLoaded[Tuple.Create(name, (language == Languages.None) ? Manager.CurrentSetup.DefaultLanguageOfQueryResult : language).ToString()];
 
             //// TODO: Ler o template real de acordo com a parametrização.
             //// TODO: Obter template da pasta de templates padrão.

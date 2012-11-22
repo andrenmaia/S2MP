@@ -41,17 +41,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Constants.cs" />
+    <Compile Include="Management\ISetup.cs" />
     <Compile Include="Management\Manager.cs" />
     <Compile Include="Management\Setup.cs" />
+    <Compile Include="Model\Parameter.cs" />
     <Compile Include="Model\TemplateParseException.cs" />
-    <Compile Include="Model\S2MPCommand.cs" />
+    <Compile Include="Command\S2MPCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Query\IQuery.cs" />
+    <Compile Include="Query\IQueryResult.cs" />
+    <Compile Include="Query\IQueryStrategy.cs" />
+    <Compile Include="Query\ProjectionQuery.cs" />
     <Compile Include="Query\Query.cs" />
-    <Compile Include="Query\QueryAtLeastN.cs" />
+    <Compile Include="Query\LogicalFormulationQuery.cs" />
+    <Compile Include="Query\QueryContext.cs" />
     <Compile Include="Query\QueryResult.cs" />
     <Compile Include="Model\Languages.cs" />
     <Compile Include="Model\Template.cs" />
+    <Compile Include="Query\SemanticFormulationQuery.cs" />
     <Compile Include="Xmi\SBVRSerialize.cs" />
     <Compile Include="Xmi\Definitions\XMI.cs" />
   </ItemGroup>

@@ -10,7 +10,7 @@ namespace S2MP.Query
     /// <summary>
     /// Query abstract.
     /// </summary>
-    public abstract class Query: IQuery
+    public abstract class Query : IQuery, IQueryStrategy
     {
         #region Attribute
 
@@ -22,7 +22,7 @@ namespace S2MP.Query
         #endregion
 
         #region Methods
-        
+
         /// <summary>
         /// Parse a query.
         /// </summary>
@@ -32,7 +32,8 @@ namespace S2MP.Query
         /// <returns>
         /// Collection of QueryResult match between IQuery and SBVR objects.
         /// </returns>
-        public abstract List<QueryResult> Parse();
+        public abstract List<IQueryResult> Parse();
+
 
         #endregion
     }
